@@ -1,0 +1,463 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$id": "https://factory.example.com/schema/Assignment.schema.json",
+  "title": "Assignment Entity Meta-Model",
+  "description": "Assignment（岗位指派）实体的元模型定义，用于实现人员与岗位角色之间的时态化绑定关系，支撑数字孪生责任流的动态履职管理。",
+  "version": "1.0",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "assigneeId",
+    "roleId",
+    "orgId",
+    "validFrom",
+    "validTo",
+    "assignmentStatus"
+  ],
+  "properties": {
+    "@context": {
+      "description": "NGSI-LD上下文定义，提供实体属性的语义解释",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "minItems": 1
+        },
+        {
+          "type": "object"
+        }
+      ],
+      "default": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://factory.example.com/context/assignment-context.jsonld"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:Assignment:[A-Za-z0-9._:-]+$",
+      "description": "Assignment实体的全局唯一标识符，遵循NGSI-LD URN命名规范。建议格式：urn:ngsi-ld:Assignment:Person.{PersonCode}:{RoleCode}:{OrgCode}:{Timestamp}，以包含人员、角色、组织和时间的语义信息。",
+      "examples": [
+        "urn:ngsi-ld:Assignment:Person.ZhangSan:Welder:SideWallShop:20250908-EarlyShift",
+        "urn:ngsi-ld:Assignment:Person.LiSi:WaterSpider:A-Line:PO123",
+        "urn:ngsi-ld:Assignment:Person.WangWu:QualitySupervisor:SideWallShop:Permanent"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "const": "Assignment",
+      "description": "NGSI-LD实体类型标识，固定值为'Assignment'"
+    },
+    "assigneeId": {
+      "type": "object",
+      "description": "被指派人员的引用关系，必须指向Person类型的TwinObject实体",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:Person\\.[A-Za-z0-9._-]+$",
+          "description": "引用的Person类型TwinObject实体ID，格式：urn:ngsi-ld:TwinObject:Person.{PersonCode}",
+          "examples": [
+            "urn:ngsi-ld:TwinObject:Person.ZhangSan",
+            "urn:ngsi-ld:TwinObject:Person.EMP123"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "roleId": {
+      "type": "object",
+      "description": "指派的岗位角色引用关系，必须指向有效的Role实体",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Role:[A-Za-z0-9._-]+$",
+          "description": "引用的Role实体ID，格式：urn:ngsi-ld:Role:{RoleCode}",
+          "examples": [
+            "urn:ngsi-ld:Role:Welder",
+            "urn:ngsi-ld:Role:WaterSpider",
+            "urn:ngsi-ld:Role:QualitySupervisor"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "orgId": {
+      "type": "object",
+      "description": "所属组织单元的引用关系，限定指派的组织范围",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:OrgUnit:[A-Za-z0-9._:-]+$",
+          "description": "引用的组织单元OrgUnit实体ID，格式：urn:ngsi-ld:OrgUnit:{OrgCode}",
+          "examples": [
+            "urn:ngsi-ld:OrgUnit:SideWallShop",
+            "urn:ngsi-ld:OrgUnit:SideWallShop:A-Line",
+            "urn:ngsi-ld:OrgUnit:ProductionDept"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sceneId": {
+      "type": "object",
+      "description": "（可选）限定指派适用的特定场景。用于临时任务指派，指派仅在该场景执行期间有效。",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Scene:[A-Za-z0-9._:-]+$",
+          "description": "引用的Scene实体ID，格式：urn:ngsi-ld:Scene:{SceneCode}",
+          "examples": [
+            "urn:ngsi-ld:Scene:PO123:FrontWelding_001",
+            "urn:ngsi-ld:Scene:Batch456:QualityInspection"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "validFrom": {
+      "type": "object",
+      "description": "指派生效的起始时间，标记人员开始担任该角色的时刻",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property",
+          "description": "NGSI-LD属性类型"
+        },
+        "value": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO8601格式的UTC时间戳，例如：2025-09-08T08:00:00Z",
+          "examples": [
+            "2025-09-08T08:00:00Z",
+            "2025-01-01T00:00:00Z"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "属性值的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "validTo": {
+      "type": "object",
+      "description": "指派失效的结束时间，标记人员担任该角色的结束时刻。对于长期指派，可设定为较远的未来时间（如2030-12-31T23:59:59Z）。",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property",
+          "description": "NGSI-LD属性类型"
+        },
+        "value": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO8601格式的UTC时间戳，必须晚于validFrom",
+          "examples": [
+            "2025-09-08T16:00:00Z",
+            "2030-12-31T23:59:59Z"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "属性值的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "shiftId": {
+      "type": "object",
+      "description": "（可选）班次标识，用于区分早班、中班、晚班等轮班制度下的具体班次",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property",
+          "description": "NGSI-LD属性类型"
+        },
+        "value": {
+          "type": "string",
+          "description": "班次代码，可根据企业实际班次制度定义。常见值：EarlyShift(早班)、MiddleShift(中班)、NightShift(晚班)，或A/B/C/D班次编码",
+          "examples": [
+            "EarlyShift",
+            "NightShift",
+            "A",
+            "B",
+            "D1"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "属性值的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "qualificationRef": {
+      "type": "object",
+      "description": "（可选）人员资质引用，列出该指派要求具备或已验证的资格证书ID列表。用于确保人岗匹配的合规性。",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:Qualification:[A-Za-z0-9._-]+$",
+              "description": "单个资质证书的引用"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:Qualification:[A-Za-z0-9._-]+$"
+              },
+              "minItems": 1,
+              "description": "多个资质证书的引用列表"
+            }
+          ],
+          "examples": [
+            "urn:ngsi-ld:Qualification:SeniorWelderCert",
+            [
+              "urn:ngsi-ld:Qualification:QualityMgrCert",
+              "urn:ngsi-ld:Qualification:ISO9001Auditor"
+            ]
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "approvalRef": {
+      "type": "object",
+      "description": "（可选）指派审批记录的引用，用于追溯该指派经过的审批流程，确保指派决策的合规性和可追溯性",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Approval:[A-Za-z0-9._-]+$",
+          "description": "引用的审批单或申请单实体ID",
+          "examples": [
+            "urn:ngsi-ld:Approval:PRD-2025-08-10-WS1",
+            "urn:ngsi-ld:Approval:HR-2024-12-20-QS-Appointment"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "assignmentStatus": {
+      "type": "object",
+      "description": "当前指派状态，标识指派在其生命周期中所处的阶段",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property",
+          "description": "NGSI-LD属性类型"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "Active",
+            "Suspended",
+            "Revoked",
+            "Expired"
+          ],
+          "description": "状态枚举值：Active(生效中)、Suspended(暂停)、Revoked(已撤销)、Expired(已过期)"
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "状态观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "createdBy": {
+      "type": "object",
+      "description": "（可选）创建该指派的操作者引用，可以是人员TwinObject或另一个Assignment（如调度员的指派身份）",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:(TwinObject:Person|Assignment):[A-Za-z0-9._-]+$",
+          "description": "创建者的实体ID",
+          "examples": [
+            "urn:ngsi-ld:TwinObject:Person.Scheduler001",
+            "urn:ngsi-ld:Assignment:Person.Admin:Scheduler:Office"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关系建立的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "object",
+      "description": "（可选）备注信息，记录指派的补充说明、特殊情况或注意事项",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property",
+          "description": "NGSI-LD属性类型"
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "备注文本内容，最大长度500字符",
+          "examples": [
+            "正常排班，早班焊接岗位",
+            "临时调配支援PO123订单生产，场景结束后自动失效",
+            "长期岗位任命，经过HR审批流程"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "属性值的观测时间（可选）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "NGSI-LD标准元数据：实体创建时间（系统自动生成）"
+    },
+    "modifiedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "NGSI-LD标准元数据：实体最后修改时间（系统自动维护）"
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://factory.example.com/context/assignment-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:Assignment:Person.ZhangSan:Welder:SideWallShop:20250908-EarlyShift",
+      "type": "Assignment",
+      "assigneeId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:Person.ZhangSan"
+      },
+      "roleId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:Welder"
+      },
+      "orgId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+      },
+      "validFrom": {
+        "type": "Property",
+        "value": "2025-09-08T08:00:00Z"
+      },
+      "validTo": {
+        "type": "Property",
+        "value": "2025-09-08T16:00:00Z"
+      },
+      "shiftId": {
+        "type": "Property",
+        "value": "EarlyShift"
+      },
+      "qualificationRef": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Qualification:SeniorWelderCert"
+      },
+      "assignmentStatus": {
+        "type": "Property",
+        "value": "Active"
+      },
+      "notes": {
+        "type": "Property",
+        "value": "正常排班，早班焊接岗位"
+      }
+    }
+  ]
+}

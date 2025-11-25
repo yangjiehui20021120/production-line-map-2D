@@ -1,0 +1,470 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Person.Extension.schema.json",
+  "title": "Person 子类型特有字段扩展规范",
+  "description": "TwinObject中Person子类型的扩展字段JSON Schema定义,版本:V1.0,扩展自核心统一元模型",
+  "type": "object",
+  
+  "allOf": [
+    {
+      "description": "继承TwinObject核心元模型的所有约束",
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Person"}
+          },
+          "required": ["type", "value"]
+        }
+      }
+    },
+    {
+      "description": "Person特有扩展字段",
+      "properties": {
+        "employeeId": {
+          "description": "企业内部唯一的员工编号",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "pattern": "^EMP-[0-9]{8,}$",
+              "examples": ["EMP-20250101", "EMP-20240801"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "department": {
+          "description": "人员所属部门名称",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "workgroup": {
+          "description": "人员所属班组/小组",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "skills": {
+          "description": "人员具备的技能标签列表",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^Skill\\.[A-Za-z]+\\.(Basic|L[1-3]|Expert)$",
+                "examples": [
+                  "Skill.Welder.L2",
+                  "Skill.QualityInspect.Expert",
+                  "Skill.CraneOperation.Basic"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "certifications": {
+          "description": "人员持有的证书列表",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "cert_type": {
+                    "type": "string",
+                    "description": "证书类型名称",
+                    "examples": ["焊工证", "质量工程师证", "安全培训证"]
+                  },
+                  "cert_id": {
+                    "type": "string",
+                    "description": "证书编号"
+                  },
+                  "level": {
+                    "type": "string",
+                    "description": "证书等级(如适用)",
+                    "examples": ["初级", "中级", "高级", "L1", "L2", "L3"]
+                  },
+                  "issue_date": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "颁发日期(ISO 8601格式)"
+                  },
+                  "expiry_date": {
+                    "type": ["string", "null"],
+                    "format": "date",
+                    "description": "到期日期(ISO 8601格式),永久有效则为null"
+                  },
+                  "issuer": {
+                    "type": "string",
+                    "description": "颁发机构"
+                  }
+                },
+                "required": ["cert_type", "cert_id", "issue_date", "issuer"],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "qualificationLevel": {
+          "description": "人员综合资格等级",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Entry", "Junior", "Intermediate", "Senior", "Expert"]
+            }
+          }
+        },
+        
+        "orgUnit": {
+          "description": "人员所属组织单元的引用",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:OrgUnit:.+$"
+            }
+          },
+          "required": ["type", "object"]
+        },
+        
+        "supervisor": {
+          "description": "直接上级/主管的引用",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:Person:.+$"
+            }
+          }
+        },
+        
+        "teamRole": {
+          "description": "在团队中的角色定位",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Leader", "Member", "Trainer", "Quality Representative", "Safety Officer", "Other"]
+            }
+          }
+        },
+        
+        "employmentType": {
+          "description": "雇佣类型",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["FullTime", "PartTime", "Contract", "Temporary", "Intern"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "hireDate": {
+          "description": "入职日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date",
+              "description": "ISO 8601日期格式(YYYY-MM-DD)"
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "shiftPattern": {
+          "description": "常规班次模式",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Fixed-Day", "Fixed-Night", "Rotating-2Shift", "Rotating-3Shift", "Flexible", "OnCall"],
+              "examples": ["Fixed-Day", "Rotating-3Shift"]
+            }
+          }
+        },
+        
+        "personalDataMask": {
+          "description": "个人信息脱敏级别",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["None", "Partial", "Full", "Encrypted"],
+              "default": "Full"
+            }
+          }
+        },
+        
+        "consentLevel": {
+          "description": "数据使用授权级别",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Essential", "Analytics", "Marketing", "Research"],
+              "default": "Essential"
+            }
+          }
+        }
+      },
+      
+      "required": [
+        "employeeId",
+        "department",
+        "orgUnit",
+        "employmentType"
+      ]
+    }
+  ],
+  
+  "examples": [
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-20250101",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-20250101"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接操作工,负责侧墙焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:WeldOperator"
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {"name": "attendance_status", "value": "在岗"},
+          {"name": "current_shift", "value": "早班"},
+          {"name": "current_station", "value": "ST-GZ-03"}
+        ]
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.Certified"
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+abc123...",
+          "real_name_hash": "5d41402abc4b2a76b9719d911017c592"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-20250101"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "A班焊接组"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.QualityInspect.L1",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "certifications": {
+        "type": "Property",
+        "value": [
+          {
+            "cert_type": "焊工证",
+            "cert_id": "WLD-2024-001234",
+            "level": "L2",
+            "issue_date": "2024-01-15",
+            "expiry_date": "2029-01-15",
+            "issuer": "人社部职业技能鉴定中心"
+          },
+          {
+            "cert_type": "安全培训证",
+            "cert_id": "SAFE-2024-5678",
+            "issue_date": "2024-03-01",
+            "expiry_date": "2025-03-01",
+            "issuer": "公司安全部"
+          }
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWallShop:A-Line"
+      },
+      "supervisor": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:Person:EMP-20240801"
+      },
+      "teamRole": {
+        "type": "Property",
+        "value": "Member"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-15"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Analytics"
+      }
+    }
+  ],
+  
+  "definitions": {
+    "SkillPattern": {
+      "description": "技能编码格式: Skill.{Domain}.{Level}",
+      "type": "string",
+      "pattern": "^Skill\\.[A-Za-z]+\\.(Basic|L[1-3]|Expert)$",
+      "examples": [
+        "Skill.Welder.L2",
+        "Skill.QualityInspect.Expert",
+        "Skill.CraneOperation.Basic",
+        "Skill.ProcessImprovement.L3"
+      ]
+    },
+    
+    "CertificationObject": {
+      "description": "证书对象结构",
+      "type": "object",
+      "properties": {
+        "cert_type": {
+          "type": "string",
+          "description": "证书类型名称"
+        },
+        "cert_id": {
+          "type": "string",
+          "description": "证书编号"
+        },
+        "level": {
+          "type": "string",
+          "description": "证书等级(如适用)"
+        },
+        "issue_date": {
+          "type": "string",
+          "format": "date",
+          "description": "颁发日期"
+        },
+        "expiry_date": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "到期日期,永久有效则为null"
+        },
+        "issuer": {
+          "type": "string",
+          "description": "颁发机构"
+        }
+      },
+      "required": ["cert_type", "cert_id", "issue_date", "issuer"]
+    },
+    
+    "StateAttributes": {
+      "description": "Person对象的典型状态属性",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "attendance_status",
+              "current_shift",
+              "current_station",
+              "current_task",
+              "work_status"
+            ]
+          },
+          "value": {
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"},
+              {"type": "boolean"}
+            ]
+          }
+        }
+      }
+    }
+  },
+  
+  "additionalProperties": true,
+  
+  "$comment": "Schema遵循NGSI-LD v1.6.1规范,所有Property/Relationship类型均采用标准封装格式"
+}

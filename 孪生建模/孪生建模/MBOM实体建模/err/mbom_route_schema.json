@@ -1,0 +1,530 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/MBOM.Route.schema.json",
+  "title": "MBOM Route Entity Schema",
+  "description": "工艺路线实体元模型 - 定义产品的完整制造工艺路线 (mbomType=Route)",
+  "type": "object",
+  
+  "required": [
+    "id",
+    "type",
+    "mbomType",
+    "routeCode",
+    "routeName",
+    "lineCode",
+    "partOfMBOM",
+    "consistsOfTakts"
+  ],
+  
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "NGSI-LD上下文定义",
+      "examples": [
+        [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://example.com/contexts/mbom-context.jsonld"
+        ]
+      ]
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:MBOM:RT_[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$",
+      "description": "Route实体唯一标识符,格式: urn:ngsi-ld:MBOM:RT_{routeCode}:{version}",
+      "examples": [
+        "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0",
+        "urn:ngsi-ld:MBOM:RT_M000004803474:V1.0"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "MBOM",
+      "description": "实体类型固定为MBOM"
+    },
+    
+    "mbomType": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "const": "Route",
+          "description": "子类型固定为Route,标识这是工艺路线实体"
+        }
+      },
+      "description": "MBOM子类型标识"
+    },
+    
+    "routeCode": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "pattern": "^RT_[A-Za-z0-9_-]+$",
+          "description": "路线编码,通常格式为 RT_{productCode}"
+        }
+      },
+      "description": "工艺路线业务编码",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "RT_M000004670327"
+        }
+      ]
+    },
+    
+    "routeName": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "description": "工艺路线名称",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "M000004670327侧墙工艺路线"
+        }
+      ]
+    },
+    
+    "routeVersion": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[Vv][0-9]+(\\.[0-9]+)*$"
+        }
+      },
+      "description": "路线版本号,通常与MBOM版本号保持一致"
+    },
+    
+    "lineCode": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        }
+      },
+      "description": "所属产线编码,对应实际生产线标识",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "TS361202"
+        }
+      ]
+    },
+    
+    "status": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["draft", "active", "retired", "deprecated"],
+          "description": "draft=草稿; active=激活使用中; retired=已退役; deprecated=已弃用"
+        }
+      },
+      "description": "路线状态"
+    },
+    
+    "effectiveFrom": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "required": ["@type", "@value"],
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "DateTime"
+            },
+            "@value": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "description": "路线生效起始时间"
+    },
+    
+    "effectiveTo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "required": ["@type", "@value"],
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "DateTime"
+            },
+            "@value": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "description": "路线生效结束时间"
+    },
+    
+    "partOfMBOM": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$",
+          "description": "所属MBOM实体ID"
+        }
+      },
+      "description": "反向关系:指向所属的MBOM根实体 (N:1)。双向关系:MBOM.hasRoute指向此实体",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:MBOM:M000004670327:V1.0"
+        }
+      ]
+    },
+    
+    "consistsOfTakts": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "包含的Takt实体ID列表,按taktSeq顺序排列"
+        }
+      },
+      "description": "正向关系:指向包含的所有Takt实体 (1:N)。双向关系:Takt.partOfRoute指回此实体",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:MBOM:M000004670327:T01",
+            "urn:ngsi-ld:MBOM:M000004670327:T02",
+            "urn:ngsi-ld:MBOM:M000004670327:T03"
+          ]
+        }
+      ]
+    },
+    
+    "totalCycleTime": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "总周期时间数值"
+        },
+        "unitCode": {
+          "type": "string",
+          "enum": ["MIN", "SEC", "HOUR"],
+          "default": "MIN",
+          "description": "时间单位: MIN=分钟, SEC=秒, HOUR=小时"
+        }
+      },
+      "description": "路线总周期时间,所有Takt的targetCT之和",
+      "examples": [
+        {
+          "type": "Property",
+          "value": 4620,
+          "unitCode": "MIN"
+        }
+      ]
+    },
+    
+    "taktCount": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "路线包含的节拍总数"
+        }
+      },
+      "description": "节拍总数,用于快速查询"
+    },
+    
+    "requiredMeasurements": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["modalityCode", "ruleId", "timing"],
+            "properties": {
+              "modalityCode": {
+                "type": "string",
+                "description": "测量模态代码,引用Modality Catalog"
+              },
+              "ruleId": {
+                "type": "string",
+                "description": "质量规则ID,引用Rule Catalog"
+              },
+              "timing": {
+                "type": "string",
+                "enum": ["pre", "in", "post"],
+                "description": "测量时机: pre=之前, in=过程中, post=之后"
+              },
+              "aggregator": {
+                "type": "string",
+                "enum": ["mean", "max", "min", "sum", "p95"],
+                "description": "聚合方式"
+              },
+              "capturedByResourceClass": {
+                "type": "string",
+                "description": "采集资源类别,如MES_SYSTEM, SENSOR等"
+              },
+              "description": {
+                "type": "string",
+                "description": "测量描述"
+              }
+            }
+          }
+        }
+      },
+      "description": "Route级测量要求,定义整体KPI如总周期时间、良品率等",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            {
+              "modalityCode": "TotalCycleTime",
+              "ruleId": "RULE_TOTAL_CT_LT_4620MIN",
+              "timing": "post",
+              "description": "整条路线总周期时间"
+            },
+            {
+              "modalityCode": "OverallYieldRate",
+              "ruleId": "RULE_YIELD_GT_95PCT",
+              "timing": "post",
+              "aggregator": "mean",
+              "description": "整体良品率"
+            }
+          ]
+        }
+      ]
+    },
+    
+    "allowedStations": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Station:ST-[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "路线允许使用的工位列表,引用Station实体"
+    },
+    
+    "allowedBuffers": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Buffer:BF-[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "路线允许使用的缓冲区列表,引用Buffer实体"
+    },
+    
+    "routeConstraints": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "maxParallelScenes": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "最大并行场景数,控制WIP上限"
+            },
+            "minOperatorCount": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "最小操作人员数量"
+            },
+            "environmentRequirements": {
+              "type": "object",
+              "properties": {
+                "temperature": {
+                  "type": "object",
+                  "properties": {
+                    "min": { "type": "number" },
+                    "max": { "type": "number" },
+                    "unit": { "type": "string", "enum": ["C", "F"] }
+                  }
+                },
+                "humidity": {
+                  "type": "object",
+                  "properties": {
+                    "min": { "type": "number" },
+                    "max": { "type": "number" },
+                    "unit": { "type": "string", "const": "%" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "description": "路线级约束条件"
+    },
+    
+    "createdBy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:(Person|System):[A-Za-z0-9_-]+$"
+        }
+      },
+      "description": "创建者"
+    },
+    
+    "modifiedBy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:(Person|System):[A-Za-z0-9_-]+$"
+        }
+      },
+      "description": "最后修改者"
+    },
+    
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "description": "元数据信息"
+    }
+  },
+  
+  "additionalProperties": false
+}

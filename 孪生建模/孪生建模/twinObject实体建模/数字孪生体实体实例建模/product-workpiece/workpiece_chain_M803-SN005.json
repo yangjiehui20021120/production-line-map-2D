@@ -1,0 +1,2540 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T01-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T01_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T01-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T01-P0010_T01-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T08:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 2
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T01-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T01_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T01-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T01-P0020_T01-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T10:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 5
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0030-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0030-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T01-P0030"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01-P0030"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T01_P0030"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T01-P0030"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T01-P0030_T01-P0030"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T12:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 7
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T01"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T01"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T01"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T01_T01"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T14:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 10
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-P0030-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T02-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T02_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T02-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T02-P0010_T02-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T16:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 13
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T01-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T02-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T02_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T02-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T02-P0020_T02-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T18:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 15
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0030-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0030-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T02-P0030"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02-P0030"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T02_P0030"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T02-P0030"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T02-P0030_T02-P0030"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T20:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 18
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0040-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0040-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T02-P0040"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02-P0040"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T02_P0040"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T02-P0040"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T02-P0040_T02-P0040"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-28T22:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 21
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0030-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T02"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T02"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T02"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T02_T02"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T00:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 23
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-P0040-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T03-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T03-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T03_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T03-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T03-P0010_T03-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T02:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 26
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T02-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T03-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T03-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T03_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T03-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T03-P0020_T03-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T04:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 28
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T03"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T03"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T03"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T03"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T03_T03"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T06:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 31
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T04-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T04-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T04_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T04-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T04-P0010_T04-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T08:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 34
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T03-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T04-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T04-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T04_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T04-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T04-P0020_T04-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T10:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 36
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T04"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T04"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T04"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T04"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T04_T04"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T12:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 39
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T05-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T05-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T05_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T05-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T05-P0010_T05-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T14:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 42
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T04-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T05-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T05-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T05_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T05-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T05-P0020_T05-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T16:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 44
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T05"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T05"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T05"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T05"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T05_T05"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T18:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 47
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T06-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T06-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T06_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T06-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T06-P0010_T06-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T20:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 50
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T05-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T06-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T06-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T06_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T06-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T06-P0020_T06-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-29T22:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 52
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T06"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T06"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T06"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T06"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T06_T06"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T00:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 55
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T07-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T07-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T07-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T07-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T07_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T07-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T07-P0010_T07-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T02:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 57
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T06-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T07-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T07-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T07"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T07"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T07"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T07"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T07_T07"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T04:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 60
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T07-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T08-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T08_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T08-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T08-P0010_T08-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T06:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 63
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T07-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T08-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T08_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T08-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T08-P0020_T08-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T08:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 65
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0030-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0030-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T08-P0030"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08-P0030"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T08_P0030"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T08-P0030"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T08-P0030_T08-P0030"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T10:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 68
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0040-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0040-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T08-P0040"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08-P0040"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T08_P0040"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T08-P0040"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T08-P0040_T08-P0040"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T12:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 71
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0030-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0050-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0050-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T08-P0050"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08-P0050"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T08_P0050"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T08-P0050"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T08-P0050_T08-P0050"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T14:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 73
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0040-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T08"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T08"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T08"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T08_T08"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T16:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 76
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-P0050-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T09-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T09-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T09_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T09-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T09-P0010_T09-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T18:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 78
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T08-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T09-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T09-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T09_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T09-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T09-P0020_T09-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T20:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 81
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T09"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T09"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T09"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T09"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T09_T09"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-30T22:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 84
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T10-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T10-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T10_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T10-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T10-P0010_T10-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-31T00:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 86
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T09-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T10-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T10-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T10_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T10-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T10-P0020_T10-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-31T02:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 89
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T10"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T10"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T10"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T10"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T10_T10"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-31T04:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 92
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-P0020-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-P0010-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-P0010-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T11-P0010"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T11-P0010"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T11_P0010"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T11-P0010"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T11-P0010_T11-P0010"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-31T06:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 94
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T10-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-P0020-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-P0020-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T11-P0020"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T11-P0020"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T11_P0020"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T11-P0020"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T11-P0020_T11-P0020"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-31T08:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 97
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "InProgress"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-P0010-Output"
+    },
+    "successorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-Output",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Workpiece"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005-T11"
+    },
+    "basedOnMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T11"
+    },
+    "mbomItemId": {
+      "type": "Property",
+      "value": "item_T11"
+    },
+    "finalProductId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN005"
+    },
+    "granularityLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "granularityContext": {
+      "type": "Property",
+      "value": {
+        "routeCode": "ROUTE_M000004803474",
+        "mbomNode": "T11"
+      }
+    },
+    "createdByScene": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Scene_M803-SN005-T11_T11"
+    },
+    "creationTimestamp": {
+      "type": "Property",
+      "value": "2025-10-31T10:00:00Z"
+    },
+    "completionRate": {
+      "type": "Property",
+      "value": 100
+    },
+    "processStatus": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "predecessorWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-P0020-Output"
+    }
+  }
+]

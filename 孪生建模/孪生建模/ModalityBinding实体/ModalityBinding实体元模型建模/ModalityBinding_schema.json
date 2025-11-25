@@ -1,0 +1,378 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://digitaltwins.rail.com/schemas/ModalityBinding.schema.json",
+  "title": "ModalityBinding",
+  "description": "模态绑定实体 - 将Modality数据字典绑定到具体TwinObject上，定义该设备上该数据点的具体采集配置",
+  "type": "object",
+  "required": ["id", "type", "twinId", "modalityId", "pointRef"],
+  
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:ModalityBinding:[A-Za-z0-9_:-]+$",
+      "description": "ModalityBinding实体的全局唯一标识符，建议格式：urn:ngsi-ld:ModalityBinding:{TwinName}:{ModalityName}:{Discriminator}:v{Version}",
+      "examples": [
+        "urn:ngsi-ld:ModalityBinding:WeldingRobot01:WeldingCurrent:v1",
+        "urn:ngsi-ld:ModalityBinding:CNCMachine01:DriveTemp:X_Main:v1",
+        "urn:ngsi-ld:ModalityBinding:Station01:AmbientTemp:TopLeft:v1"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "ModalityBinding",
+      "description": "实体类型标识，固定为ModalityBinding"
+    },
+    
+    "@context": {
+      "description": "NGSI-LD上下文链接",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1
+        }
+      ],
+      "default": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]
+    },
+    
+    "twinId": {
+      "type": "object",
+      "description": "关联的TwinObject（NGSI-LD Relationship，必填）",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:[A-Za-z0-9_-]+$",
+          "description": "该绑定所属的TwinObject的URN，表示在哪个设备/对象上采集数据"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "modalityId": {
+      "type": "object",
+      "description": "关联的Modality（NGSI-LD Relationship，必填）",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Modality:[A-Za-z0-9_-]+$",
+          "description": "该绑定实例化的Modality的URN，表示采集什么数据"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "pointRef": {
+      "type": "object",
+      "description": "数据点引用（NGSI-LD Property，必填）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "具体的数据采集点位引用，如OPC UA节点、Modbus寄存器地址、MQTT主题、HTTP API端点等",
+          "examples": [
+            "opc.tcp://10.0.0.5:4840/ns=2;s=Robot/Process/WeldCurrent",
+            "modbus://192.168.1.100:502/holding/1001",
+            "mqtt://broker.local/sensors/temp01/value",
+            "http://api.local/v1/measurements/pressure"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "sampleRate": {
+      "type": "object",
+      "description": "采样频率（NGSI-LD Property，强烈推荐）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "采样周期或频率。支持时间间隔（如100ms, 1s, 10s）或特殊值（如byStep表示按工步触发, onEvent表示事件触发）",
+          "examples": ["100ms", "1s", "10s", "byStep", "onEvent", "continuous"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "unit": {
+      "type": "object",
+      "description": "计量单位覆盖（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "如果该绑定采集的数据单位与Modality定义的默认单位不同，可在此覆盖。例如传感器返回毫安(mA)，但Modality定义为安培(A)",
+          "examples": ["A", "mA", "V", "mV", "°C", "°F", "mm", "inch", "rpm", "rad/s"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "axis": {
+      "type": "object",
+      "description": "轴标识（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "对于多轴设备，标识该绑定对应的轴。用于区分同一设备上同一Modality的多个采集点",
+          "examples": ["X", "Y", "Z", "A", "B", "C", "Spindle", "A1"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "location": {
+      "type": "object",
+      "description": "位置标识（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "对于多点采集，标识该传感器的具体位置或安装位置。用于区分同一设备上同一Modality的多个采集点",
+          "examples": ["Main", "Forward", "Slave", "ForwardSlave", "TopLeft", "TopRight", "BottomLeft", "BottomRight", "Center"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "bindingVersion": {
+      "type": "object",
+      "description": "绑定配置版本（NGSI-LD Property，强烈推荐）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "该绑定配置的语义化版本号，遵循SemVer规范。用于追踪配置变更历史",
+          "examples": ["1.0.0", "1.2.0", "2.0.0"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "实体创建时间（NGSI-LD标准属性）"
+    },
+    
+    "modifiedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "实体最后修改时间（NGSI-LD标准属性）"
+    }
+  },
+  
+  "additionalProperties": false,
+  
+  "examples": [
+    {
+      "id": "urn:ngsi-ld:ModalityBinding:WeldingRobot01:WeldingCurrent:v1",
+      "type": "ModalityBinding",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "twinId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:WeldingRobot01"
+      },
+      "modalityId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+      },
+      "pointRef": {
+        "type": "Property",
+        "value": "opc.tcp://10.0.0.5:4840/ns=2;s=Robot/Process/WeldCurrent"
+      },
+      "sampleRate": {
+        "type": "Property",
+        "value": "100ms"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "bindingVersion": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:ModalityBinding:CNCMachine01:DriveTemp:X_Main:v1",
+      "type": "ModalityBinding",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "twinId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:CNCMachine01"
+      },
+      "modalityId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:DriveTemp"
+      },
+      "pointRef": {
+        "type": "Property",
+        "value": "opc.tcp://10.0.0.10:4840/ns=2;s=CNC/Drive/X/Main/Temperature"
+      },
+      "sampleRate": {
+        "type": "Property",
+        "value": "10s"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "°C"
+      },
+      "axis": {
+        "type": "Property",
+        "value": "X"
+      },
+      "location": {
+        "type": "Property",
+        "value": "Main"
+      },
+      "bindingVersion": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:ModalityBinding:Station01:AmbientTemp:TopLeft:v1",
+      "type": "ModalityBinding",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "twinId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:Station01"
+      },
+      "modalityId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:AmbientTemp_Auto"
+      },
+      "pointRef": {
+        "type": "Property",
+        "value": "opc.tcp://10.0.0.20:4840/ns=2;s=Station/Env/Temp/TopLeft"
+      },
+      "sampleRate": {
+        "type": "Property",
+        "value": "1s"
+      },
+      "location": {
+        "type": "Property",
+        "value": "TopLeft"
+      },
+      "bindingVersion": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:ModalityBinding:LaserScanner01:ProfileOffset:v2",
+      "type": "ModalityBinding",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "twinId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:LaserScanner01"
+      },
+      "modalityId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:ProfileOffset"
+      },
+      "pointRef": {
+        "type": "Property",
+        "value": "opc.tcp://10.0.0.6:4840/ns=1;s=Scanner/Result/NewProfileOffset"
+      },
+      "sampleRate": {
+        "type": "Property",
+        "value": "byStep"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "bindingVersion": {
+        "type": "Property",
+        "value": "2.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:ModalityBinding:HandWelder01:WeldingCurrent:v1",
+      "type": "ModalityBinding",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "twinId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:HandWelder01"
+      },
+      "modalityId": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+      },
+      "pointRef": {
+        "type": "Property",
+        "value": "opc.tcp://10.0.0.8:4840/ns=2;s=Welder/CurrentActual"
+      },
+      "sampleRate": {
+        "type": "Property",
+        "value": "100ms"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "bindingVersion": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    }
+  ]
+}

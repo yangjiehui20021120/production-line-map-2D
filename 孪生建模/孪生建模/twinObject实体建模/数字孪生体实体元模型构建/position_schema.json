@@ -1,0 +1,399 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Position.schema.json",
+  "title": "TwinObject Position子类型扩展字段规范",
+  "description": "台位(Position)子类型的特有字段JSON Schema定义,版本:V1.0,扩展TwinObject统一元模型",
+  "type": "object",
+  
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Position"}
+          },
+          "required": ["type", "value"]
+        }
+      },
+      "required": ["subType"]
+    }
+  ],
+  
+  "properties": {
+    "belongsToStation": {
+      "description": "所属工位(必填)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:Station:.+$"
+        }
+      },
+      "required": ["type", "object"]
+    },
+    
+    "positionIndex": {
+      "description": "台位编号(工位内唯一)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "pattern": "^P[0-9]+$|^[A-Z][0-9]+$"
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "positionType": {
+      "description": "台位类型",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "WorkTable",
+            "LoadingPoint",
+            "UnloadingPoint",
+            "InspectionPoint",
+            "FixturePoint",
+            "BufferPoint",
+            "HandoverPoint"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "relativeOffset": {
+      "description": "相对工位的坐标偏移",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "offsetX": {"type": "number"},
+            "offsetY": {"type": "number"},
+            "offsetZ": {"type": "number"},
+            "unit": {"type": "string", "default": "mm"}
+          },
+          "required": ["offsetX", "offsetY"]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "capacityWip": {
+      "description": "在制品容量(件数)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    
+    "physicalDimension": {
+      "description": "物理尺寸",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "length": {"type": "number"},
+            "width": {"type": "number"},
+            "height": {"type": "number"},
+            "unit": {"type": "string", "default": "mm"}
+          }
+        }
+      }
+    },
+    
+    "mountedEquipment": {
+      "description": "安装的设备/工装",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Relationship"},
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:TwinObject:.+$"
+          }
+        },
+        "required": ["type", "object"]
+      }
+    },
+    
+    "supportedOperations": {
+      "description": "支持的操作类型",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Loading",
+              "Unloading",
+              "Welding",
+              "Assembly",
+              "Inspection",
+              "Clamping",
+              "Positioning",
+              "Waiting"
+            ]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "accessDirection": {
+      "description": "可接近方向",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Front", "Back", "Left", "Right", "Top", "Bottom"]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "occupancyStatus": {
+      "description": "占用状态配置",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "trackOccupancy": {
+              "type": "boolean",
+              "description": "是否追踪占用状态"
+            },
+            "allowMultipleWip": {
+              "type": "boolean",
+              "description": "是否允许多件在制品"
+            },
+            "defaultStatus": {
+              "type": "string",
+              "enum": ["Empty", "Occupied", "Reserved", "Blocked"],
+              "description": "默认状态"
+            }
+          }
+        }
+      }
+    },
+    
+    "workpieceConstraint": {
+      "description": "工件约束",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "allowedTypes": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "允许的工件类型"
+            },
+            "maxWeight": {
+              "type": "number",
+              "description": "最大承重(kg)"
+            },
+            "maxDimension": {
+              "type": "object",
+              "properties": {
+                "length": {"type": "number"},
+                "width": {"type": "number"},
+                "height": {"type": "number"},
+                "unit": {"type": "string", "default": "mm"}
+              },
+              "description": "最大尺寸"
+            }
+          }
+        }
+      }
+    },
+    
+    "safetyZone": {
+      "description": "安全区域定义",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "description": "安全半径(mm)"
+            },
+            "height": {
+              "type": "number",
+              "description": "安全高度(mm)"
+            },
+            "restrictedAccess": {
+              "type": "boolean",
+              "description": "是否限制进入"
+            }
+          }
+        }
+      }
+    },
+    
+    "sequenceInStation": {
+      "description": "在工位内的工序顺序",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    
+    "transferConnections": {
+      "description": "物流连接关系",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "upstreamPositions": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "上游台位ID列表"
+            },
+            "downstreamPositions": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "下游台位ID列表"
+            },
+            "transferMethod": {
+              "type": "string",
+              "enum": ["Manual", "Robot", "Conveyor", "Crane", "AGV"],
+              "description": "转运方式"
+            },
+            "transferTime": {
+              "type": "number",
+              "description": "标准转运时间(秒)"
+            }
+          }
+        }
+      }
+    },
+    
+    "ergonomics": {
+      "description": "人机工程学信息",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "workingHeight": {
+              "type": "number",
+              "description": "作业高度(mm)"
+            },
+            "reachDistance": {
+              "type": "number",
+              "description": "可及距离(mm)"
+            },
+            "posture": {
+              "type": "string",
+              "enum": ["Standing", "Sitting", "Bending", "Mixed"],
+              "description": "作业姿势"
+            },
+            "fatigueLevel": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High"],
+              "description": "疲劳度评级"
+            }
+          }
+        }
+      }
+    },
+    
+    "visualMarking": {
+      "description": "视觉标识",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "floorMarking": {
+              "type": "string",
+              "description": "地面标识"
+            },
+            "labelText": {
+              "type": "string",
+              "description": "标签文本"
+            },
+            "colorCode": {
+              "type": "string",
+              "description": "颜色编码"
+            },
+            "signageRef": {
+              "type": "string",
+              "description": "标识牌参考"
+            }
+          }
+        }
+      }
+    },
+    
+    "cycleTimeTarget": {
+      "description": "目标节拍时间",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "standard": {
+              "type": "number",
+              "description": "标准时间(秒)"
+            },
+            "target": {
+              "type": "number",
+              "description": "目标时间(秒)"
+            },
+            "tolerance": {
+              "type": "number",
+              "description": "容差(±秒)"
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "required": [
+    "belongsToStation",
+    "positionIndex",
+    "positionType",
+    "relativeOffset"
+  ]
+}

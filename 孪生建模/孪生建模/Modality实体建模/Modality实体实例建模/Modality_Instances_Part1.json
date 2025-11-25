@@ -1,0 +1,890 @@
+{
+  "$schema": "https://digitaltwins.rail.com/schemas/Modality.schema.json",
+  "description": "动车侧墙产线 Modality 实体实例集合 - Part 1: 运动速度类和位姿类",
+  "version": "1.0.0",
+  "createdAt": "2025-10-27T07:20:00Z",
+  "modalities": [
+    {
+      "id": "urn:ngsi-ld:Modality:RobotLinearSpeed",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "机器人线速度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "机器人末端执行器的线性运动速度，从机器人控制器自动采集"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm/s"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 500]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±1mm/s"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "用于打磨和定位过程的速度控制，不同设备通过ModalityBinding区分"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:MotorRotationSpeed",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "电机转速"
+      },
+      "description": {
+        "type": "Property",
+        "value": "电机或主轴的旋转速度，实时连续采集"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "rpm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 6000]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±10rpm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "包括焊接电机速度和主轴转速，通过ModalityBinding区分电机类型"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WireFeedSpeed_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "送丝速度(自动采集)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程中的送丝速度，从焊机控制系统自动采集"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "m/min"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 20]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1 m/min"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "relatedModalities": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+        },
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WeldingVoltage_Auto"
+        }
+      ],
+      "businessNote": {
+        "type": "Property",
+        "value": "送丝速度需与焊接电流、电压协同控制以保证焊接质量"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingSpeed",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接速度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程的移动速度，需与电流/电压协同控制"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm/s"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [3, 8]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.5mm/s"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "CRH侧墙标准焊接速度范围3-8mm/s"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:ToolLinearSpeed",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "刀具线速度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "切削刀具的线速度"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "m/min"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [200, 300]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±5 m/min"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "侧墙加工中心硬质合金刀片标准速度范围200-300m/min"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:FeedRate",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "进给速度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "加工过程中刀具或工件的移动速度"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm/min"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 5000]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±10mm/min"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "直接影响加工效率和表面质量"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotTCPPose",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "机器人TCP位姿"
+      },
+      "description": {
+        "type": "Property",
+        "value": "机器人工具中心点的6自由度位姿{X,Y,Z,A,B,C}"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Object"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "Position: mm; Orientation: deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "TCP位姿用于轨迹记录和路径验证，包含位置(X,Y,Z)和姿态(A,B,C)两部分"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotBaseX",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "机器人X轴姿态"
+      },
+      "description": {
+        "type": "Property",
+        "value": "机器人基座坐标系绕X轴旋转角度(Roll)"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-180, 180]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "用于防止线缆缠绕和监控机器人姿态安全"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotBaseY",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "机器人Y轴姿态"
+      },
+      "description": {
+        "type": "Property",
+        "value": "机器人基座坐标系绕Y轴旋转角度(Pitch)"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-180, 180]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotBaseZ",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "机器人Z轴姿态"
+      },
+      "description": {
+        "type": "Property",
+        "value": "机器人基座坐标系绕Z轴旋转角度(Yaw)"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-180, 180]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotToolEX",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "工具坐标系X姿态"
+      },
+      "description": {
+        "type": "Property",
+        "value": "工具坐标系绕X轴旋转角度"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-180, 180]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotToolEY",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "工具坐标系Y姿态"
+      },
+      "description": {
+        "type": "Property",
+        "value": "工具坐标系绕Y轴旋转角度"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-180, 180]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotToolEZ",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "工具坐标系Z姿态"
+      },
+      "description": {
+        "type": "Property",
+        "value": "工具坐标系绕Z轴旋转角度"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-180, 180]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.1deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:RobotRailPosition",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "机器人导轨位置"
+      },
+      "description": {
+        "type": "Property",
+        "value": "机器人在导轨上的线性定位坐标"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 10000]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±1mm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "导轨行程约10米，用于扩展机器人工作范围"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:AxisAngle",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "轴旋转角度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "数控机床旋转轴的角度位置"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "deg"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 360]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.01deg"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "包括主轴角度和A1/B/C旋转轴角度，通过ModalityBinding区分轴类型"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    }
+  ]
+}

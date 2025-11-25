@@ -1,0 +1,552 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.AutoEquipment.schema.json",
+  "title": "AutoEquipment子类型特有字段扩展",
+  "description": "自动化生产设备(机器人、焊机、变位机等)的特有字段定义,版本V1.0",
+  
+  "type": "object",
+  "required": ["deviceType"],
+  
+  "properties": {
+    
+    "deviceType": {
+      "description": "设备细分类型(必填)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "Robot",
+            "Welder", 
+            "Positioner",
+            "CNC",
+            "PressMachine",
+            "Laser",
+            "Other"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "controllerType": {
+      "description": "控制器类型",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "examples": ["ABB_IRC5", "FANUC_R-30iB", "KUKA_KRC4", "Siemens_840D"]
+        }
+      }
+    },
+    
+    "controllerVersion": {
+      "description": "控制器软件版本",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "axes": {
+      "description": "轴数(机器人/CNC)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "unitCode": {"const": "axes"}
+      }
+    },
+    
+    "payload": {
+      "description": "额定负载(机器人/变位机)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {
+          "type": "string",
+          "enum": ["kg", "ton"]
+        }
+      }
+    },
+    
+    "reach": {
+      "description": "工作半径(机器人)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {"const": "mm"}
+      }
+    },
+    
+    "repeatability": {
+      "description": "重复定位精度(机器人/CNC)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {"const": "mm"}
+      }
+    },
+    
+    "maxSpeed": {
+      "description": "最大运行速度",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {
+          "type": "string",
+          "enum": ["mm/s", "deg/s", "rpm"]
+        }
+      }
+    },
+    
+    "workEnvelope": {
+      "description": "工作包络空间",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["cylindrical", "spherical", "rectangular"]
+            },
+            "radius_mm": {"type": "number"},
+            "height_mm": {"type": "number"},
+            "length_mm": {"type": "number"},
+            "width_mm": {"type": "number"},
+            "depth_mm": {"type": "number"}
+          }
+        }
+      }
+    },
+    
+    "powerRating": {
+      "description": "额定功率",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {"const": "kW"}
+      }
+    },
+    
+    "voltageRating": {
+      "description": "额定电压",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {"const": "V"}
+      }
+    },
+    
+    "currentRange": {
+      "description": "电流范围(焊机)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"},
+            "unit": {"const": "A"}
+          },
+          "required": ["min", "max"]
+        }
+      }
+    },
+    
+    "weldingProcessTypes": {
+      "description": "支持的焊接工艺类型(焊机)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["MIG", "MAG", "TIG", "Spot", "Laser", "Plasma"]
+          }
+        }
+      }
+    },
+    
+    "rotationAxisCount": {
+      "description": "旋转轴数量(变位机)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      }
+    },
+    
+    "tiltAngleRange": {
+      "description": "倾斜角度范围(变位机)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number", "minimum": -360, "maximum": 360},
+            "max": {"type": "number", "minimum": -360, "maximum": 360},
+            "unit": {"const": "degrees"}
+          }
+        }
+      }
+    },
+    
+    "tableSize": {
+      "description": "工作台尺寸(变位机/CNC)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "diameter_mm": {"type": "number"},
+            "length_mm": {"type": "number"},
+            "width_mm": {"type": "number"}
+          }
+        }
+      }
+    },
+    
+    "toolMagazineCapacity": {
+      "description": "刀库容量(CNC)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unitCode": {"const": "tools"}
+      }
+    },
+    
+    "spindleSpeedRange": {
+      "description": "主轴转速范围(CNC)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"},
+            "unit": {"const": "rpm"}
+          }
+        }
+      }
+    },
+    
+    "protectionLevel": {
+      "description": "防护等级",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "pattern": "^IP[0-9]{2}$",
+          "examples": ["IP54", "IP65"]
+        }
+      }
+    },
+    
+    "mountingType": {
+      "description": "安装方式",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "floor",
+            "ceiling",
+            "wall",
+            "shelf",
+            "rail",
+            "mobile"
+          ]
+        }
+      }
+    },
+    
+    "coolingMethod": {
+      "description": "冷却方式",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": ["air", "water", "oil", "natural"]
+        }
+      }
+    },
+    
+    "programmingLanguages": {
+      "description": "支持的编程语言",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "examples": [["RAPID", "KRL", "G-Code"]]
+        }
+      }
+    },
+    
+    "communicationProtocols": {
+      "description": "通信协议",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "OPC-UA",
+              "Modbus-TCP",
+              "EtherNet/IP",
+              "PROFINET",
+              "MTConnect",
+              "Proprietary"
+            ]
+          }
+        }
+      }
+    },
+    
+    "safetyFeatures": {
+      "description": "安全功能",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "EmergencyStop",
+              "SafetyZone",
+              "CollisionDetection",
+              "SpeedLimiting",
+              "SafetyPLC",
+              "LightCurtain",
+              "TwoHandControl"
+            ]
+          }
+        }
+      }
+    },
+    
+    "maintenanceInterval": {
+      "description": "保养周期",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "value": {"type": "number", "minimum": 0},
+            "unit": {
+              "type": "string",
+              "enum": ["hours", "days", "cycles"]
+            }
+          }
+        }
+      }
+    },
+    
+    "certifications": {
+      "description": "认证标准",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": ["CE", "ISO9001", "RoHS", "UL", "CCC"]
+          }
+        }
+      }
+    },
+    
+    "manufactureDate": {
+      "description": "生产日期",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    
+    "installationDate": {
+      "description": "安装日期",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    
+    "warrantyExpiration": {
+      "description": "质保到期日",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    
+    "energyEfficiencyClass": {
+      "description": "能效等级",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": ["A+++", "A++", "A+", "A", "B", "C", "D"]
+        }
+      }
+    },
+    
+    "operatingTemperatureRange": {
+      "description": "工作温度范围",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"},
+            "unit": {"const": "Celsius"}
+          }
+        }
+      }
+    },
+    
+    "weight": {
+      "description": "设备自重",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unitCode": {"const": "kg"}
+      }
+    },
+    
+    "dimensions": {
+      "description": "外形尺寸",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "length_mm": {"type": "number"},
+            "width_mm": {"type": "number"},
+            "height_mm": {"type": "number"}
+          }
+        }
+      }
+    },
+    
+    "integratedEquipment": {
+      "description": "集成的附属设备",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Relationship"},
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:TwinObject:.+$"
+          }
+        }
+      }
+    },
+    
+    "maintenanceProvider": {
+      "description": "维保服务商",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "spareParts": {
+      "description": "常用备件清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "partName": {"type": "string"},
+              "partNumber": {"type": "string"},
+              "supplier": {"type": "string"},
+              "stockLocation": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

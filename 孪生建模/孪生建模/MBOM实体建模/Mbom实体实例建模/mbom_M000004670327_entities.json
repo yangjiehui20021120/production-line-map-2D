@@ -1,0 +1,5259 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:V1.0",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "MBOMRoot"
+    },
+    "mbomCode": {
+      "type": "Property",
+      "value": "MBOM_M000004670327"
+    },
+    "mbomName": {
+      "type": "Property",
+      "value": "M000004670327侧墙制造BOM"
+    },
+    "mbomVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "productCode": {
+      "type": "Property",
+      "value": "M000004670327"
+    },
+    "status": {
+      "type": "Property",
+      "value": "active"
+    },
+    "hasRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": {
+        "@type": "DateTime",
+        "@value": "2025-01-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Route"
+    },
+    "routeCode": {
+      "type": "Property",
+      "value": "RT_M000004670327"
+    },
+    "routeName": {
+      "type": "Property",
+      "value": "M000004670327侧墙工艺路线"
+    },
+    "routeVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "lineCode": {
+      "type": "Property",
+      "value": "TS361202"
+    },
+    "status": {
+      "type": "Property",
+      "value": "active"
+    },
+    "partOfMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:V1.0"
+    },
+    "consistsOfTakts": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T11"
+      }
+    ],
+    "taktCount": {
+      "type": "Property",
+      "value": 11
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍1"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518642"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "清洗打磨侧墙型材"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理型材"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 60.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n抹布、打磨工具；\n设备：\n天车；"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "装配侧墙反装"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S04"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S05"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 5
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "吊运侧墙型材Ⅴ入工装"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF->ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙反装焊接工装\n设备：\n天车、圆吊带；\nIGM焊机机器人"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "装配侧墙型材Ⅳ"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF->ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n尼龙锤、焊缝检测尺、钢板尺；\n工装：\n侧墙反装焊接工装\n设备：\n天车、圆吊带"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "装配侧墙型材Ⅲ"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF->ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n尼龙锤、焊缝检测尺、钢板尺；\n工装：\n侧墙反装焊接工装\n设备：\n天车、圆吊带"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "装配侧墙型材Ⅱ"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF->ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n尼龙锤、焊缝检测尺、钢板尺；\n工装：\n侧墙反装焊接工装\n设备：\n天车、圆吊带"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020:S05",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 5
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "装配侧墙型材I"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF->ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n尼龙锤、焊缝检测尺、钢板尺；\n工装：\n侧墙反装焊接工装\n设备：\n天车、圆吊带"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0030"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "焊接侧墙反面焊缝"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "铺防火毯"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "压紧工件"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 40.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0030"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍2"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 4
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518727"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "焊接侧墙反面焊缝"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S04"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S05"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 5
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "点固反装焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 40.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n温湿度测量表、焊枪\n工装：\n三步梯、焊机存放架、气瓶存放架、侧墙反装焊接工装\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "打磨点固点"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动角磨机、气动直磨机\n工装：\n侧墙反装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "焊接反装焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 140.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙反装焊接工装\n设备：\nIGM焊机机器人"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010:S05",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 5
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "检测反装焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊缝检测尺\n工装：\n侧墙反装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "返修侧墙反面焊缝缺陷"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "出胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ->ST-BH"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n天车\n工装：\n侧墙反装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "修补反装缺陷"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-BH"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊枪、气动直磨机、气体流量计\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0030"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "点固侧墙正装"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "翻转侧墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-BH"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n天车"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "点固正装焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 40.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-BH"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0030"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n温湿度测量表、焊枪、气体流量计\n工装：      \n三步梯、气瓶存放架、打磨凳、焊机存放架\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0040"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "吊运侧墙入胎"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 4
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "工件入胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-BH->ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n天车\n工装：\n侧墙正装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "压紧工件"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T02:P0040"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍3"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518739"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "焊接侧墙正面焊缝"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前检查"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装焊接工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "焊接正装焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 210.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装焊接工装\n设备：\nIGM焊机机器人"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "检测正装焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊缝检测尺\n工装：\n侧墙正装焊接工装\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "返修侧墙正面焊缝缺陷"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S04"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 4
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "修补正装缺陷"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊枪、气动直磨机、气体流量计\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "出胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-BH->ST-TX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n圆吊带\n设备：\n天车"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "收防火毯"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T03:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍4"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518709"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "调修侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "测量侧墙并记录"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n测量卡尺\n工装：\n车体侧墙检测柔性化工装B、侧墙外轮廓检测样板"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "调修测墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 300.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊炬杆、乙炔回火防止器、打火枪、数字表面温度计\n工装：\n车体侧墙检测柔性化工装B"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "交验侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "记录检测数据"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 50.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n车体侧墙检测柔性化工装B"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T04:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 5
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍5"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518718"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "侧墙入胎"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 25.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-UNKNOWN"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "吊运侧墙入胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 35.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX->ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n圆吊带\n工装：\n侧墙正装自动打磨工装\n设备：\n天车"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "侧墙夹紧"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 45.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "侧墙大线自动打磨"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S04"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S05"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S06"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S07"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 7
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "输入车型值选中对应程序"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 25.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "根据扫描值调整箱体姿态"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 55.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "焊缝扫描与打磨"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 85.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装\n设备：\n大线打磨机器人"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "机器人回到初始位置"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 25.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装\n设备：\n大线打磨机器人"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S05",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 5
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "打磨质量检查"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 45.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S06",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 6
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "夹具松开并清理侧墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 25.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙正装自动打磨工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020:S07",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 7
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "侧墙出胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 35.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-TX->ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T05:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n圆吊带\n工装：\n侧墙正装自动打磨工装\n设备：\n天车"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 6
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍6"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518717"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "吊运侧墙入胎"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "吊运侧墙入胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n钢卷尺、扁吊带\n工装：\n侧墙加工工装\n设备：\n天车、加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "加工侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S04"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S05"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S06"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 6
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "找正侧墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n专用刀柄"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "压卡侧墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 20.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "侧墙探点"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 110.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n专用刀柄\n工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "侧墙加工"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 200.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n可转位立铣刀、整体立铣刀、侧固刀柄、锯片\n工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S05",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 5
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "加工车体铆接件安装孔"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 200.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020:S06",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 6
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T06:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 7
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍7"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 1
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518620"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "清理、交验、出胎侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T07"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S04"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S05"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 5
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 240.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n风管、风管母接头、风管公接头\n工装：\n侧墙加工工装、打磨凳\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "出胎"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "handling"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n扁吊带\n工装：\n侧墙加工工装、打磨凳\n设备：\n天车、加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "交验"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 130.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n钢卷尺\n工装：\n侧墙加工工装、打磨凳\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010:S05",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 5
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JG"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T07:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工装：\n侧墙加工工装\n设备：\n加工中心"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 8
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍8"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0020"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0030"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0040"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 5
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518689"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "打磨侧墙加工余量"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JX->ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "打磨侧墙加工余量"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-JX"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动角磨机、气动直磨机\n工装：\n打磨凳\n设备：\n打磨机器人"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "倒钝侧墙锐边"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0020:S01"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 1
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "倒钝侧墙锐边"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动角磨机、气动直磨机\n工装：\n打磨凳"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0030",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0030"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "安装聚氨酯发泡"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0030:S01"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 1
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0030:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "安装聚氨酯发泡"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 60.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0030"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0040",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0040"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "去垫板PT"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 4
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0040:S01"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 1
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0040:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "去垫板并PT检测"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0040"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动直磨机、气动角磨机\n工装：\n打磨凳"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0050"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "装配侧墙附件"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 5
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S03"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S04"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 4
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "装配侧墙附件"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 100.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动直磨机、气体流量计、尼龙锤、气动角磨机\n工装：\n打磨凳"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "焊接侧墙反装附件"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 60.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊枪\n工装：\n打磨凳\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "安装铆螺母和螺纹接头"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 30.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动拉铆母枪枪头、气动拉铆母枪枪头、气动拉铆母枪、螺纹接头安装工具\n工装：\n打磨凳"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050:S04",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 4
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T08:P0050"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 9
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍9"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518699"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "翻转侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 15.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "翻转侧墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 40.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n圆吊带\n设备：\n天车"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "焊接正装附件"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "焊接正装附件"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 265.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊枪\n工装：\n侧墙附件焊接工装、侧墙门口支撑工装\n设备：\n电弧焊接机"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "处理焊缝"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 85.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具:\n气动角磨机、风管、气动直磨机\n工装：\n侧墙附件焊接工装、侧墙门口支撑工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 15.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T09:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 10
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍10"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518704"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "调修侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010:S02"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010:S03"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 3
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 15.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动角磨机、风管、金属直尺\n工装：\n侧墙附件焊接工装、侧墙门口支撑工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "测量侧墙并记录"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 70.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n焊炬杆、乙炔回火防止器、打火枪、流量管\n工装：\n侧墙附件调修工装、侧墙外轮廓检测样板、车体侧墙检测柔性化工装A"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010:S03",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 3
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "调修侧墙并记录"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 70.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n打火枪、金属直尺、数字表面温度计\n工装：\n侧墙附件调修工装、侧墙外轮廓检测样板、车体侧墙检测柔性化工装A"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "打磨侧墙附件"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "侧墙附件打磨"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 100.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n气动角磨机、风管、金属直尺\n工装：\n侧墙附件焊接工装、侧墙门口支撑工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "清理现场"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 15.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T10:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T11",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "taktSeq": {
+      "type": "Property",
+      "value": 11
+    },
+    "taktName": {
+      "type": "Property",
+      "value": "M000004670327侧墙组成节拍11"
+    },
+    "partOfRoute": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+    },
+    "includesProcesses": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0020"
+      }
+    ],
+    "processCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "taktCode": {
+      "type": "Property",
+      "value": "D0000518646"
+    },
+    "targetCT": {
+      "type": "Property",
+      "value": 420.0,
+      "unitCode": "MIN"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0010"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "防护侧墙"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 1
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T11"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010:S01"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010:S02"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 2
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "开工前准备"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 10.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010:S02",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 2
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "防护侧墙"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 45.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0010"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n风管、气动直磨机、气动角磨机\n工装：\n侧墙附件焊接工装、侧墙门口支撑工装"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T11:P0020",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "procCode": {
+      "type": "Property",
+      "value": "0020"
+    },
+    "procName": {
+      "type": "Property",
+      "value": "交验"
+    },
+    "procSeqInTakt": {
+      "type": "Property",
+      "value": 2
+    },
+    "partOfTakt": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T11"
+    },
+    "composedOfSteps": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0020:S01"
+      }
+    ],
+    "stepCount": {
+      "type": "Property",
+      "value": 1
+    },
+    "procKind": {
+      "type": "Property",
+      "value": "process"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/mbom-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:MBOM:M000004670327:T11:P0020:S01",
+    "type": "MBOM",
+    "mbomType": {
+      "type": "Property",
+      "value": "Step"
+    },
+    "stepSeq": {
+      "type": "Property",
+      "value": 1
+    },
+    "stepName": {
+      "type": "Property",
+      "value": "交验"
+    },
+    "stdTime": {
+      "type": "Property",
+      "value": 100.0,
+      "unitCode": "MIN"
+    },
+    "stationCode": {
+      "type": "Property",
+      "value": "BF"
+    },
+    "partOfProcess": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004670327:T11:P0020"
+    },
+    "processKind": {
+      "type": "Property",
+      "value": "process"
+    },
+    "resourceClasses": {
+      "type": "Property",
+      "value": [
+        "工具：\n风管、气动直磨机、钢卷尺、金属直尺、焊缝检测尺、气动角磨机\n工装：\n车体侧墙检测柔性化工装B、侧墙外轮廓检测样板、侧墙附件焊接工装、侧墙门口支撑工装、侧墙附件存放工装"
+      ]
+    }
+  }
+]

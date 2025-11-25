@@ -1,0 +1,615 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.TransportEquipment.schema.json",
+  "title": "TwinObject TransportEquipment子类型扩展字段规范",
+  "description": "转运设备(天车、AGV等)的特有字段定义,版本V1.0,扩展TwinObject统一元模型",
+  "type": "object",
+  
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "TransportEquipment"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "transportType": {
+          "description": "转运设备细分类型(必填)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": [
+                "Crane",
+                "AGV",
+                "RGV",
+                "Conveyor",
+                "Hoist",
+                "Forklift",
+                "Shuttle",
+                "Other"
+              ]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "liftingCapacity": {
+          "description": "额定起重量(天车/吊车/叉车)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {
+              "type": "string",
+              "enum": ["kg", "ton"]
+            }
+          }
+        },
+        
+        "spanLength": {
+          "description": "跨度(天车)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "m"}
+          }
+        },
+        
+        "liftingHeight": {
+          "description": "起升高度",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "m"}
+          }
+        },
+        
+        "liftingSpeed": {
+          "description": "起升速度",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "m/min"}
+          }
+        },
+        
+        "travelSpeed": {
+          "description": "运行速度",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {
+              "type": "string",
+              "enum": ["m/min", "m/s", "km/h"]
+            }
+          }
+        },
+        
+        "crossSpeed": {
+          "description": "横移速度(天车)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "m/min"}
+          }
+        },
+        
+        "loadCapacity": {
+          "description": "载重能力(AGV/RGV/叉车)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "kg"}
+          }
+        },
+        
+        "platformSize": {
+          "description": "平台尺寸(AGV/RGV)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "length_mm": {"type": "number"},
+                "width_mm": {"type": "number"},
+                "height_mm": {"type": "number"}
+              }
+            }
+          }
+        },
+        
+        "navigationMethod": {
+          "description": "导航方式(AGV/RGV)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": [
+                "MagneticTape",
+                "LaserSLAM",
+                "VisualSLAM",
+                "QRCode",
+                "RailGuided",
+                "InductiveWire",
+                "NaturalNavigation"
+              ]
+            }
+          }
+        },
+        
+        "batteryType": {
+          "description": "电池类型(AGV/叉车)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["LithiumIon", "LeadAcid", "NickelMetal", "Supercapacitor"]
+            }
+          }
+        },
+        
+        "batteryCapacity": {
+          "description": "电池容量",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "Ah"}
+          }
+        },
+        
+        "chargingTime": {
+          "description": "充电时长",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "hours"}
+          }
+        },
+        
+        "operatingRange": {
+          "description": "续航里程(AGV)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "km"}
+          }
+        },
+        
+        "conveyorType": {
+          "description": "输送机类型(输送线)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": [
+                "Belt",
+                "Roller",
+                "Chain",
+                "Slat",
+                "Overhead",
+                "Pneumatic"
+              ]
+            }
+          }
+        },
+        
+        "conveyorLength": {
+          "description": "输送线长度",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "m"}
+          }
+        },
+        
+        "conveyorWidth": {
+          "description": "输送线宽度",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "mm"}
+          }
+        },
+        
+        "conveyorSpeed": {
+          "description": "输送速度",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "m/min"}
+          }
+        },
+        
+        "workingArea": {
+          "description": "作业区域范围",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "areaType": {
+                  "type": "string",
+                  "enum": ["rectangular", "rail", "freeNavigation"]
+                },
+                "length_m": {"type": "number"},
+                "width_m": {"type": "number"},
+                "railLength_m": {"type": "number"}
+              }
+            }
+          }
+        },
+        
+        "controlMode": {
+          "description": "控制模式",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": [
+                "Manual",
+                "SemiAutomatic",
+                "FullyAutomatic",
+                "RemoteControl",
+                "AutonomousNavigation"
+              ]
+            }
+          }
+        },
+        
+        "positioningAccuracy": {
+          "description": "定位精度(AGV/RGV)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "mm"}
+          }
+        },
+        
+        "obstacleDetection": {
+          "description": "障碍物检测方式",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "LaserScanner",
+                  "UltrasonicSensor",
+                  "Camera",
+                  "LiDAR",
+                  "Radar",
+                  "BumperSwitch"
+                ]
+              }
+            }
+          }
+        },
+        
+        "communicationProtocols": {
+          "description": "通信协议",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "WiFi",
+                  "5G",
+                  "PROFINET",
+                  "EtherCAT",
+                  "Modbus-TCP",
+                  "OPC-UA",
+                  "Proprietary"
+                ]
+              }
+            }
+          }
+        },
+        
+        "routePoints": {
+          "description": "路径节点定义(AGV/RGV)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "pointId": {"type": "string"},
+                  "pointName": {"type": "string"},
+                  "x": {"type": "number"},
+                  "y": {"type": "number"},
+                  "stationType": {
+                    "type": "string",
+                    "enum": ["Loading", "Unloading", "Charging", "Waiting", "Parking"]
+                  }
+                },
+                "required": ["pointId", "x", "y"]
+              }
+            }
+          }
+        },
+        
+        "taskManagementSystem": {
+          "description": "任务管理系统",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "examples": ["WMS", "MES", "TMS", "Standalone"]
+            }
+          }
+        },
+        
+        "safetyFeatures": {
+          "description": "安全功能",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "EmergencyStop",
+                  "OverloadProtection",
+                  "CollisionAvoidance",
+                  "AntiSwaySystem",
+                  "SafetyLightCurtain",
+                  "SpeedLimiting",
+                  "ZoneRestriction",
+                  "AutomaticBraking"
+                ]
+              }
+            }
+          }
+        },
+        
+        "hoistType": {
+          "description": "起重机构类型(天车)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Electric", "Manual", "Pneumatic", "Hydraulic"]
+            }
+          }
+        },
+        
+        "operatingCycles": {
+          "description": "工作循环次数(累计)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        
+        "maintenanceInterval": {
+          "description": "保养周期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "value": {"type": "number", "minimum": 0},
+                "unit": {
+                  "type": "string",
+                  "enum": ["hours", "days", "cycles", "km"]
+                }
+              },
+              "required": ["value", "unit"]
+            }
+          }
+        },
+        
+        "powerRating": {
+          "description": "额定功率",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "kW"}
+          }
+        },
+        
+        "protectionLevel": {
+          "description": "防护等级",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "pattern": "^IP[0-9]{2}$"
+            }
+          }
+        },
+        
+        "operatingTemperatureRange": {
+          "description": "工作温度范围",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"},
+                "unit": {"const": "Celsius"}
+              },
+              "required": ["min", "max", "unit"]
+            }
+          }
+        },
+        
+        "dimensions": {
+          "description": "外形尺寸",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "length_mm": {"type": "number"},
+                "width_mm": {"type": "number"},
+                "height_mm": {"type": "number"}
+              }
+            }
+          }
+        },
+        
+        "weight": {
+          "description": "设备自重",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {"const": "kg"}
+          }
+        },
+        
+        "certifications": {
+          "description": "认证标准",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        },
+        
+        "manufactureDate": {
+          "description": "生产日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        
+        "installationDate": {
+          "description": "安装日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        
+        "controllerType": {
+          "description": "控制器类型",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "fleetManagementSystem": {
+          "description": "车队管理系统(AGV/RGV)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        }
+      },
+      "required": ["transportType"]
+    }
+  ]
+}

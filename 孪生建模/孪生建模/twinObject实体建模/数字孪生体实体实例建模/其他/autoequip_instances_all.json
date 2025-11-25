@@ -1,0 +1,1138 @@
+{
+  "instances": [
+    {
+      "filename": "ROBOT-R01_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:ROBOT-R01",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "机文名"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-DX"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-工位工-DX"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Robot"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "雅浦"
+        },
+        "model": {
+          "type": "Property",
+          "value": "YP-R6-2000"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "序列号"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "YP_Controller_V3"
+        },
+        "axes": {
+          "type": "Property",
+          "value": 6,
+          "unitCode": "axes"
+        },
+        "payload": {
+          "type": "Property",
+          "value": 180,
+          "unitCode": "kg"
+        },
+        "reach": {
+          "type": "Property",
+          "value": 2400,
+          "unitCode": "mm"
+        },
+        "repeatability": {
+          "type": "Property",
+          "value": 0.1,
+          "unitCode": "mm"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 10,
+          "unitCode": "kW"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["Modbus-TCP", "Proprietary"]
+        },
+        "safetyFeatures": {
+          "type": "Property",
+          "value": ["EmergencyStop", "SafetyZone"]
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-01-15"
+        },
+        "notes": {
+          "type": "Property",
+          "value": "Note"
+        }
+      }
+    },
+    {
+      "filename": "IGM-WELDER-A01_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:IGM-WELDER-A01",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "IGM焊接机器人A01"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-焊接工位-ST-HJ"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Welder"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "IGM"
+        },
+        "model": {
+          "type": "Property",
+          "value": "IGM-AP-45"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "IGM-2024-A01"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "IGM_Controller"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 45,
+          "unitCode": "kW"
+        },
+        "voltageRating": {
+          "type": "Property",
+          "value": 380,
+          "unitCode": "V"
+        },
+        "currentRange": {
+          "type": "Property",
+          "value": {
+            "min": 50,
+            "max": 500,
+            "unit": "A"
+          }
+        },
+        "weldingProcessTypes": {
+          "type": "Property",
+          "value": ["MIG", "MAG"]
+        },
+        "coolingMethod": {
+          "type": "Property",
+          "value": "water"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["Modbus-TCP", "Proprietary"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-02-01"
+        },
+        "maintenanceInterval": {
+          "type": "Property",
+          "value": {
+            "value": 1000,
+            "unit": "hours"
+          }
+        }
+      }
+    },
+    {
+      "filename": "IGM-WELDER-A02_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:IGM-WELDER-A02",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "IGM焊接机器人A02"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-焊接工位-ST-HJ"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Welder"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "IGM"
+        },
+        "model": {
+          "type": "Property",
+          "value": "IGM-AP-45"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "IGM-2024-A02"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "IGM_Controller"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 45,
+          "unitCode": "kW"
+        },
+        "voltageRating": {
+          "type": "Property",
+          "value": 380,
+          "unitCode": "V"
+        },
+        "currentRange": {
+          "type": "Property",
+          "value": {
+            "min": 50,
+            "max": 500,
+            "unit": "A"
+          }
+        },
+        "weldingProcessTypes": {
+          "type": "Property",
+          "value": ["MIG", "MAG"]
+        },
+        "coolingMethod": {
+          "type": "Property",
+          "value": "water"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["Modbus-TCP", "Proprietary"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-02-01"
+        },
+        "maintenanceInterval": {
+          "type": "Property",
+          "value": {
+            "value": 1000,
+            "unit": "hours"
+          }
+        }
+      }
+    },
+    {
+      "filename": "IGM-WELDER-A03_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:IGM-WELDER-A03",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "IGM焊接机器人A03"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-焊接工位-ST-HJ"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Welder"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "IGM"
+        },
+        "model": {
+          "type": "Property",
+          "value": "IGM-AP-45"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "IGM-2024-A03"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "IGM_Controller"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 45,
+          "unitCode": "kW"
+        },
+        "voltageRating": {
+          "type": "Property",
+          "value": 380,
+          "unitCode": "V"
+        },
+        "currentRange": {
+          "type": "Property",
+          "value": {
+            "min": 50,
+            "max": 500,
+            "unit": "A"
+          }
+        },
+        "weldingProcessTypes": {
+          "type": "Property",
+          "value": ["MIG", "MAG"]
+        },
+        "coolingMethod": {
+          "type": "Property",
+          "value": "water"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["Modbus-TCP", "Proprietary"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-02-01"
+        },
+        "maintenanceInterval": {
+          "type": "Property",
+          "value": {
+            "value": 1000,
+            "unit": "hours"
+          }
+        }
+      }
+    },
+    {
+      "filename": "IGM-WELDER-A04_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:IGM-WELDER-A04",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "IGM焊接机器人A04"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-焊接工位-ST-HJ"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Welder"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "IGM"
+        },
+        "model": {
+          "type": "Property",
+          "value": "IGM-AP-45"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "IGM-2024-A04"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "IGM_Controller"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 45,
+          "unitCode": "kW"
+        },
+        "voltageRating": {
+          "type": "Property",
+          "value": 380,
+          "unitCode": "V"
+        },
+        "currentRange": {
+          "type": "Property",
+          "value": {
+            "min": 50,
+            "max": 500,
+            "unit": "A"
+          }
+        },
+        "weldingProcessTypes": {
+          "type": "Property",
+          "value": ["MIG", "MAG"]
+        },
+        "coolingMethod": {
+          "type": "Property",
+          "value": "water"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["Modbus-TCP", "Proprietary"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-02-01"
+        },
+        "maintenanceInterval": {
+          "type": "Property",
+          "value": {
+            "value": 1000,
+            "unit": "hours"
+          }
+        }
+      }
+    },
+    {
+      "filename": "WELD-ROBOT-A01_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:WELD-ROBOT-A01",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "大线订做机器人A01"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-DX"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-大线订做工位-ST-DX"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Robot"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "雅浦"
+        },
+        "model": {
+          "type": "Property",
+          "value": "YP-WR-200"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "YP-2024-WR01"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "YP_WeldController_V2"
+        },
+        "axes": {
+          "type": "Property",
+          "value": 6,
+          "unitCode": "axes"
+        },
+        "payload": {
+          "type": "Property",
+          "value": 200,
+          "unitCode": "kg"
+        },
+        "reach": {
+          "type": "Property",
+          "value": 2800,
+          "unitCode": "mm"
+        },
+        "repeatability": {
+          "type": "Property",
+          "value": 0.1,
+          "unitCode": "mm"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 12,
+          "unitCode": "kW"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["Modbus-TCP", "EtherNet/IP"]
+        },
+        "safetyFeatures": {
+          "type": "Property",
+          "value": ["EmergencyStop", "SafetyZone", "CollisionDetection"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-03-01"
+        },
+        "capabilities": {
+          "type": "Property",
+          "value": ["CAP.Weld.Robot", "CAP.Weld.Seam"]
+        }
+      }
+    },
+    {
+      "filename": "FOOKE-ROBOT-01_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:FOOKE-ROBOT-01",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "数控加工中心01"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-JG-A"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-加工工位A-ST-JG-A"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Robot"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "FOOKE"
+        },
+        "model": {
+          "type": "Property",
+          "value": "FOOKE-Endura-805"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "FOOKE-2024-01"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "FOOKE_CNC_Controller"
+        },
+        "axes": {
+          "type": "Property",
+          "value": 5,
+          "unitCode": "axes"
+        },
+        "repeatability": {
+          "type": "Property",
+          "value": 0.01,
+          "unitCode": "mm"
+        },
+        "spindleSpeedRange": {
+          "type": "Property",
+          "value": {
+            "min": 0,
+            "max": 8000,
+            "unit": "rpm"
+          }
+        },
+        "workEnvelope": {
+          "type": "Property",
+          "value": {
+            "type": "rectangular",
+            "length_mm": 8000,
+            "width_mm": 4000,
+            "height_mm": 2000
+          }
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 40,
+          "unitCode": "kW"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["OPC-UA", "PROFINET"]
+        },
+        "programmingLanguages": {
+          "type": "Property",
+          "value": ["G-Code", "ISO"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-01-20"
+        },
+        "capabilities": {
+          "type": "Property",
+          "value": ["CAP.Mill.5Axis", "CAP.Drill"]
+        }
+      }
+    },
+    {
+      "filename": "FOOKE-ROBOT-02_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:FOOKE-ROBOT-02",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "数控加工中心02"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.1"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-JG-B"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-加工工位B-ST-JG-B"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Robot"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "FOOKE"
+        },
+        "model": {
+          "type": "Property",
+          "value": "FOOKE-Endura-805"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "FOOKE-2024-02"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "FOOKE_CNC_Controller"
+        },
+        "axes": {
+          "type": "Property",
+          "value": 5,
+          "unitCode": "axes"
+        },
+        "repeatability": {
+          "type": "Property",
+          "value": 0.01,
+          "unitCode": "mm"
+        },
+        "spindleSpeedRange": {
+          "type": "Property",
+          "value": {
+            "min": 0,
+            "max": 8000,
+            "unit": "rpm"
+          }
+        },
+        "workEnvelope": {
+          "type": "Property",
+          "value": {
+            "type": "rectangular",
+            "length_mm": 8000,
+            "width_mm": 4000,
+            "height_mm": 2000
+          }
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 40,
+          "unitCode": "kW"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["OPC-UA", "PROFINET"]
+        },
+        "programmingLanguages": {
+          "type": "Property",
+          "value": ["G-Code", "ISO"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-01-20"
+        },
+        "capabilities": {
+          "type": "Property",
+          "value": ["CAP.Mill.5Axis", "CAP.Drill"]
+        }
+      }
+    },
+    {
+      "filename": "ABB-ROBOT-A01_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:ABB-ROBOT-A01",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "侧摆窗口封闭机器人A01"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.2"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-JX"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-胶粘工位-ST-JX"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Robot"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "ABB"
+        },
+        "model": {
+          "type": "Property",
+          "value": "IRB-4600-40/2.55"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "ABB-2024-A01"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "ABB_IRC5"
+        },
+        "controllerVersion": {
+          "type": "Property",
+          "value": "7.10.1"
+        },
+        "axes": {
+          "type": "Property",
+          "value": 6,
+          "unitCode": "axes"
+        },
+        "payload": {
+          "type": "Property",
+          "value": 40,
+          "unitCode": "kg"
+        },
+        "reach": {
+          "type": "Property",
+          "value": 2550,
+          "unitCode": "mm"
+        },
+        "repeatability": {
+          "type": "Property",
+          "value": 0.03,
+          "unitCode": "mm"
+        },
+        "maxSpeed": {
+          "type": "Property",
+          "value": 2100,
+          "unitCode": "mm/s"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 7,
+          "unitCode": "kW"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["OPC-UA", "EtherNet/IP"]
+        },
+        "programmingLanguages": {
+          "type": "Property",
+          "value": ["RAPID"]
+        },
+        "safetyFeatures": {
+          "type": "Property",
+          "value": ["EmergencyStop", "SafetyZone", "CollisionDetection"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-02-15"
+        },
+        "certifications": {
+          "type": "Property",
+          "value": ["CE", "ISO9001"]
+        },
+        "capabilities": {
+          "type": "Property",
+          "value": ["CAP.Glue.Dispense", "CAP.Assembly"]
+        }
+      }
+    },
+    {
+      "filename": "ABB-ROBOT-A02_instance.json",
+      "data": {
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ],
+        "id": "urn:ngsi-ld:TwinObject:AutoEquipment:ABB-ROBOT-A02",
+        "type": "TwinObject",
+        "name": {
+          "type": "Property",
+          "value": "侧摆窗口封闭机器人A02"
+        },
+        "twinType": {
+          "type": "Property",
+          "value": "Constituent"
+        },
+        "subType": {
+          "type": "Property",
+          "value": "AutoEquipment"
+        },
+        "functionCategory": {
+          "type": "Property",
+          "value": "F1.2.2"
+        },
+        "twinLevel": {
+          "type": "Property",
+          "value": 3
+        },
+        "partOf": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Station:ST-JX"
+        },
+        "installPosition": {
+          "type": "Property",
+          "value": "侧墙产线-胶粘工位-ST-JX"
+        },
+        "deviceType": {
+          "type": "Property",
+          "value": "Robot"
+        },
+        "vendor": {
+          "type": "Property",
+          "value": "ABB"
+        },
+        "model": {
+          "type": "Property",
+          "value": "IRB-4600-40/2.55"
+        },
+        "serialNumber": {
+          "type": "Property",
+          "value": "ABB-2024-A02"
+        },
+        "status": {
+          "type": "Property",
+          "value": "active"
+        },
+        "controllerType": {
+          "type": "Property",
+          "value": "ABB_IRC5"
+        },
+        "controllerVersion": {
+          "type": "Property",
+          "value": "7.10.1"
+        },
+        "axes": {
+          "type": "Property",
+          "value": 6,
+          "unitCode": "axes"
+        },
+        "payload": {
+          "type": "Property",
+          "value": 40,
+          "unitCode": "kg"
+        },
+        "reach": {
+          "type": "Property",
+          "value": 2550,
+          "unitCode": "mm"
+        },
+        "repeatability": {
+          "type": "Property",
+          "value": 0.03,
+          "unitCode": "mm"
+        },
+        "maxSpeed": {
+          "type": "Property",
+          "value": 2100,
+          "unitCode": "mm/s"
+        },
+        "powerRating": {
+          "type": "Property",
+          "value": 7,
+          "unitCode": "kW"
+        },
+        "communicationProtocols": {
+          "type": "Property",
+          "value": ["OPC-UA", "EtherNet/IP"]
+        },
+        "programmingLanguages": {
+          "type": "Property",
+          "value": ["RAPID"]
+        },
+        "safetyFeatures": {
+          "type": "Property",
+          "value": ["EmergencyStop", "SafetyZone", "CollisionDetection"]
+        },
+        "protectionLevel": {
+          "type": "Property",
+          "value": "IP54"
+        },
+        "installationDate": {
+          "type": "Property",
+          "value": "2024-02-15"
+        },
+        "certifications": {
+          "type": "Property",
+          "value": ["CE", "ISO9001"]
+        },
+        "capabilities": {
+          "type": "Property",
+          "value": ["CAP.Glue.Dispense", "CAP.Assembly"]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_count": 10,
+    "by_deviceType": {
+      "Robot": 6,
+      "Welder": 4
+    },
+    "by_vendor": {
+      "雅浦": 2,
+      "IGM": 4,
+      "FOOKE": 2,
+      "ABB": 2
+    },
+    "by_station": {
+      "ST-DX": 2,
+      "ST-HJ": 4,
+      "ST-JG-A": 1,
+      "ST-JG-B": 1,
+      "ST-JX": 2
+    }
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.OrgUnit.schema.json",
+  "title": "TwinObject OrgUnit子类型扩展字段规范",
+  "description": "组织单元(OrgUnit)子类型的特有字段JSON Schema定义,版本:V1.0,扩展TwinObject统一元模型",
+  "type": "object",
+  
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "OrgUnit"}
+          },
+          "required": ["type", "value"]
+        }
+      },
+      "required": ["subType"]
+    }
+  ],
+  
+  "properties": {
+    "orgUnitType": {
+      "description": "组织单元类型",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "Factory",
+            "Workshop",
+            "ProductionLine",
+            "Team",
+            "Department",
+            "Division"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "orgLevel": {
+      "description": "组织层级",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "parentOrg": {
+      "description": "上级组织单元",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:OrgUnit:.+$"
+        }
+      }
+    },
+    
+    "childOrgs": {
+      "description": "下级组织单元清单",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Relationship"},
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:TwinObject:OrgUnit:.+$"
+          }
+        },
+        "required": ["type", "object"]
+      }
+    },
+    
+    "headcount": {
+      "description": "人员编制",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "total": {"type": "integer"},
+            "current": {"type": "integer"},
+            "managers": {"type": "integer"},
+            "operators": {"type": "integer"},
+            "technicians": {"type": "integer"}
+          }
+        }
+      }
+    },
+    
+    "manager": {
+      "description": "负责人",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:Person:.+$"
+        }
+      }
+    },
+    
+    "operatingSchedule": {
+      "description": "运营时间安排",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "shiftPattern": {
+              "type": "string",
+              "enum": ["TwoShift", "ThreeShift", "FourShift", "Continuous", "DayOnly"]
+            },
+            "shiftsPerDay": {"type": "integer"},
+            "workingDays": {
+              "type": "array",
+              "items": {"type": "integer", "minimum": 1, "maximum": 7}
+            },
+            "annualWorkingDays": {"type": "integer"}
+          }
+        }
+      }
+    },
+    
+    "kpiTargets": {
+      "description": "KPI目标",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "oee": {"type": "number"},
+            "qualityRate": {"type": "number"},
+            "throughput": {"type": "number"},
+            "cycleTime": {"type": "number"},
+            "customKPIs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "kpiCode": {"type": "string"},
+                  "kpiName": {"type": "string"},
+                  "target": {"type": "number"},
+                  "unit": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "responsibilities": {
+      "description": "职责范围",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    
+    "managedAssets": {
+      "description": "管理的资产清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "stations": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "equipment": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "tools": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    
+    "productScope": {
+      "description": "产品范围",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "负责生产的产品类型"
+        }
+      }
+    },
+    
+    "costCenter": {
+      "description": "成本中心编码",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "budgetInfo": {
+      "description": "预算信息",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "annualBudget": {"type": "number"},
+            "currency": {"type": "string"},
+            "fiscalYear": {"type": "string"}
+          }
+        }
+      }
+    },
+    
+    "contactInfo": {
+      "description": "联系信息",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "phone": {"type": "string"},
+            "email": {"type": "string"},
+            "location": {"type": "string"},
+            "officeNumber": {"type": "string"}
+          }
+        }
+      }
+    },
+    
+    "effectiveDate": {
+      "description": "生效日期",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string", "format": "date"}
+      }
+    },
+    
+    "orgStatus": {
+      "description": "组织状态",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": ["Active", "Inactive", "Restructuring", "Dissolving"]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "shiftTeams": {
+      "description": "班组配置",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "teamId": {"type": "string"},
+              "teamName": {"type": "string"},
+              "shiftId": {"type": "string"},
+              "teamLeader": {"type": "string"},
+              "memberCount": {"type": "integer"}
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "required": [
+    "orgUnitType",
+    "orgLevel",
+    "orgStatus"
+  ]
+}

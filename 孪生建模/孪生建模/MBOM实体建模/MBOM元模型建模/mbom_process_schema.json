@@ -1,0 +1,607 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/MBOM.Process.schema.json",
+  "title": "MBOM Process Entity Schema",
+  "description": "工序实体元模型 - 定义一道完整的加工/装配/检验工序 (mbomType=Process)",
+  "type": "object",
+  
+  "required": [
+    "id",
+    "type",
+    "mbomType",
+    "procCode",
+    "procName",
+    "procSeqInTakt",
+    "partOfTakt",
+    "composedOfSteps"
+  ],
+  
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "NGSI-LD上下文定义",
+      "examples": [
+        [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://example.com/contexts/mbom-context.jsonld"
+        ]
+      ]
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]{2,3}:P[0-9]{4}$",
+      "description": "Process实体唯一标识符,格式: urn:ngsi-ld:MBOM:{productCode}:T{taktSeq}:P{procCode}",
+      "examples": [
+        "urn:ngsi-ld:MBOM:M000004670327:T01:P0010",
+        "urn:ngsi-ld:MBOM:M000004670327:T02:P0020"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "MBOM",
+      "description": "实体类型固定为MBOM"
+    },
+    
+    "mbomType": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "const": "Process",
+          "description": "子类型固定为Process,标识这是工序实体"
+        }
+      },
+      "description": "MBOM子类型标识"
+    },
+    
+    "procCode": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$",
+          "description": "工序编码,4位数字,如0010, 0020"
+        }
+      },
+      "description": "工序业务编码,通常以10为间隔递增",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "0010"
+        }
+      ]
+    },
+    
+    "procName": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "description": "工序名称,业务友好的描述性名称",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "焊接侧墙反面焊缝"
+        }
+      ]
+    },
+    
+    "procSeqInTakt": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99,
+          "description": "工序在节拍内的顺序位置,从1开始"
+        }
+      },
+      "description": "工序在节拍内的序号,定义工序的执行顺序",
+      "examples": [
+        {
+          "type": "Property",
+          "value": 1
+        }
+      ]
+    },
+    
+    "procKind": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["process", "handling", "inspection", "andon", "measurement"],
+          "description": "process=加工; handling=搬运; inspection=检验; andon=报警; measurement=测量"
+        }
+      },
+      "description": "工序类型,定义工序的业务类别",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "process"
+        }
+      ]
+    },
+    
+    "partOfTakt": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+$",
+          "description": "所属Takt实体ID"
+        }
+      },
+      "description": "反向关系:指向所属的Takt实体 (N:1)。双向关系:Takt.includesProcesses指向此实体",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:MBOM:M000004670327:T01"
+        }
+      ]
+    },
+    
+    "composedOfSteps": {
+      "type": "array",
+      "description": "正向关系: 指向包含的所有Step实体 (1:N)。双向关系: Step.partOfProcess指回此实体",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Relationship"
+          },
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+:P[0-9]+:S[0-9]+$"
+          }
+        },
+        "required": ["type", "object"]
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "examples": [
+        [
+          {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S01"
+          },
+          {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S02"
+          }
+        ]
+      ]
+    },
+    
+    "stepCount": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "工序包含的工步总数"
+        }
+      },
+      "description": "工步总数,用于快速统计"
+    },
+    
+    "estimatedDuration": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "估算总时长,所有工步标准工时之和"
+        },
+        "unitCode": {
+          "type": "string",
+          "enum": ["MIN", "SEC", "HOUR"],
+          "default": "MIN"
+        }
+      },
+      "description": "工序估算总时长"
+    },
+    
+    "allowedStationCodes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Station:ST-[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true,
+          "description": "允许执行此工序的工位ID列表"
+        }
+      },
+      "description": "允许工位白名单,工序可在这些工位上执行,支持柔性调度",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:Station:ST-HJ-01",
+            "urn:ngsi-ld:Station:ST-HJ-03"
+          ]
+        }
+      ]
+    },
+    
+    "allowedBufferCodes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Buffer:BF-[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "允许使用的缓冲区列表"
+    },
+    
+    "requiredRoles": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Role:ROLE_[A-Z_]+$"
+          },
+          "uniqueItems": true,
+          "description": "所需人员角色ID列表"
+        }
+      },
+      "description": "工序级人员角色需求,引用Role实体列表",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:Role:ROLE_WELDER"
+          ]
+        }
+      ]
+    },
+    
+    "requiredEquipmentTypes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:EquipmentType:[A-Z_]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "工序级设备类型需求,引用EquipmentType实体列表"
+    },
+    
+    "requiredTooling": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Tooling:[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "工序级工装需求,引用Tooling实体列表"
+    },
+    
+    "consumedMaterials": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["materialCode", "quantity", "unit"],
+            "properties": {
+              "materialCode": {
+                "type": "string",
+                "description": "物料编码,引用Material实体"
+              },
+              "quantity": {
+                "type": "number",
+                "minimum": 0,
+                "description": "消耗数量"
+              },
+              "unit": {
+                "type": "string",
+                "description": "单位,如KG, L, PCS"
+              },
+              "consumableType": {
+                "type": "string",
+                "enum": ["welding", "gas", "cleaning", "lubricant", "other"],
+                "description": "消耗品类型"
+              }
+            }
+          }
+        }
+      },
+      "description": "工序级物料消耗,定义该工序消耗的辅料、消耗品",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            {
+              "materialCode": "MAT_WELDING_WIRE_ER70S6",
+              "quantity": 1.2,
+              "unit": "KG",
+              "consumableType": "welding"
+            }
+          ]
+        }
+      ]
+    },
+    
+    "requiredMeasurements": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["modalityCode", "ruleId", "timing"],
+            "properties": {
+              "modalityCode": {
+                "type": "string",
+                "description": "测量模态代码"
+              },
+              "ruleId": {
+                "type": "string",
+                "description": "质量规则ID"
+              },
+              "timing": {
+                "type": "string",
+                "enum": ["pre", "in", "post"]
+              },
+              "aggregator": {
+                "type": "string",
+                "enum": ["mean", "max", "min", "sum", "p95"]
+              },
+              "capturedByResourceClass": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "description": "Process级测量要求,定义工序级KPI如缺陷率、环境参数等"
+    },
+    
+    "documents": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "sopCode": {
+              "type": "string",
+              "description": "工序SOP文档编码"
+            },
+            "workInstruction": {
+              "type": "string",
+              "description": "作业指导书编码"
+            },
+            "qualityStandard": {
+              "type": "string",
+              "description": "质量标准编码"
+            },
+            "safetyChecklist": {
+              "type": "string",
+              "description": "安全检查表编码"
+            }
+          }
+        }
+      },
+      "description": "工序级关联文档",
+      "examples": [
+        {
+          "type": "Property",
+          "value": {
+            "sopCode": "SOP_WELD_001",
+            "workInstruction": "WI_WELD_SIDEWALL_2024"
+          }
+        }
+      ]
+    },
+    
+    "processVersion": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[A-Z]$",
+          "description": "工序版本,如A, B, C"
+        }
+      },
+      "description": "工序工艺版本标识"
+    },
+    
+    "criticality": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["critical", "major", "minor"],
+          "description": "critical=关键工序; major=重要工序; minor=一般工序"
+        }
+      },
+      "description": "工序重要性等级,用于质量控制和资源优先级"
+    },
+    
+    "qualityGateRequired": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "boolean",
+          "description": "是否需要质量门检查"
+        }
+      },
+      "description": "质量门要求,true表示必须通过质量检查才能进入下一工序"
+    },
+    
+    "predecessorProcess": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+:P[0-9]+$"
+        }
+      },
+      "description": "前序工序,建立工序间依赖关系"
+    },
+    
+    "successorProcess": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+:P[0-9]+$"
+        }
+      },
+      "description": "后续工序,建立工序间依赖关系"
+    },
+    
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "description": "元数据信息"
+    }
+  },
+  
+  "additionalProperties": false
+}

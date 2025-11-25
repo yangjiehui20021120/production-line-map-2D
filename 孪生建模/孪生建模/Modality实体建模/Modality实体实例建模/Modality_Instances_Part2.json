@@ -1,0 +1,884 @@
+{
+  "$schema": "https://digitaltwins.rail.com/schemas/Modality.schema.json",
+  "description": "动车侧墙产线 Modality 实体实例集合 - Part 2: 电气参数、温度、力学参数类",
+  "version": "1.0.0",
+  "createdAt": "2025-10-27T07:20:00Z",
+  "modalities": [
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingCurrent_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接电流(自动采集)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程电流，从焊机控制系统自动采集的实时曲线"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 500]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±1%"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "relatedModalities": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WireFeedSpeed_Auto"
+        },
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WeldingVoltage_Auto"
+        }
+      ],
+      "businessNote": {
+        "type": "Property",
+        "value": "焊接电流是焊接质量的关键参数，需与送丝速度和电压协同控制"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingCurrent_Stat",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接电流(统计值)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程电流的统计值(Min/Max)，从实时电流计算得出"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 500]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+        }
+      ],
+      "derivationRule": {
+        "type": "Property",
+        "value": "min/max over scene duration"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "用于质量判定，每个焊接场景结束后计算最小值和最大值"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingVoltage_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接电压(自动采集)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程电压，从焊机控制系统自动采集的实时曲线"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "V"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 50]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.5%"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "relatedModalities": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+        },
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WireFeedSpeed_Auto"
+        }
+      ],
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingVoltage_Stat",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接电压(统计值)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程电压的统计值(Min/Max)，从实时电压计算得出"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "V"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 50]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:WeldingVoltage_Auto"
+        }
+      ],
+      "derivationRule": {
+        "type": "Property",
+        "value": "min/max over scene duration"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:SendWireCurrent",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "送丝电流"
+      },
+      "description": {
+        "type": "Property",
+        "value": "送丝电机驱动电流"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 50]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±1%"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:DriveTemp",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "驱动器温度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "伺服驱动器温度，从PLC读取"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "°C"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 80]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±1°C"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "过热报警阈值70°C，典型多点采集场景：数控加工中心有8个驱动器温度测点(X_Main/X_Forward/X_Slave/X_ForwardSlave/Y/Z/A/C)"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:AmbientTemp_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "环境温度(自动采集)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "工作区域环境温度，从传感器自动采集"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Environment"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "°C"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [15, 30]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.5°C"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "environment"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "环境温度影响焊接质量和工件尺寸稳定性"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:AmbientTemp_Stat",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "环境温度(统计值)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "环境温度的统计值(Min/Max)，从实时温度计算得出"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Environment"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "°C"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [15, 30]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "environment"
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:AmbientTemp_Auto"
+        }
+      ],
+      "derivationRule": {
+        "type": "Property",
+        "value": "min/max over scene duration"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:AmbientHumidity_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "环境湿度(自动采集)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "工作区域环境相对湿度，从传感器自动采集"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Environment"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "%RH"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [30, 70]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±2%RH"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "environment"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:AmbientHumidity_Stat",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "环境湿度(统计值)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "环境湿度的统计值(Min/Max)，从实时湿度计算得出"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Environment"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "%RH"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [30, 70]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "environment"
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:AmbientHumidity_Auto"
+        }
+      ],
+      "derivationRule": {
+        "type": "Property",
+        "value": "min/max over scene duration"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:DriveForce",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "驱动力"
+      },
+      "description": {
+        "type": "Property",
+        "value": "伺服驱动器输出力/扭矩，用于刀具磨损监测"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "N"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 10000]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±10N"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "驱动力异常上升可能表示刀具磨损或工件材料硬度异常。典型多点采集：数控加工中心有8个驱动力测点"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WorkpieceDeflection",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "工件挠度"
+      },
+      "description": {
+        "type": "Property",
+        "value": "加工过程中工件弹性变形量"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 5]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.01mm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "工件挠度过大会影响加工精度，需要调整装夹方式或切削参数"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:CoolingWaterFlow",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "冷却水流量"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊枪冷却水流量"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "L/min"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [5, 15]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.5 L/min"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "冷却水流量不足会导致焊枪过热损坏"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:ShieldingGasFlow",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "保护气流量"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接保护气体流量"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "L/min"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [15, 20]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.5 L/min"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "保护气流量直接影响焊缝质量，流量不足会导致焊缝氧化。IGM为scalar，手工焊机为timeseries，可在Binding层覆盖"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    }
+  ]
+}

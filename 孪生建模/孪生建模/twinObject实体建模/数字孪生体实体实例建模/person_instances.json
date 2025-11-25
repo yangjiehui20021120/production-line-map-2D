@@ -1,0 +1,7876 @@
+{
+  "entities": [
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00005979",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00005979"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+7be49d3548ee4aae",
+          "real_name_hash": "bdf7e36df2870a96bcff0fc5539bc1a6",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00005979"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00006152",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00006152"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+7dda9f00c688cda2",
+          "real_name_hash": "8c6ffff09f429211f8e7758b1d570823",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00006152"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00001578",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00001578"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+288bdcd0582cb888",
+          "real_name_hash": "fc6ac35eb03c7dc6986bb5f9418c6372",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00001578"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00010936",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00010936"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+e5c103a1e1fc69a2",
+          "real_name_hash": "e4d7f723f424ec675efd1eb0d436e841",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00010936"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00001411",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00001411"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+809f77b193bfd96b",
+          "real_name_hash": "7a877d4455a23613a0f33f29e6d448b5",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00001411"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00004315",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00004315"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+0fa244be585d4fb3",
+          "real_name_hash": "3a0132bcb6c8aee54d2e0984f56f7c07",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00004315"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00067804",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00067804"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+455f84e90f1b632b",
+          "real_name_hash": "c88361f879cac1cd48b3b0fa34363536",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00067804"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00083304",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00083304"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+76249b4f1c2fdfbe",
+          "real_name_hash": "303bac22a7a168ff9f940988c173d2f2",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00083304"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00083371",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00083371"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+6744fbc0c7ab2598",
+          "real_name_hash": "e2ef73c101ac236731890f91ce13a42c",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00083371"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00083510",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00083510"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.1.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "生产线管理人员,负责产线调度与协调"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:ProductionLineManager"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "产线管理"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+928e574b6e6af983",
+          "real_name_hash": "fa968bd237125ae2eef5651c23f66fe0",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00083510"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "产线管理"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Management.L2",
+          "Skill.Safety.Expert"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Senior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:产线管理"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Fixed-Day"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061294",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061294"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+79677f6b21fdedd1",
+          "real_name_hash": "36892f1aaa832a1b44f131bbced94695",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061294"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00062605",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00062605"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+b70a13b320e573bb",
+          "real_name_hash": "4a82b4b0724c14550edf7db91e3411e6",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00062605"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00065419",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00065419"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+6dbae1b8a245172a",
+          "real_name_hash": "56c33fda0c6f8ffdf82a2afdb9b5f76c",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00065419"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060328",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060328"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+29a59bb753193e03",
+          "real_name_hash": "9471093a7e2942945219587da62e507a",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060328"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00012178",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00012178"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+2cf6fe5ef1af07da",
+          "real_name_hash": "57809406a2182564197a12f6ed707358",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00012178"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060387",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060387"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+f0c4a23f7c67f62f",
+          "real_name_hash": "2448c251acf3f123f39710d3fabab49c",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060387"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060382",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060382"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+c1eb222471557563",
+          "real_name_hash": "c1786f3bfa015bcb2a2566223d481a6e",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060382"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064129",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064129"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+6af32e42f0b0120c",
+          "real_name_hash": "7be08855b181b6c30edf6869c658e9f4",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064129"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00066351",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00066351"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+91a57f1da8e2489d",
+          "real_name_hash": "20d6ed71985210142bec859cbf8a9518",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00066351"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00066365",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00066365"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+0bfaf0b20857e85c",
+          "real_name_hash": "d18d76e7c66d28cd7da8293d40da4822",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00066365"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00066360",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00066360"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+34162947b19a3774",
+          "real_name_hash": "ad97b09148dd5e31c357507c0d7ca583",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00066360"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00081766",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00081766"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+d9beeb5f9073d9af",
+          "real_name_hash": "0037e7a753b69f0f27e7a1b258474081",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00081766"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00082390",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00082390"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.2"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "焊接机器人操作员,负责自动化焊接设备操作"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:RobotWeldOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+b6f96eec07e039dd",
+          "real_name_hash": "1d8fd533ddf25f45ace7c82fa82d264a",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00082390"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.RobotOperation.L2",
+          "Skill.Welder.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00062568",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00062568"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-组焊"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+31e3acf5162f4f2a",
+          "real_name_hash": "3216023abecdf231770bcda1110dd048",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00062568"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-组焊"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_组焊"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00065972",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00065972"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-调修"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+a0ea35df1edec395",
+          "real_name_hash": "0b0fa0159bc662b2d8426bdb31388352",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00065972"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-调修"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_调修"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00011448",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00011448"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙组装班-调修"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+0b13f7133ca0ef3f",
+          "real_name_hash": "67a191ad23a8197486bfee9a2221c3b3",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00011448"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙组装班-调修"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙组装班_调修"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00011140",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00011140"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+1d871ed09336dea7",
+          "real_name_hash": "33c53b0848bd4eabe79077f2f74dae50",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00011140"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00011131",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00011131"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+0825de5029cbc9cd",
+          "real_name_hash": "e15f228cd32afabecea9cbecb6c70d59",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00011131"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060298",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060298"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+c43b948954468ee7",
+          "real_name_hash": "f58d062a9258002aa1bf1186dab04083",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060298"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00011134",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00011134"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+5d43b4c6d5eb6455",
+          "real_name_hash": "214a8258d0cf49b4a0d29444fb3b0979",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00011134"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00010329",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00010329"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+82111621fd1770a3",
+          "real_name_hash": "4531827144623be695858ce7d1a27388",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00010329"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00063585",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00063585"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+05f954565f29b0b6",
+          "real_name_hash": "0db56917cf521411ad08f7e3a8ffa5eb",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00063585"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00063586",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00063586"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+fe68022611cd2137",
+          "real_name_hash": "f114e702ebb5260eb5a388f3cf75e58e",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00063586"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064832",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064832"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+e1c9f81fdc8c7aa9",
+          "real_name_hash": "a21d2953a35025cad0cf9f60c4decb79",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064832"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064812",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064812"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+430e9393f0db8e1e",
+          "real_name_hash": "563e6060a8a2872684a717edc4ca5265",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064812"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064840",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064840"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+4f6cee3325fb11b5",
+          "real_name_hash": "e84e0173b8ab88580340ec87197414a0",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064840"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064864",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064864"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+27597928065b9c08",
+          "real_name_hash": "9504a402fdd5b589a8a71f13c53ee9cf",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064864"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064876",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064876"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙加工班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+5137f0a3d30aa7b2",
+          "real_name_hash": "3ce5d158235b983f21a8c2cf8610468f",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064876"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙加工班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙加工班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060330",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060330"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+b324f115b3b8e29d",
+          "real_name_hash": "2562eea70702ecdf698e631dad468a98",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060330"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061286",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061286"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+16afad2f08f8aef4",
+          "real_name_hash": "96cc1146bde88aa12495d19cb9cb5cdb",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061286"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061293",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061293"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+8f726920a60eb245",
+          "real_name_hash": "c9af733ae5b991d49fbd2be2708767a9",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061293"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061290",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061290"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+f35cde6f11340930",
+          "real_name_hash": "a2d26b142856db720e883df170464eec",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061290"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00062571",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00062571"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+5f870ef57d06c847",
+          "real_name_hash": "22dd82345c180ebd5a114331b14f0354",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00062571"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060351",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060351"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+183814ae9774459e",
+          "real_name_hash": "2bb2b8d32956dad6544e084375e4bd90",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060351"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00062543",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00062543"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+ef1b931bf4e29106",
+          "real_name_hash": "8decaee1f31c025c637c0be62732310a",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00062543"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064852",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064852"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+7d2f598ede8f0f17",
+          "real_name_hash": "62e69bc1925c946e34b18521457d6e4e",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064852"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00063570",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00063570"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+e108c2fb52eceda5",
+          "real_name_hash": "39bc38c23006529155389b274842c766",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00063570"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00062561",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00062561"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+598b6b3adf68d89c",
+          "real_name_hash": "bfb5f1d0c61fb21c837c7576e3cf7f6a",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00062561"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064130",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064130"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+f9080ed45c975c5c",
+          "real_name_hash": "7abb65f3cca04ae9d30f93b0aab5a343",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064130"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00065408",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00065408"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+6c3dcb294e948a27",
+          "real_name_hash": "6db82e9c27821da496239ad8060e8ea5",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00065408"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00068151",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00068151"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+e506096bd68ad505",
+          "real_name_hash": "c2f4908de3000f2fe1e9c7917a6bc3ef",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00068151"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00012983",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00012983"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+6cdca38a76b31383",
+          "real_name_hash": "57534c9c67cd340fb21bb670e92f7f6f",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00012983"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060361",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060361"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+2055d07ea9621120",
+          "real_name_hash": "5f562f5ed57ff86ee99719b660046610",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060361"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00011391",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00011391"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+12b63545c4f6a36c",
+          "real_name_hash": "c7cd825790ee9f96a2e2303b7edd0e01",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00011391"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061220",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061220"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+70ee42d965e708d3",
+          "real_name_hash": "435965fe6f8138f640a0726d91c0df2a",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061220"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064875",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064875"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+93f8e74af986df5b",
+          "real_name_hash": "6673c96740370732eaa6e342e7e578ee",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064875"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064874",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064874"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+f4e0a9a584cd125f",
+          "real_name_hash": "34bbb6f3a3df714f1e31b8c05cbbc593",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064874"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00062570",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00062570"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+18d3bde89f911736",
+          "real_name_hash": "925bc1feaa6870f9961952e0995bca3d",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00062570"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060647",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060647"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+2de3665257e845b1",
+          "real_name_hash": "50baff1bf8552b0a5db2501cfeb2de31",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060647"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064884",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064884"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+0163bcf780acc79e",
+          "real_name_hash": "c7296fb5add89d1b865fcce547277cbc",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064884"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060322",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060322"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+b1e731f8adb39dc8",
+          "real_name_hash": "3a202490d7956053da46dea125e11258",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060322"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00064117",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00064117"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+d158a8fbae8519d7",
+          "real_name_hash": "26082ded5a295038937e46546bb212fc",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00064117"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00065411",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00065411"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+e2ca6aed4501cebe",
+          "real_name_hash": "39ab5dbe6461b64d0cc9ede9b23f304a",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00065411"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060419",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060419"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+6abab58aac867e59",
+          "real_name_hash": "6a6545d5696e589ac38fb381f23d7b7d",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060419"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00068159",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00068159"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+05222a223e6bf57d",
+          "real_name_hash": "bf68cf3e03dff05c28e12314be8535b2",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00068159"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061180",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061180"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+f0026ed6d7457c08",
+          "real_name_hash": "23704ba4da510705e00d380f74493499",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061180"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061205",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061205"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "铝合金焊接操作工,负责车体焊接作业"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:AluminumWelder"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+aaf07779eae2b3e6",
+          "real_name_hash": "ed8b8e7ed650d6a2d7c5f5fd974019c5",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061205"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Welder.L2",
+          "Skill.Safety.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00060306",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00060306"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.3.1"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "数控加工中心操作员,负责零件加工"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:CNCOperator"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+1059e1b8694bb461",
+          "real_name_hash": "687f02938ba153f30b254b1d5d45fe64",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00060306"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.CNCOperation.L2",
+          "Skill.Machining.L2"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Intermediate"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    },
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:TwinObject:Person:EMP-00061274",
+      "type": "TwinObject",
+      "name": {
+        "type": "Property",
+        "value": "员工编号EMP-00061274"
+      },
+      "twinType": {
+        "type": "Property",
+        "value": "Constituent"
+      },
+      "subType": {
+        "type": "Property",
+        "value": "Person"
+      },
+      "functionCategory": {
+        "type": "Property",
+        "value": "F1.2.3"
+      },
+      "functionDesc": {
+        "type": "Property",
+        "value": "车体装配操作工,负责部件组装与安装"
+      },
+      "twinLevel": {
+        "type": "Property",
+        "value": 4
+      },
+      "hasRole": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Role:BodyAssembler"
+      },
+      "capabilities": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "stateAttr": {
+        "type": "Property",
+        "value": [
+          {
+            "name": "attendance_status",
+            "value": "在岗"
+          },
+          {
+            "name": "current_shift",
+            "value": "侧墙附件班"
+          },
+          {
+            "name": "work_status",
+            "value": "Ready"
+          }
+        ]
+      },
+      "specifications": {
+        "type": "Property",
+        "value": {
+          "real_name_encrypted": "U2FsdGVkX1+1de4bebd5ecc667f",
+          "real_name_hash": "6c3ffbdb3edf158800aef0a273b3410e",
+          "source_system": "HRM"
+        }
+      },
+      "employeeId": {
+        "type": "Property",
+        "value": "EMP-00061274"
+      },
+      "department": {
+        "type": "Property",
+        "value": "侧墙车间"
+      },
+      "workgroup": {
+        "type": "Property",
+        "value": "侧墙附件班"
+      },
+      "skills": {
+        "type": "Property",
+        "value": [
+          "Skill.Assembly.L2",
+          "Skill.Safety.L1"
+        ]
+      },
+      "qualificationLevel": {
+        "type": "Property",
+        "value": "Junior"
+      },
+      "orgUnit": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:SideWall:侧墙附件班"
+      },
+      "employmentType": {
+        "type": "Property",
+        "value": "FullTime"
+      },
+      "hireDate": {
+        "type": "Property",
+        "value": "2024-01-01"
+      },
+      "shiftPattern": {
+        "type": "Property",
+        "value": "Rotating-3Shift"
+      },
+      "personalDataMask": {
+        "type": "Property",
+        "value": "Full"
+      },
+      "consentLevel": {
+        "type": "Property",
+        "value": "Essential"
+      }
+    }
+  ],
+  "metadata": {
+    "total_count": 69,
+    "generated_at": "2025-10-27T13:36:05.339964",
+    "schema_version": "V1.0",
+    "source_file": "person.xlsx"
+  }
+}

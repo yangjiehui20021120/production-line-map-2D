@@ -1,0 +1,12 @@
+person_id,role_id,org_id,validFrom,validTo,shiftId,assignmentStatus
+urn:ngsi-ld:TwinObject:Person:EMP-00061294,urn:ngsi-ld:Role:AluminumWelder,urn:ngsi-ld:OrgUnit:SideWallLine-TeamA,2025-10-28T08:00:00Z,2025-10-28T16:00:00Z,EarlyShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00062605,urn:ngsi-ld:Role:AluminumWelder,urn:ngsi-ld:OrgUnit:SideWallLine-TeamA,2025-10-28T08:00:00Z,2025-10-28T16:00:00Z,EarlyShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00012178,urn:ngsi-ld:Role:RoboticWeldingOperator,urn:ngsi-ld:OrgUnit:SideWallLine-TeamA,2025-10-28T08:00:00Z,2025-10-28T16:00:00Z,EarlyShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00062568,urn:ngsi-ld:Role:BodyAssembler,urn:ngsi-ld:OrgUnit:SideWallLine-TeamA,2025-10-28T08:00:00Z,2025-10-28T16:00:00Z,EarlyShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00011140,urn:ngsi-ld:Role:MachiningCenterOperator,urn:ngsi-ld:OrgUnit:SideWallLine-TeamA,2025-10-28T08:00:00Z,2025-10-28T16:00:00Z,EarlyShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00064130,urn:ngsi-ld:Role:AluminumWelder,urn:ngsi-ld:OrgUnit:SideWallLine-TeamB,2025-10-28T16:00:00Z,2025-10-29T00:00:00Z,NightShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00065408,urn:ngsi-ld:Role:AluminumWelder,urn:ngsi-ld:OrgUnit:SideWallLine-TeamB,2025-10-28T16:00:00Z,2025-10-29T00:00:00Z,NightShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00060387,urn:ngsi-ld:Role:RoboticWeldingOperator,urn:ngsi-ld:OrgUnit:SideWallLine-TeamB,2025-10-28T16:00:00Z,2025-10-29T00:00:00Z,NightShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00065972,urn:ngsi-ld:Role:BodyAssembler,urn:ngsi-ld:OrgUnit:SideWallLine-TeamB,2025-10-28T16:00:00Z,2025-10-29T00:00:00Z,NightShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00060306,urn:ngsi-ld:Role:MachiningCenterOperator,urn:ngsi-ld:OrgUnit:SideWallLine-TeamB,2025-10-28T16:00:00Z,2025-10-29T00:00:00Z,NightShift,Active
+urn:ngsi-ld:TwinObject:Person:EMP-00005979,urn:ngsi-ld:Role:SchedulingSupervisor,urn:ngsi-ld:OrgUnit:SideWallLine,2025-01-01T00:00:00Z,9999-12-31T23:59:59Z,LongTerm,Active

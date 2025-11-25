@@ -1,0 +1,421 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/Role.schema.json",
+  "title": "Role Entity Schema (Complete)",
+  "description": "角色实体完整元模型 - 岗位职责的数字化静态蓝图,支持职责与个体解耦的责任链模式",
+  "type": "object",
+  
+  "required": [
+    "id",
+    "type",
+    "name",
+    "responsibilities"
+  ],
+  
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "NGSI-LD上下文定义",
+      "examples": [
+        [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://example.com/contexts/role-context.jsonld"
+        ]
+      ]
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:Role:[A-Za-z0-9_-]+$",
+      "description": "Role实体的唯一标识符,遵循URN命名规范,建议包含岗位语义信息",
+      "examples": [
+        "urn:ngsi-ld:Role:WeldingTeamLeader",
+        "urn:ngsi-ld:Role:IEEngineer",
+        "urn:ngsi-ld:Role:QualitySupervisor"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "Role",
+      "description": "实体类型固定为Role"
+    },
+    
+    "name": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "岗位名称的人类可读标识"
+        }
+      },
+      "description": "【必填】角色名称,通常与id名称部分对应",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "焊接班组长"
+        }
+      ]
+    },
+    
+    "description": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "对该角色职责范围、技能要求等的详细描述"
+        }
+      },
+      "description": "角色的详细描述",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "负责焊接工序现场管理和质量控制的班组长角色"
+        }
+      ]
+    },
+    
+    "responsibilities": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "description": "每项描述岗位的一条核心职责"
+        }
+      },
+      "description": "【必填,核心字段】主要工作职责列表,必须完整列举岗位需要做什么",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            "落实工序质量检查与自检互检",
+            "响应处置焊接异常并组织5Why分析",
+            "协调人员保障产线节拍与异常支援"
+          ]
+        }
+      ]
+    },
+    
+    "permissionSet": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z_]+$",
+            "description": "系统操作权限码,如MES_ResolveAndon"
+          },
+          "uniqueItems": true,
+          "description": "授予此角色的系统操作权限码列表"
+        }
+      },
+      "description": "系统权限集合,列出授予此角色的IT系统功能权限,用于基于角色的访问控制(RBAC)",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            "MES_ResolveAndon",
+            "MES_ConfirmProcess",
+            "MES_ApproveQualityIssue"
+          ]
+        }
+      ]
+    },
+    
+    "qualificationReq": {
+      "type": "array",
+      "description": "任职要求资质,确保只有具备相应资质的人员才可被指派到该角色",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Relationship"
+          },
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Qualification:[A-Za-z0-9_-]+$"
+          }
+        },
+        "required": ["type", "object"]
+      },
+      "uniqueItems": true,
+      "examples": [
+        [
+          {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Qualification:SeniorWelderCert"
+          },
+          {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Qualification:ISO9001Auditor"
+          }
+        ]
+      ]
+    },
+    
+    "kpiOwnership": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "KPI指标名称"
+          },
+          "uniqueItems": true,
+          "description": "该角色需关注或负责改进的KPI指标名称列表"
+        }
+      },
+      "description": "KPI归属,明确此角色负责监控或达成的绩效指标",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            "CycleTimeVariance",
+            "LaborUtilization",
+            "FirstTimeYield"
+          ]
+        }
+      ]
+    },
+    
+    "orgScope": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:OrgUnit:[A-Za-z0-9_-]+$",
+          "description": "组织单元ID"
+        }
+      },
+      "description": "适用组织范围,引用该角色适用的组织单元ID,限定角色在哪些组织范围内有效",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:OrgUnit:ProductionDept"
+        }
+      ]
+    },
+    
+    "relatedFunctions": {
+      "type": "array",
+      "description": "关联的功能单元,引用企业功能架构中与此角色相关的功能单元ID列表,使岗位职责与组织功能体系相对应",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Relationship"
+          },
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Function:[A-Za-z0-9._-]+$"
+          }
+        },
+        "required": ["type", "object"]
+      },
+      "uniqueItems": true,
+      "examples": [
+        [
+          {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Function:F2.3.1"
+          },
+          {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Function:F2.3.2"
+          }
+        ]
+      ]
+    },
+    
+    "effectiveFrom": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "format": "date-time",
+          "description": "角色定义启用的日期时间(UTC,ISO8601格式)"
+        }
+      },
+      "description": "生效时间,该角色定义启用的日期时间,用于角色版本演进管理",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "2025-01-01T00:00:00Z"
+        }
+      ]
+    },
+    
+    "effectiveTo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "format": "date-time",
+          "description": "角色定义废止的日期时间,为空表示当前仍有效"
+        }
+      },
+      "description": "失效时间,该角色定义废止的日期时间(如适用),为空表示当前仍有效",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "2025-12-31T23:59:59Z"
+        }
+      ]
+    },
+    
+    "ownerOrg": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:OrgUnit:[A-Za-z0-9_-]+$",
+          "description": "归口管理部门的组织单元ID"
+        }
+      },
+      "description": "所属组织,负责该角色管理或维护的组织单元ID,用于治理和溯源",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:OrgUnit:IE-Team"
+        }
+      ]
+    },
+    
+    "policyRef": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Policy:[A-Za-z0-9_-]+$",
+          "description": "政策或制度文件ID"
+        }
+      },
+      "description": "策略引用,引用此角色设定所依据的政策或制度文件ID,用于治理和溯源",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Policy:HR-RoleStd-V1"
+        }
+      ]
+    }
+  },
+  
+  "additionalProperties": false,
+  
+  "examples": [
+    {
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://example.com/contexts/role-context.jsonld"
+      ],
+      "id": "urn:ngsi-ld:Role:WeldingTeamLeader",
+      "type": "Role",
+      "name": {
+        "type": "Property",
+        "value": "焊接班组长"
+      },
+      "description": {
+        "type": "Property",
+        "value": "负责焊接工序现场管理和质量控制的班组长角色"
+      },
+      "responsibilities": {
+        "type": "Property",
+        "value": [
+          "落实工序质量检查与自检互检",
+          "响应处置焊接异常并组织5Why分析",
+          "协调人员保障产线节拍与异常支援"
+        ]
+      },
+      "permissionSet": {
+        "type": "Property",
+        "value": [
+          "MES_ResolveAndon",
+          "MES_ConfirmProcess"
+        ]
+      },
+      "qualificationReq": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Qualification:SeniorWelderCert"
+        }
+      ],
+      "kpiOwnership": {
+        "type": "Property",
+        "value": [
+          "WeldingQualityRate",
+          "AndonResponseTime"
+        ]
+      },
+      "orgScope": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:WeldingWorkshop"
+      },
+      "effectiveFrom": {
+        "type": "Property",
+        "value": "2025-01-01T00:00:00Z"
+      },
+      "ownerOrg": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:OrgUnit:ProductionDept"
+      }
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.CoreModel.schema.json",
+  "title": "TwinObject 统一元模型核心字段规范",
+  "description": "数字孪生对象(TwinObject)的统一元模型JSON Schema定义,版本:V1.0,基于NGSI-LD标准和专题一建模规范",
+  "type": "object",
+  
+  "required": [
+    "@context",
+    "id",
+    "type",
+    "twinType",
+    "subType",
+    "functionCategory"
+  ],
+  
+  "properties": {
+    "@context": {
+      "description": "NGSI-LD语义上下文引用",
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "examples": [
+        ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]
+      ]
+    },
+    
+    "id": {
+      "description": "全局唯一标识符(URN格式)",
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:TwinObject:[A-Za-z]+:[A-Za-z0-9_-]+$",
+      "examples": ["urn:ngsi-ld:TwinObject:Robot:ROBOT-R01"]
+    },
+    
+    "type": {
+      "description": "NGSI-LD实体类型",
+      "const": "TwinObject"
+    },
+    
+    "name": {
+      "description": "对象名称(人类可读)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      },
+      "required": ["type", "value"]
+    },
+    
+    "twinType": {
+      "description": "顶层类型分类:构成性或流转性",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": ["Constituent", "Transitional"]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "subType": {
+      "description": "细化子类型",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "Robot", "Welder", "Positioner", "Crane", 
+            "Scanner", "QC_Tool", "Fixture", "Person",
+            "Workpiece", "Product", "Material"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "functionCategory": {
+      "description": "生产功能分类代码(必须来自F1/F2体系)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "pattern": "^F[12](\\.[0-9]+)*$"
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "functionCode": {
+      "description": "内部功能代码",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "functionDesc": {
+      "description": "功能描述文字",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "behaviorIntent": {
+      "description": "行为意图说明",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "twinLevel": {
+      "description": "系统分解层级深度",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    
+    "partOf": {
+      "description": "上级对象引用",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:.+$"
+        }
+      },
+      "required": ["type", "object"]
+    },
+    
+    "installPosition": {
+      "description": "固定安装位置(仅构成性非人员对象)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "location": {
+      "description": "地理坐标(GeoProperty)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "GeoProperty"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Point"},
+            "coordinates": {
+              "type": "array",
+              "items": {"type": "number"},
+              "minItems": 2,
+              "maxItems": 3
+            }
+          }
+        }
+      }
+    },
+    
+    "locatedIn": {
+      "description": "当前所在位置载体(仅流转性对象)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {"type": "string"}
+      }
+    },
+    
+    "inputAttr": {
+      "description": "输入接口列表",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "sourceTwin": {"type": "string"},
+              "sourceInterface": {"type": "string"}
+            },
+            "required": ["name"]
+          }
+        }
+      }
+    },
+    
+    "outputAttr": {
+      "description": "输出接口列表",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "targetTwin": {"type": "string"},
+              "targetInterface": {"type": "string"}
+            },
+            "required": ["name"]
+          }
+        }
+      }
+    },
+    
+    "controlAttr": {
+      "description": "控制接口列表",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "source": {"type": "string"}
+            },
+            "required": ["name"]
+          }
+        }
+      }
+    },
+    
+    "stateAttr": {
+      "description": "当前状态属性集合",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "value": {}
+            },
+            "required": ["name", "value"]
+          }
+        }
+      }
+    },
+    
+    "supportedModalities": {
+      "description": "支持的数据模态白名单",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Relationship"},
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Modality:.+$"
+          }
+        },
+        "required": ["type", "object"]
+      }
+    },
+    
+    "modalityBindings": {
+      "description": "模态数据绑定配置",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Property"},
+          "value": {
+            "type": "object",
+            "properties": {
+              "modalityId": {"type": "string"},
+              "pointRef": {"type": "string"},
+              "bindingVersion": {"type": "string"},
+              "changeId": {"type": "string"},
+              "effectiveFrom": {"type": "string", "format": "date-time"}
+            },
+            "required": ["modalityId", "pointRef", "bindingVersion", "effectiveFrom"]
+          }
+        }
+      }
+    },
+    
+    "hasRole": {
+      "description": "关联的岗位角色(仅Person)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {"type": "string"}
+      }
+    },
+    
+    "basedOnMBOM": {
+      "description": "关联的制造BOM(仅流转性对象)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Relationship"},
+        "object": {"type": "string"}
+      }
+    },
+    
+    "mbomItemId": {
+      "description": "MBOM中的项目ID",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "capabilities": {
+      "description": "能力标签集合",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    
+    "specifications": {
+      "description": "技术规格参数",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "object"}
+      }
+    },
+    
+    "vendor": {
+      "description": "制造厂商",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "model": {
+      "description": "设备型号",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "serialNumber": {
+      "description": "序列号",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,646 @@
+{
+  "$schema": "https://digitaltwins.rail.com/schemas/Modality.schema.json",
+  "description": "动车侧墙产线 Modality 实体实例集合 - Part 3: 几何测量和能源管理类",
+  "version": "1.0.0",
+  "createdAt": "2025-10-27T07:20:00Z",
+  "modalities": [
+    {
+      "id": "urn:ngsi-ld:Modality:ToolCompensation",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "刀具补偿值"
+      },
+      "description": {
+        "type": "Property",
+        "value": "刀具长度/半径补偿"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 10]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.001mm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "刀具补偿值用于自动补偿刀具磨损，保证加工精度"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:DimensionMeasurement_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "尺寸测量(自动)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "测量设备自动测量的工件尺寸实测值"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.01mm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "由侧墙轮廓测量设备自动测量，用于质量判定"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:DimensionMeasurement_Manual",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "尺寸测量(人工确认)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "操作员人工确认后提交的尺寸值"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Manual"
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.01mm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "操作员审核自动测量结果后手工提交，作为最终判定依据。与DimensionMeasurement_Auto是不同的Modality，因为source不同"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:DimensionDeviation",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "尺寸偏差"
+      },
+      "description": {
+        "type": "Property",
+        "value": "实测值与标准值的偏差"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [-1, 1]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Modality:DimensionMeasurement_Auto"
+        }
+      ],
+      "derivationRule": {
+        "type": "Property",
+        "value": "deviation = measured - target"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "偏差值用于SPC控制图分析和工艺能力评估"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:ProfileScan",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "轮廓扫描"
+      },
+      "description": {
+        "type": "Property",
+        "value": "传感器扫描的完整轮廓数据"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Geometry"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Array"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "mm"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.01mm"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "profile"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "geometry"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "轮廓扫描数据为点云数组，用于三维重建和形位公差分析"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:TotalEnergyConsumption",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "总能耗"
+      },
+      "description": {
+        "type": "Property",
+        "value": "统计周期内总电能消耗"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Energy"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "kWh"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 1000]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perStep"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "energy"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "从能源采集箱计算得出，用于能耗分析和成本核算"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:PowerOnDuration",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "上电时长"
+      },
+      "description": {
+        "type": "Property",
+        "value": "设备通电总时长"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Energy"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "h"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 24]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perStep"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "energy"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "用于计算设备利用率和待机能耗"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:OperationDuration",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "开动时长"
+      },
+      "description": {
+        "type": "Property",
+        "value": "设备实际运行时长"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Energy"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "h"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 24]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perStep"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "energy"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "开动时长 / 上电时长 = 设备综合效率(OEE)的时间利用率"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:ActualProcessingTime",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "实际加工时长"
+      },
+      "description": {
+        "type": "Property",
+        "value": "实际执行加工任务的时长"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Energy"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "h"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 24]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perStep"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "energy"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "实际加工时长排除了等待、调整等辅助时间，用于评估净加工效率"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:CumulativeRuntime",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "累计运行时长"
+      },
+      "description": {
+        "type": "Property",
+        "value": "设备生命周期累计运行时长"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Energy"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "h"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 100000]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perStep"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "energy"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "累计运行时长用于预防性维护计划和设备折旧计算"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:SpindlePower",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "主轴功率"
+      },
+      "description": {
+        "type": "Property",
+        "value": "主轴实时功率"
+      },
+      "category": {
+        "type": "Property",
+        "value": "Energy"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "kW"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 50]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±0.5kW"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "energy"
+      },
+      "businessNote": {
+        "type": "Property",
+        "value": "主轴功率曲线反映切削负载变化，用于刀具状态监测和能耗优化"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    }
+  ]
+}

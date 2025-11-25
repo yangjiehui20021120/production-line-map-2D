@@ -1,0 +1,724 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/Scene.schema.json",
+  "title": "Scene Entity Schema (Unified)",
+  "description": "场景实体统一元模型 - 定义生产执行过程的时空容器,支持五层级灵活创建",
+  "type": "object",
+  
+  "required": [
+    "id",
+    "type",
+    "sceneLevel",
+    "sceneCode",
+    "sceneName",
+    "refMBOM",
+    "refWorkpiece",
+    "timeFrame",
+    "location",
+    "status"
+  ],
+  
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "NGSI-LD上下文定义",
+      "examples": [
+        [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://example.com/contexts/scene-context.jsonld"
+        ]
+      ]
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:Scene:(Route|Takt|Process|Step|SubStep):[A-Za-z0-9_-]+:[A-Za-z0-9_-]+:[0-9]{14}$",
+      "description": "Scene实例唯一标识符,格式: urn:ngsi-ld:Scene:{sceneLevel}:{workpieceCode}:{mbomRef}:{timestamp}",
+      "examples": [
+        "urn:ngsi-ld:Scene:Takt:PO123-001:T01:20250108143020",
+        "urn:ngsi-ld:Scene:Process:PO123-001:T01-P0010:20250108150000",
+        "urn:ngsi-ld:Scene:Step:PO123-001:T01-P0010-S01:20250108151200"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "Scene",
+      "description": "实体类型固定为Scene"
+    },
+    
+    "sceneLevel": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["Route", "Takt", "Process", "Step", "SubStep"],
+          "description": "场景层级: Route=路线级; Takt=节拍级; Process=工序级; Step=工步级; SubStep=子步骤级"
+        }
+      },
+      "description": "场景层级标识,决定该Scene对应MBOM的哪一层",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "Process"
+        }
+      ]
+    },
+    
+    "sceneCode": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "场景业务编码,通常继承自MBOM或组合生成"
+        }
+      },
+      "description": "场景业务编码,便于业务系统引用",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "T01-P0010-Exec"
+        }
+      ]
+    },
+    
+    "sceneName": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "description": "场景名称,业务友好的描述性名称",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "侧墙板焊接工序执行-订单PO123-001"
+        }
+      ]
+    },
+    
+    "description": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "description": "场景详细描述"
+    },
+    
+    "refMBOM": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-:]+$",
+          "description": "引用的MBOM实体实例ID,层级应与sceneLevel匹配"
+        }
+      },
+      "description": "【关键】引用MBOM实体实例,定义该场景遵循的工艺蓝图。sceneLevel=Takt时,应引用MBOM.Takt实例; sceneLevel=Process时,应引用MBOM.Process实例,以此类推",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010",
+          "comment": "ProcessScene引用Process实例"
+        },
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:MBOM:M000004670327:T01",
+          "comment": "TaktScene引用Takt实例"
+        }
+      ]
+    },
+    
+    "refWorkpiece": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:(Workpiece|Product)\\.[A-Za-z0-9_-]+$",
+          "description": "绑定的具体产品或在制品TwinObject实例ID"
+        }
+      },
+      "description": "【核心区别】Scene与MBOM的关键区别:Scene绑定具体产品实例,MBOM是通用模板。每个产品在生产过程中创建自己的Scene实例",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:TwinObject:Workpiece.PO123-001"
+        }
+      ]
+    },
+    
+    "timeFrame": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "required": ["start"],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time",
+              "description": "场景开始时间(UTC ISO8601),Scene创建时必须指定"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time",
+              "description": "场景结束时间(UTC),执行中为null,完成后填充"
+            },
+            "actualDuration": {
+              "type": "number",
+              "minimum": 0,
+              "description": "实际执行时长(秒),自动计算或手动填充"
+            }
+          }
+        }
+      },
+      "description": "【时空容器-时间维度】场景执行的时间范围,提供时间锚点。start在Scene创建时确定,end在Scene完成时更新",
+      "examples": [
+        {
+          "type": "Property",
+          "value": {
+            "start": "2025-01-08T14:30:20Z",
+            "end": "2025-01-08T18:05:15Z",
+            "actualDuration": 13495
+          }
+        }
+      ]
+    },
+    
+    "location": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "lineCode": {
+              "type": "string",
+              "description": "产线编码"
+            },
+            "stationCode": {
+              "type": "string",
+              "description": "工位编码,StepScene必填"
+            },
+            "zoneId": {
+              "type": "string",
+              "description": "区域标识"
+            },
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "latitude": {"type": "number"},
+                "longitude": {"type": "number"}
+              },
+              "description": "地理坐标(可选)"
+            }
+          }
+        }
+      },
+      "description": "【时空容器-空间维度】场景执行的空间位置,提供空间锚点。粒度可根据sceneLevel调整:TaktScene可能只有lineCode,StepScene需要精确到stationCode",
+      "examples": [
+        {
+          "type": "Property",
+          "value": {
+            "lineCode": "TS361202",
+            "stationCode": "ST-HJ-01",
+            "zoneId": "ZONE-WELD-A"
+          }
+        }
+      ]
+    },
+    
+    "status": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["Planned", "Running", "Paused", "Completed", "Failed", "Aborted"],
+          "description": "Planned=计划中(已创建未开始); Running=执行中; Paused=暂停; Completed=正常完成; Failed=失败终止; Aborted=人工中止"
+        }
+      },
+      "description": "场景执行状态,状态机转换:Planned→Running→(Paused→Running)→Completed/Failed/Aborted",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "Running"
+        }
+      ]
+    },
+    
+    "partOfScene": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Scene:[A-Za-z0-9_-:]+$",
+          "description": "父场景ID,指向上一层级的Scene实例"
+        }
+      },
+      "description": "反向关系:指向父场景(N:1)。例如ProcessScene.partOfScene指向TaktScene。支持层级嵌套但非强制,可以创建孤立的Scene",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Scene:Takt:PO123-001:T01:20250108143020"
+        }
+      ]
+    },
+    
+    "includesSubScenes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Scene:[A-Za-z0-9_-:]+$"
+          },
+          "uniqueItems": true,
+          "description": "子场景ID列表"
+        }
+      },
+      "description": "正向关系:指向子场景列表(1:N)。例如TaktScene.includesSubScenes包含多个ProcessScene。子Scene创建后可动态添加到此列表",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:Scene:Process:PO123-001:T01-P0010:20250108150000",
+            "urn:ngsi-ld:Scene:Process:PO123-001:T01-P0020:20250108160000"
+          ]
+        }
+      ]
+    },
+    
+    "involvesAsset": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:TwinObject:[A-Za-z0-9_.-]+$"
+          },
+          "uniqueItems": true,
+          "description": "涉及的TwinObject实例ID列表,包括设备/工装/人员等"
+        }
+      },
+      "description": "场景涉及的所有孪生体对象,用于LLM分析时确定上下文边界。应包含:执行设备(Robot/Welder)、辅助工装(Fixture)、操作人员(Person)等",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:TwinObject:Workpiece.PO123-001",
+            "urn:ngsi-ld:TwinObject:Robot.WELD-R01",
+            "urn:ngsi-ld:TwinObject:Person.Zhang_San",
+            "urn:ngsi-ld:TwinObject:Fixture.FIX-HJ-01"
+          ]
+        }
+      ]
+    },
+    
+    "responsibilityAssignment": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["stepId", "responsible"],
+            "properties": {
+              "stepId": {
+                "type": "string",
+                "description": "步骤标识,对应MBOM Step ID或Scene内部步骤名"
+              },
+              "responsible": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:Role:[A-Za-z_]+$",
+                "description": "负责执行的角色(R)"
+              },
+              "accountable": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:Role:[A-Za-z_]+$",
+                "description": "最终负责人角色(A),必须唯一"
+              },
+              "consulted": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "咨询角色列表(C)"
+              },
+              "informed": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "知会角色列表(I)"
+              }
+            }
+          }
+        }
+      },
+      "description": "RACI职责分配。通常继承自MBOM的responsibilityFlow定义,但Scene创建时可根据实际情况覆盖或调整。每步骤必须有唯一accountable(A)和至少一个responsible(R)",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            {
+              "stepId": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S01",
+              "responsible": "urn:ngsi-ld:Role:Welder",
+              "accountable": "urn:ngsi-ld:Role:WeldingSupervisor"
+            }
+          ]
+        }
+      ]
+    },
+    
+    "stepLog": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["stepId", "performedBy", "observedAt"],
+            "properties": {
+              "stepId": {
+                "type": "string",
+                "description": "步骤标识,通常为MBOM Step ID"
+              },
+              "performedBy": {
+                "type": "object",
+                "required": ["personId", "roleId"],
+                "properties": {
+                  "personId": {
+                    "type": "string",
+                    "pattern": "^urn:ngsi-ld:TwinObject:Person\\.[A-Za-z0-9_-]+$",
+                    "description": "实际执行者的人员TwinObject ID"
+                  },
+                  "roleId": {
+                    "type": "string",
+                    "pattern": "^urn:ngsi-ld:Role:[A-Za-z_]+$",
+                    "description": "执行时担任的角色ID"
+                  }
+                },
+                "description": "实际执行者,记录人员ID+角色ID双锚,支持责任链追溯"
+              },
+              "observedAt": {
+                "type": "string",
+                "format": "date-time",
+                "description": "步骤执行时间(UTC)"
+              },
+              "approvedBy": {
+                "type": "object",
+                "properties": {
+                  "personId": {"type": "string"},
+                  "roleId": {"type": "string"}
+                },
+                "description": "审批者(如适用),同样记录人员+角色"
+              },
+              "duration": {
+                "type": "number",
+                "minimum": 0,
+                "description": "步骤实际耗时(秒)"
+              },
+              "resultData": {
+                "type": "object",
+                "description": "步骤级结果数据,如status/quality等"
+              }
+            }
+          }
+        }
+      },
+      "description": "步骤执行日志,记录每个步骤的实际执行者+角色+时间+结果。支持责任链审计:可追溯到是谁以什么角色在何时执行了该步骤。主要用于Process/Step层级Scene",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            {
+              "stepId": "urn:ngsi-ld:MBOM:M000004670327:T01:P0010:S01",
+              "performedBy": {
+                "personId": "urn:ngsi-ld:TwinObject:Person.Zhang_San",
+                "roleId": "urn:ngsi-ld:Role:Welder"
+              },
+              "observedAt": "2025-01-08T14:35:00Z",
+              "duration": 125,
+              "resultData": {
+                "status": "Pass",
+                "qualityScore": 98
+              }
+            }
+          ]
+        }
+      ]
+    },
+    
+    "result": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "required": ["overallStatus", "derivedFrom"],
+          "properties": {
+            "overallStatus": {
+              "type": "string",
+              "enum": ["Pass", "Fail", "PartialPass", "Inconclusive", "Pending"],
+              "description": "Pass=合格; Fail=不合格; PartialPass=部分合格; Inconclusive=无法判定; Pending=待判定"
+            },
+            "kpi": {
+              "type": "object",
+              "description": "KPI指标,如cycleTime/qualityScore/yieldRate等,根据sceneLevel定义不同指标"
+            },
+            "defects": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "defectCode": {"type": "string"},
+                  "severity": {"type": "string", "enum": ["Critical", "Major", "Minor"]},
+                  "description": {"type": "string"},
+                  "detectedAt": {"type": "string", "format": "date-time"}
+                }
+              },
+              "description": "缺陷记录列表"
+            },
+            "deviations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {"type": "string", "description": "偏差类型"},
+                  "description": {"type": "string"},
+                  "severity": {"type": "string"}
+                }
+              },
+              "description": "偏差记录,如超时/参数偏离等"
+            },
+            "derivedFrom": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:(ModalData|Scene|Event):[A-Za-z0-9_-:]+$"
+              },
+              "minItems": 1,
+              "description": "【核心溯源】结果来源的数据/子场景ID列表,支持一跳回溯。必须包含所有支撑该结果判定的数据源"
+            },
+            "computedAt": {
+              "type": "string",
+              "format": "date-time",
+              "description": "结果计算时间"
+            },
+            "computedBy": {
+              "type": "string",
+              "description": "结果计算方式,如MES_System/DataProduct_QualityCheck/Manual"
+            }
+          }
+        }
+      },
+      "description": "【关键】场景执行结果,必须包含derivedFrom实现溯源。overallStatus判定依据derivedFrom中的数据。Scene完成后填充,执行中可为Pending",
+      "examples": [
+        {
+          "type": "Property",
+          "value": {
+            "overallStatus": "Pass",
+            "kpi": {
+              "cycleTime": 214,
+              "qualityScore": 98.5,
+              "firstTimeYield": 1.0
+            },
+            "derivedFrom": [
+              "urn:ngsi-ld:ModalData:WeldCurrent:20250108143500:001",
+              "urn:ngsi-ld:ModalData:WeldSeamWidth:20250108180000:001",
+              "urn:ngsi-ld:Scene:Step:PO123-001:T01-P0010-S01:20250108151200"
+            ],
+            "computedAt": "2025-01-08T18:05:15Z",
+            "computedBy": "DataProduct_QualityCheck_V2.0"
+          }
+        }
+      ]
+    },
+    
+    "predecessorScene": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Scene:[A-Za-z0-9_-:]+$"
+        }
+      },
+      "description": "前序场景,指向同层级或跨层级的前置Scene。例如同一产品的上一个ProcessScene,或上一个TaktScene"
+    },
+    
+    "successorScene": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Scene:[A-Za-z0-9_-:]+$"
+        }
+      },
+      "description": "后续场景,指向同层级或跨层级的后续Scene"
+    },
+    
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Scene实例创建时间(系统时间)"
+            },
+            "createdBy": {
+              "type": "string",
+              "description": "创建者,如MES系统/人员ID"
+            },
+            "modifiedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "tags": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "标签,如urgent/rework/inspection等"
+            },
+            "notes": {
+              "type": "string",
+              "description": "备注信息"
+            }
+          }
+        }
+      },
+      "description": "元数据信息"
+    }
+  },
+  
+  "additionalProperties": false,
+  
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "sceneLevel": {
+            "properties": {
+              "value": {"const": "Step"}
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "location": {
+            "properties": {
+              "value": {
+                "required": ["stationCode"]
+              }
+            }
+          }
+        },
+        "description": "StepScene必须指定精确的stationCode"
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "sceneLevel": {
+            "properties": {
+              "value": {"enum": ["Process", "Step"]}
+            }
+          }
+        }
+      },
+      "then": {
+        "description": "Process和Step层级Scene建议填充stepLog字段"
+      }
+    }
+  ]
+}

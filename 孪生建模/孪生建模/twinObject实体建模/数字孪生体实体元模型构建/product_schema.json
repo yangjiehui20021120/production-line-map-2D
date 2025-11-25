@@ -1,0 +1,377 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Product.schema.json",
+  "title": "TwinObject Product子类型特有字段规范",
+  "description": "成品(Product)对象的扩展字段定义,版本:V1.0,基于TwinObject统一元模型核心规范",
+  
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Product"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "twinType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Transitional"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "productType": {
+          "description": "产品类型分类",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["FinalProduct", "SemiFinished", "Assembly", "Component"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "productModel": {
+          "description": "产品型号",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "productVersion": {
+          "description": "产品版本号",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "batchNumber": {
+          "description": "批次号",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "productionDate": {
+          "description": "生产日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        
+        "completionDate": {
+          "description": "完工日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        
+        "qualityStatus": {
+          "description": "质量状态",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Qualified", "UnderInspection", "Rework", "Scrapped", "Quarantine"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "qualityGrade": {
+          "description": "质量等级",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["A", "B", "C", "NG"]
+            }
+          }
+        },
+        
+        "inspectionRecords": {
+          "description": "检验记录列表",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "inspectionId": {"type": "string"},
+                  "inspectionType": {
+                    "type": "string",
+                    "enum": ["FirstArticle", "ProcessInspection", "FinalInspection", "RandomSampling"]
+                  },
+                  "inspectorId": {"type": "string"},
+                  "inspectionTime": {"type": "string", "format": "date-time"},
+                  "result": {
+                    "type": "string",
+                    "enum": ["Pass", "Fail", "ConditionalPass"]
+                  },
+                  "defects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "defectCode": {"type": "string"},
+                        "defectDesc": {"type": "string"},
+                        "severity": {
+                          "type": "string",
+                          "enum": ["Critical", "Major", "Minor"]
+                        }
+                      }
+                    }
+                  },
+                  "remarks": {"type": "string"}
+                },
+                "required": ["inspectionId", "inspectionType", "inspectionTime", "result"]
+              }
+            }
+          }
+        },
+        
+        "processRoute": {
+          "description": "已完成的工艺路线",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "stepSeq": {"type": "integer"},
+                  "procCode": {"type": "string"},
+                  "stationCode": {"type": "string"},
+                  "startTime": {"type": "string", "format": "date-time"},
+                  "endTime": {"type": "string", "format": "date-time"},
+                  "operatorId": {"type": "string"},
+                  "sceneId": {"type": "string"}
+                },
+                "required": ["stepSeq", "procCode", "startTime"]
+              }
+            }
+          }
+        },
+        
+        "reworkHistory": {
+          "description": "返工历史",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "reworkId": {"type": "string"},
+                  "reworkReason": {"type": "string"},
+                  "reworkDate": {"type": "string", "format": "date-time"},
+                  "originalDefect": {"type": "string"},
+                  "reworkProcCode": {"type": "string"},
+                  "reworkOperator": {"type": "string"},
+                  "reworkResult": {
+                    "type": "string",
+                    "enum": ["Success", "Failed"]
+                  }
+                },
+                "required": ["reworkId", "reworkReason", "reworkDate"]
+              }
+            }
+          }
+        },
+        
+        "packagingInfo": {
+          "description": "包装信息",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "packageType": {"type": "string"},
+                "packageDate": {"type": "string", "format": "date-time"},
+                "packageOperator": {"type": "string"},
+                "containerCode": {"type": "string"},
+                "grossWeight": {"type": "number"},
+                "netWeight": {"type": "number"},
+                "dimensions": {
+                  "type": "object",
+                  "properties": {
+                    "length": {"type": "number"},
+                    "width": {"type": "number"},
+                    "height": {"type": "number"},
+                    "unit": {"type": "string", "default": "mm"}
+                  }
+                }
+              }
+            }
+          }
+        },
+        
+        "shippingInfo": {
+          "description": "发运信息",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "shipmentId": {"type": "string"},
+                "shipmentDate": {"type": "string", "format": "date-time"},
+                "destination": {"type": "string"},
+                "carrier": {"type": "string"},
+                "trackingNumber": {"type": "string"},
+                "deliveryStatus": {
+                  "type": "string",
+                  "enum": ["Pending", "InTransit", "Delivered", "Returned"]
+                }
+              }
+            }
+          }
+        },
+        
+        "warrantyInfo": {
+          "description": "质保信息",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "warrantyPeriod": {"type": "integer", "description": "质保期(月)"},
+                "warrantyStartDate": {"type": "string", "format": "date"},
+                "warrantyEndDate": {"type": "string", "format": "date"},
+                "warrantyTerms": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "customerInfo": {
+          "description": "客户信息",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "customerId": {"type": "string"},
+                "customerName": {"type": "string"},
+                "orderNumber": {"type": "string"},
+                "contractNumber": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "traceabilityCode": {
+          "description": "追溯码/二维码",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "certifications": {
+          "description": "产品认证信息",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "certType": {"type": "string"},
+                  "certNumber": {"type": "string"},
+                  "certAuthority": {"type": "string"},
+                  "certDate": {"type": "string", "format": "date"},
+                  "expiryDate": {"type": "string", "format": "date"}
+                }
+              }
+            }
+          }
+        },
+        
+        "attachedDocuments": {
+          "description": "附带文档",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "docType": {
+                    "type": "string",
+                    "enum": ["QualityCertificate", "TestReport", "UserManual", "Warranty", "Other"]
+                  },
+                  "docId": {"type": "string"},
+                  "docUrl": {"type": "string"},
+                  "issueDate": {"type": "string", "format": "date"}
+                }
+              }
+            }
+          }
+        },
+        
+        "genealogy": {
+          "description": "产品谱系(关键物料追溯)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "componentType": {"type": "string"},
+                  "componentSN": {"type": "string"},
+                  "supplierBatch": {"type": "string"},
+                  "usageTimestamp": {"type": "string", "format": "date-time"}
+                }
+              }
+            }
+          }
+        }
+      },
+      
+      "required": ["productType", "productModel", "qualityStatus"]
+    }
+  ]
+}

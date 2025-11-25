@@ -1,0 +1,448 @@
+{
+  "@context": {
+    "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+    "mbom": "https://example.com/mbom/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    
+    "@vocab": "https://example.com/mbom/",
+    
+    "MBOM": {
+      "@id": "mbom:MBOM",
+      "@type": "@id",
+      "rdfs:comment": "Manufacturing Bill of Materials - 制造物料清单实体类型"
+    },
+    
+    "mbomType": {
+      "@id": "mbom:mbomType",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "MBOM子类型标识,枚举值: MBOMRoot, Route, Takt, Process, Step"
+    },
+    
+    "mbomCode": {
+      "@id": "mbom:mbomCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "MBOM业务编码"
+    },
+    
+    "mbomName": {
+      "@id": "mbom:mbomName",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "MBOM名称"
+    },
+    
+    "mbomVersion": {
+      "@id": "mbom:mbomVersion",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "MBOM版本号"
+    },
+    
+    "productCode": {
+      "@id": "mbom:productCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "关联的产品代码"
+    },
+    
+    "status": {
+      "@id": "mbom:status",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "状态,枚举值: draft, active, retired, deprecated"
+    },
+    
+    "effectiveFrom": {
+      "@id": "mbom:effectiveFrom",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "生效起始时间"
+    },
+    
+    "effectiveTo": {
+      "@id": "mbom:effectiveTo",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "生效结束时间"
+    },
+    
+    "hasRoute": {
+      "@id": "mbom:hasRoute",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "MBOM指向Route的关系,1:1"
+    },
+    
+    "partOfMBOM": {
+      "@id": "mbom:partOfMBOM",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Route指向MBOM的反向关系,N:1"
+    },
+    
+    "consistsOfTakts": {
+      "@id": "mbom:consistsOfTakts",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Route指向Takt列表的关系,1:N"
+    },
+    
+    "partOfRoute": {
+      "@id": "mbom:partOfRoute",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Takt指向Route的反向关系,N:1"
+    },
+    
+    "includesProcesses": {
+      "@id": "mbom:includesProcesses",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Takt指向Process列表的关系,1:N"
+    },
+    
+    "partOfTakt": {
+      "@id": "mbom:partOfTakt",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Process指向Takt的反向关系,N:1"
+    },
+    
+    "composedOfSteps": {
+      "@id": "mbom:composedOfSteps",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Process指向Step列表的关系,1:N"
+    },
+    
+    "partOfProcess": {
+      "@id": "mbom:partOfProcess",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "Step指向Process的反向关系,N:1"
+    },
+    
+    "requiresMaterials": {
+      "@id": "mbom:requiresMaterials",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "引用所需Material实体列表"
+    },
+    
+    "requiresRoles": {
+      "@id": "mbom:requiresRoles",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "引用所需Role实体列表"
+    },
+    
+    "requiresEquipmentTypes": {
+      "@id": "mbom:requiresEquipmentTypes",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "引用所需EquipmentType实体列表"
+    },
+    
+    "documents": {
+      "@id": "mbom:documents",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "关联文档集合"
+    },
+    
+    "routeCode": {
+      "@id": "mbom:routeCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工艺路线编码"
+    },
+    
+    "routeName": {
+      "@id": "mbom:routeName",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工艺路线名称"
+    },
+    
+    "routeVersion": {
+      "@id": "mbom:routeVersion",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "路线版本号"
+    },
+    
+    "lineCode": {
+      "@id": "mbom:lineCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "所属产线编码"
+    },
+    
+    "totalCycleTime": {
+      "@id": "mbom:totalCycleTime",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "总周期时间"
+    },
+    
+    "taktSeq": {
+      "@id": "mbom:taktSeq",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "节拍序号"
+    },
+    
+    "taktCode": {
+      "@id": "mbom:taktCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "节拍业务编码"
+    },
+    
+    "taktName": {
+      "@id": "mbom:taktName",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "节拍名称"
+    },
+    
+    "targetCT": {
+      "@id": "mbom:targetCT",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "目标节拍时间"
+    },
+    
+    "defaultTimeWindow": {
+      "@id": "mbom:defaultTimeWindow",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "默认时间窗口,枚举值: perPiece, perBatch, perShift, perDay"
+    },
+    
+    "procCode": {
+      "@id": "mbom:procCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工序编码"
+    },
+    
+    "procName": {
+      "@id": "mbom:procName",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工序名称"
+    },
+    
+    "procSeqInTakt": {
+      "@id": "mbom:procSeqInTakt",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工序在节拍内的序号"
+    },
+    
+    "procKind": {
+      "@id": "mbom:procKind",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工序类型,枚举值: process, handling, inspection, andon, measurement"
+    },
+    
+    "allowedStationCodes": {
+      "@id": "mbom:allowedStationCodes",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "允许执行的工位列表"
+    },
+    
+    "allowedBufferCodes": {
+      "@id": "mbom:allowedBufferCodes",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "允许使用的缓冲区列表"
+    },
+    
+    "consumedMaterials": {
+      "@id": "mbom:consumedMaterials",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工序级物料消耗"
+    },
+    
+    "requiredMeasurements": {
+      "@id": "mbom:requiredMeasurements",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "测量要求定义,包含modalityCode, ruleId, timing等"
+    },
+    
+    "stepSeq": {
+      "@id": "mbom:stepSeq",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步序号"
+    },
+    
+    "stepCode": {
+      "@id": "mbom:stepCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步业务编码"
+    },
+    
+    "stepName": {
+      "@id": "mbom:stepName",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步名称"
+    },
+    
+    "processKind": {
+      "@id": "mbom:processKind",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步类型"
+    },
+    
+    "stdTime": {
+      "@id": "mbom:stdTime",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "标准工时"
+    },
+    
+    "stationCode": {
+      "@id": "mbom:stationCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "执行工位编码"
+    },
+    
+    "positionCode": {
+      "@id": "mbom:positionCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工位内位置编码"
+    },
+    
+    "resourceClasses": {
+      "@id": "mbom:resourceClasses",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "资源类别列表"
+    },
+    
+    "roleCodes": {
+      "@id": "mbom:roleCodes",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "人员角色列表"
+    },
+    
+    "actsOnType": {
+      "@id": "mbom:actsOnType",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "作用对象类型,枚举值: Workpiece, Station, Buffer, Equipment"
+    },
+    
+    "actsOnHint": {
+      "@id": "mbom:actsOnHint",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "作用对象提示"
+    },
+    
+    "qgateIn": {
+      "@id": "mbom:qgateIn",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "入口质量门标识"
+    },
+    
+    "qgateOut": {
+      "@id": "mbom:qgateOut",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "出口质量门标识"
+    },
+    
+    "resultKeys": {
+      "@id": "mbom:resultKeys",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步输出结果键"
+    },
+    
+    "materialChecks": {
+      "@id": "mbom:materialChecks",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "物料检查定义"
+    },
+    
+    "materialConsumption": {
+      "@id": "mbom:materialConsumption",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步级物料消耗"
+    },
+    
+    "materialsHandled": {
+      "@id": "mbom:materialsHandled",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "物料操作定义"
+    },
+    
+    "resourceRequirements": {
+      "@id": "mbom:resourceRequirements",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "资源要求,包含能力、技能、工装"
+    },
+    
+    "stepDocuments": {
+      "@id": "mbom:stepDocuments",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步级关联文档"
+    },
+    
+    "evidenceFormCode": {
+      "@id": "mbom:evidenceFormCode",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "证据表单编码"
+    },
+    
+    "templateVersion": {
+      "@id": "mbom:templateVersion",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "工步模板版本"
+    },
+    
+    "createdBy": {
+      "@id": "mbom:createdBy",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "创建者"
+    },
+    
+    "approvedBy": {
+      "@id": "mbom:approvedBy",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "审批者"
+    },
+    
+    "modifiedBy": {
+      "@id": "mbom:modifiedBy",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "修改者"
+    },
+    
+    "supersededBy": {
+      "@id": "mbom:supersededBy",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "被替代关系"
+    },
+    
+    "supersedes": {
+      "@id": "mbom:supersedes",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "替代关系"
+    },
+    
+    "changeHistory": {
+      "@id": "mbom:changeHistory",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "变更历史记录"
+    },
+    
+    "predecessorTakt": {
+      "@id": "mbom:predecessorTakt",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "前序节拍"
+    },
+    
+    "successorTakt": {
+      "@id": "mbom:successorTakt",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "后续节拍"
+    },
+    
+    "predecessorProcess": {
+      "@id": "mbom:predecessorProcess",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "前序工序"
+    },
+    
+    "successorProcess": {
+      "@id": "mbom:successorProcess",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "后续工序"
+    },
+    
+    "predecessorStep": {
+      "@id": "mbom:predecessorStep",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "前序工步"
+    },
+    
+    "successorStep": {
+      "@id": "mbom:successorStep",
+      "@type": "ngsi-ld:Relationship",
+      "rdfs:comment": "后续工步"
+    },
+    
+    "metadata": {
+      "@id": "mbom:metadata",
+      "@type": "ngsi-ld:Property",
+      "rdfs:comment": "元数据信息"
+    }
+  }
+}

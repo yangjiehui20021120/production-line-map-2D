@@ -1,0 +1,393 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Station.schema.json",
+  "title": "TwinObject Station子类型扩展字段规范",
+  "description": "工位(Station)子类型的特有字段JSON Schema定义,版本:V1.0,扩展TwinObject统一元模型",
+  "type": "object",
+  
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Station"}
+          },
+          "required": ["type", "value"]
+        }
+      },
+      "required": ["subType"]
+    }
+  ],
+  
+  "properties": {
+    "stationCategory": {
+      "description": "工位类别",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "ProductionStation",
+            "InspectionStation",
+            "AssemblyStation",
+            "BufferZone",
+            "HandlingStation"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "areaCode": {
+      "description": "所属区域代码",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "zoneId": {
+      "description": "所属分区标识",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {"type": "string"}
+      }
+    },
+    
+    "capacityWip": {
+      "description": "在制品容量(件数)",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    
+    "hasPositions": {
+      "description": "包含的台位清单",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Relationship"},
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:TwinObject:Position:.+$"
+          }
+        },
+        "required": ["type", "object"]
+      }
+    },
+    
+    "deployedEquipment": {
+      "description": "部署的设备清单",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"const": "Relationship"},
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:TwinObject:.+$"
+          }
+        },
+        "required": ["type", "object"]
+      }
+    },
+    
+    "compatibleProcCodes": {
+      "description": "可执行工序代码清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "requiredRoles": {
+      "description": "需要的岗位角色清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "hazardFlags": {
+      "description": "危险作业标记",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Welding",
+              "Lifting",
+              "HighVoltage",
+              "HighTemperature",
+              "ConfinedSpace",
+              "Chemical",
+              "Radiation",
+              "Noise"
+            ]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "safetyRequirements": {
+      "description": "安全要求说明",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "ppe": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "个人防护装备要求"
+            },
+            "certifications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "所需安全资质"
+            },
+            "procedures": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "安全操作规程"
+            },
+            "emergencyProtocol": {
+              "type": "string",
+              "description": "应急响应预案"
+            }
+          }
+        }
+      }
+    },
+    
+    "layoutInfo": {
+      "description": "布局信息",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "dimension": {
+              "type": "object",
+              "properties": {
+                "length": {"type": "number"},
+                "width": {"type": "number"},
+                "height": {"type": "number"},
+                "unit": {"type": "string", "default": "mm"}
+              }
+            },
+            "accessDirection": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["Front", "Back", "Left", "Right", "Top"]
+              },
+              "description": "可接近方向"
+            },
+            "floorMarking": {
+              "type": "string",
+              "description": "地面标识"
+            }
+          }
+        }
+      }
+    },
+    
+    "environmentalSpec": {
+      "description": "环境规格要求",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "temperatureRange": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"},
+                "unit": {"type": "string", "default": "°C"}
+              }
+            },
+            "humidityRange": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"},
+                "unit": {"type": "string", "default": "%RH"}
+              }
+            },
+            "ventilation": {
+              "type": "string",
+              "enum": ["Natural", "Forced", "LocalExhaust", "None"]
+            },
+            "lighting": {
+              "type": "object",
+              "properties": {
+                "level": {"type": "number", "description": "照度(lux)"},
+                "type": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "utilityConnections": {
+      "description": "公用工程接口",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "power": {
+              "type": "object",
+              "properties": {
+                "voltage": {"type": "string"},
+                "capacity": {"type": "string"}
+              }
+            },
+            "compressed_air": {
+              "type": "object",
+              "properties": {
+                "pressure": {"type": "string"},
+                "flow": {"type": "string"}
+              }
+            },
+            "gas": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "气体类型"
+            },
+            "water": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    
+    "statusTracking": {
+      "description": "状态追踪配置",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "trackOccupancy": {
+              "type": "boolean",
+              "description": "是否追踪占用状态"
+            },
+            "trackThroughput": {
+              "type": "boolean",
+              "description": "是否追踪产出"
+            },
+            "trackCycleTime": {
+              "type": "boolean",
+              "description": "是否追踪节拍时间"
+            },
+            "trackQuality": {
+              "type": "boolean",
+              "description": "是否追踪质量指标"
+            }
+          }
+        }
+      }
+    },
+    
+    "operatingSchedule": {
+      "description": "运行排班",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "shifts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "shiftId": {"type": "string"},
+                  "startTime": {"type": "string"},
+                  "endTime": {"type": "string"},
+                  "requiredStaff": {"type": "integer"}
+                }
+              }
+            },
+            "daysOfWeek": {
+              "type": "array",
+              "items": {"type": "integer", "minimum": 1, "maximum": 7}
+            }
+          }
+        }
+      }
+    },
+    
+    "maintenanceAccess": {
+      "description": "维护通道信息",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "accessible": {"type": "boolean"},
+            "clearanceRequired": {"type": "string"},
+            "restrictions": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    
+    "aliasCode": {
+      "description": "别名或旧编码",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        }
+      }
+    }
+  },
+  
+  "required": [
+    "stationCategory"
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/MBOM.schema.json",
+  "title": "MBOM (Manufacturing Bill of Materials) Meta-Model",
+  "description": "制造物料清单(MBOM)元模型 - 集成工艺(Process)、资源(Resource)、物料(Material)、文档(Document)四要素的完整制造蓝图",
+  "type": "object",
+  "required": ["id", "type", "mbomCode", "mbomName", "mbomVersion", "productCode", "status", "route"],
+  
+  "properties": {
+    "@context": {
+      "description": "NGSI-LD上下文定义",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$",
+      "description": "MBOM唯一标识符 URN格式: urn:ngsi-ld:MBOM:{productCode}:{version}"
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "MBOM",
+      "description": "实体类型固定为MBOM"
+    },
+    
+    "mbomCode": {
+      "type": "string",
+      "description": "MBOM业务编码"
+    },
+    
+    "mbomName": {
+      "type": "string",
+      "description": "MBOM名称"
+    },
+    
+    "mbomVersion": {
+      "type": "string",
+      "pattern": "^[Vv][0-9]+(\\.[0-9]+)*$",
+      "description": "MBOM版本号,如V1.0"
+    },
+    
+    "productCode": {
+      "type": "string",
+      "description": "关联的产品代码"
+    },
+    
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "retired", "deprecated"],
+      "description": "MBOM状态"
+    },
+    
+    "effectiveFrom": {
+      "type": "string",
+      "format": "date-time",
+      "description": "生效时间"
+    },
+    
+    "effectiveTo": {
+      "type": "string",
+      "format": "date-time",
+      "description": "失效时间"
+    },
+    
+    "documents": {
+      "type": "object",
+      "description": "D: Document 文档要素",
+      "properties": {
+        "sopCodes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "关联的SOP文档编码列表"
+        },
+        "drawingRefs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "工程图纸引用"
+        },
+        "inspectionStandards": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "检验标准"
+        },
+        "safetyInstructions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "安全规程"
+        }
+      }
+    },
+    
+    "materials": {
+      "type": "object",
+      "description": "M: Material 物料要素",
+      "properties": {
+        "bomReference": {
+          "type": "string",
+          "description": "PLM系统BOM引用"
+        },
+        "materialList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["materialCode", "materialName", "quantity", "unit"],
+            "properties": {
+              "materialCode": { "type": "string" },
+              "materialName": { "type": "string" },
+              "specification": { "type": "string" },
+              "quantity": { "type": "number" },
+              "unit": { "type": "string" },
+              "supplierCode": { "type": "string" },
+              "consumableType": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    
+    "resources": {
+      "type": "object",
+      "description": "R: Resource 资源要素",
+      "properties": {
+        "requiredRoles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["roleCode", "roleName"],
+            "properties": {
+              "roleCode": { "type": "string" },
+              "roleName": { "type": "string" },
+              "minCount": { "type": "integer", "minimum": 1 },
+              "requiredSkills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "certifications": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "requiredEquipment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["equipmentType"],
+            "properties": {
+              "equipmentType": { "type": "string" },
+              "requiredCapabilities": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "minCount": { "type": "integer" },
+              "preferredModels": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "requiredTooling": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["toolingCode", "toolingName"],
+            "properties": {
+              "toolingCode": { "type": "string" },
+              "toolingName": { "type": "string" },
+              "toolingType": {
+                "type": "string",
+                "enum": ["fixture", "gauge", "jig", "sling"]
+              },
+              "quantity": { "type": "integer" }
+            }
+          }
+        },
+        "requiredStations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stationCode": { "type": "string" },
+              "stationName": { "type": "string" },
+              "capabilities": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "usedInProcesses": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "route": {
+      "type": "object",
+      "required": ["routeCode", "routeName", "takts"],
+      "description": "P: Process 工艺要素 - 完整的工艺路线定义",
+      "properties": {
+        "routeCode": { "type": "string" },
+        "routeName": { "type": "string" },
+        "routeVersion": { "type": "string" },
+        "lineCode": { "type": "string" },
+        "effectiveFrom": { "type": "string", "format": "date-time" },
+        "effectiveTo": { "type": "string", "format": "date-time" },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "active", "retired"]
+        },
+        
+        "requiredMeasurements": {
+          "$ref": "#/definitions/MeasurementRequirements",
+          "description": "Route级测量要求"
+        },
+        
+        "takts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/Takt" }
+        }
+      }
+    }
+  },
+  
+  "definitions": {
+    "MeasurementRequirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["modalityCode", "ruleId", "timing"],
+        "properties": {
+          "modalityCode": {
+            "type": "string",
+            "description": "模态代码,引用MODALITY_CATALOG"
+          },
+          "ruleId": {
+            "type": "string",
+            "description": "质量规则ID,引用RULE_CATALOG"
+          },
+          "timing": {
+            "type": "string",
+            "enum": ["pre", "in", "post"],
+            "description": "测量时机: pre-之前, in-过程中, post-之后"
+          },
+          "aggregator": {
+            "type": "string",
+            "enum": ["mean", "max", "min", "p95", "sum"],
+            "description": "聚合方式"
+          },
+          "sampleSize": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "采样数量"
+          },
+          "capturedByResourceClass": {
+            "type": "string",
+            "description": "采集资源类别"
+          },
+          "description": {
+            "type": "string",
+            "description": "测量描述"
+          }
+        }
+      }
+    },
+    
+    "Takt": {
+      "type": "object",
+      "required": ["taktSeq", "taktName", "processes"],
+      "properties": {
+        "taktSeq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "taktCode": { "type": "string" },
+        "taktName": { "type": "string" },
+        "targetCT_min": {
+          "type": "number",
+          "minimum": 0,
+          "description": "目标节拍时间(分钟)"
+        },
+        "defaultTimeWindow": {
+          "type": "string",
+          "enum": ["perPiece", "perBatch", "perShift", "perDay"]
+        },
+        "requiredMeasurements": {
+          "$ref": "#/definitions/MeasurementRequirements",
+          "description": "Takt级测量要求"
+        },
+        "processes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/Process" }
+        }
+      }
+    },
+    
+    "Process": {
+      "type": "object",
+      "required": ["procCode", "procName", "procSeqInTakt", "steps"],
+      "properties": {
+        "procCode": { "type": "string" },
+        "procName": { "type": "string" },
+        "procSeqInTakt": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "procKind": {
+          "type": "string",
+          "enum": ["process", "handling", "inspection", "andon"]
+        },
+        "allowedStationCodes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allowedBufferCodes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sopDocCode": { "type": "string" },
+        "version": { "type": "string" },
+        
+        "consumedMaterials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "materialCode": { "type": "string" },
+              "quantity": { "type": "number" },
+              "unit": { "type": "string" }
+            }
+          },
+          "description": "Process级物料消耗"
+        },
+        
+        "requiredResources": {
+          "type": "object",
+          "properties": {
+            "roles": { "type": "array", "items": { "type": "string" } },
+            "equipment": { "type": "array", "items": { "type": "string" } },
+            "tooling": { "type": "array", "items": { "type": "string" } }
+          },
+          "description": "Process级资源要求"
+        },
+        
+        "documents": {
+          "type": "object",
+          "properties": {
+            "sopCode": { "type": "string" },
+            "workInstruction": { "type": "string" }
+          },
+          "description": "Process级文档"
+        },
+        
+        "requiredMeasurements": {
+          "$ref": "#/definitions/MeasurementRequirements",
+          "description": "Process级测量要求"
+        },
+        
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/Step" }
+        }
+      }
+    },
+    
+    "Step": {
+      "type": "object",
+      "required": ["stepSeq", "stepName", "stdTime_min", "stationCode"],
+      "properties": {
+        "stepSeq": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "stepCode": { "type": "string" },
+        "stepName": { "type": "string" },
+        "processKind": {
+          "type": "string",
+          "enum": ["process", "handling", "inspection", "andon"]
+        },
+        "stdTime_min": {
+          "type": "number",
+          "minimum": 0,
+          "description": "标准工时(分钟)"
+        },
+        "stationCode": { "type": "string" },
+        "positionCode": { "type": "string" },
+        
+        "resourceClasses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "资源类别"
+        },
+        "roleCodes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "角色代码"
+        },
+        "actsOnType": {
+          "type": "string",
+          "enum": ["Workpiece", "Station", "Buffer"],
+          "description": "作用对象类型"
+        },
+        "actsOnHint": {
+          "type": "string",
+          "description": "作用对象提示"
+        },
+        "qgateIn": {
+          "type": "boolean",
+          "description": "入口质量门"
+        },
+        "qgateOut": {
+          "type": "boolean",
+          "description": "出口质量门"
+        },
+        "resultKeys": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "输出结果键"
+        },
+        
+        "materialChecks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "materialCode": { "type": "string" },
+              "checkType": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          },
+          "description": "Step级物料检查"
+        },
+        
+        "materialConsumption": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "materialCode": { "type": "string" },
+              "quantity": { "type": "number" },
+              "unit": { "type": "string" }
+            }
+          },
+          "description": "Step级物料消耗"
+        },
+        
+        "materialsHandled": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "materialCode": { "type": "string" },
+              "operation": { "type": "string" }
+            }
+          },
+          "description": "Step级物料操作"
+        },
+        
+        "resourceRequirements": {
+          "type": "object",
+          "properties": {
+            "requiredCapabilities": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "requiredSkills": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "mustHaveTooling": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "description": "Step级资源要求"
+        },
+        
+        "stepDocuments": {
+          "type": "object",
+          "properties": {
+            "workInstructionSection": { "type": "string" },
+            "safetyNotes": { "type": "string" },
+            "qualityStandard": { "type": "string" },
+            "safetyChecklist": { "type": "string" }
+          },
+          "description": "Step级文档"
+        },
+        
+        "requiredMeasurements": {
+          "$ref": "#/definitions/MeasurementRequirements",
+          "description": "Step级测量要求"
+        }
+      }
+    }
+  }
+}

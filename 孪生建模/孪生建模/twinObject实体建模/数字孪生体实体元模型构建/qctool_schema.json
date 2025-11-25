@@ -1,0 +1,502 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.QC_Tool.schema.json",
+  "title": "TwinObject QC_Tool子类型扩展字段规范",
+  "description": "质检工具(QC_Tool)子类型的特有字段JSON Schema定义,版本:V1.0,扩展TwinObject统一元模型",
+  "type": "object",
+  
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "QC_Tool"}
+          },
+          "required": ["type", "value"]
+        }
+      },
+      "required": ["subType"]
+    }
+  ],
+  
+  "properties": {
+    "qcToolCategory": {
+      "description": "质检工具类别",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "MeasuringTool",
+            "Gauge",
+            "Instrument",
+            "VisionSystem",
+            "TestEquipment",
+            "Scanner"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "measurementType": {
+      "description": "测量类型",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "Dimensional",
+            "Geometric",
+            "Surface",
+            "Functional",
+            "Visual",
+            "Destructive",
+            "NonDestructive"
+          ]
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "measurableModalities": {
+      "description": "可测量的模态类型清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Modality:.+$"
+          },
+          "minItems": 1
+        }
+      },
+      "required": ["type", "value"]
+    },
+    
+    "measurementRange": {
+      "description": "测量范围",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"},
+            "unit": {"type": "string"}
+          },
+          "required": ["min", "max", "unit"]
+        }
+      }
+    },
+    
+    "accuracy": {
+      "description": "测量精度",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "value": {"type": "number"},
+            "unit": {"type": "string"},
+            "standard": {"type": "string"}
+          },
+          "required": ["value", "unit"]
+        }
+      }
+    },
+    
+    "resolution": {
+      "description": "分辨率",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "value": {"type": "number"},
+            "unit": {"type": "string"}
+          },
+          "required": ["value", "unit"]
+        }
+      }
+    },
+    
+    "repeatability": {
+      "description": "重复性精度",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "value": {"type": "number"},
+            "unit": {"type": "string"}
+          },
+          "required": ["value", "unit"]
+        }
+      }
+    },
+    
+    "calibrationRequirement": {
+      "description": "校准要求",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "required": {
+              "type": "boolean",
+              "description": "是否需要定期校准"
+            },
+            "interval": {
+              "type": "integer",
+              "description": "校准周期(天)",
+              "minimum": 1
+            },
+            "standard": {
+              "type": "string",
+              "description": "校准标准"
+            },
+            "authority": {
+              "type": "string",
+              "description": "校准机构"
+            }
+          },
+          "required": ["required"]
+        }
+      }
+    },
+    
+    "calibrationStatus": {
+      "description": "当前校准状态",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["Valid", "Expired", "Pending", "Failed", "NotRequired"]
+            },
+            "lastCalibrationDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "nextCalibrationDue": {
+              "type": "string",
+              "format": "date"
+            },
+            "certificateNumber": {
+              "type": "string"
+            },
+            "calibratedBy": {
+              "type": "string"
+            }
+          },
+          "required": ["status"]
+        }
+      }
+    },
+    
+    "msaStatus": {
+      "description": "MSA(测量系统分析)状态",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["Pass", "Fail", "Pending", "NotApplicable"]
+            },
+            "grr": {
+              "type": "number",
+              "description": "GR&R百分比",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "lastMSADate": {
+              "type": "string",
+              "format": "date"
+            },
+            "nextMSADue": {
+              "type": "string",
+              "format": "date"
+            },
+            "reportReference": {
+              "type": "string"
+            }
+          },
+          "required": ["status"]
+        }
+      }
+    },
+    
+    "compatibleProcCodes": {
+      "description": "适用工序代码清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "compatibleWorkpieceTypes": {
+      "description": "适用在制品类型清单",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        }
+      }
+    },
+    
+    "measurementMode": {
+      "description": "测量模式",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "string",
+          "enum": [
+            "Manual",
+            "SemiAutomatic",
+            "FullyAutomatic",
+            "Remote"
+          ]
+        }
+      }
+    },
+    
+    "operatingEnvironment": {
+      "description": "使用环境要求",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "temperatureRange": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"},
+                "unit": {"type": "string", "default": "°C"}
+              }
+            },
+            "humidityRange": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"},
+                "unit": {"type": "string", "default": "%RH"}
+              }
+            },
+            "vibrationLevel": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High", "NotSensitive"]
+            },
+            "dustProtection": {
+              "type": "string",
+              "description": "防尘等级,如IP54"
+            }
+          }
+        }
+      }
+    },
+    
+    "dataOutputFormat": {
+      "description": "数据输出格式",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "formats": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Analog",
+                  "Digital",
+                  "RS232",
+                  "USB",
+                  "Ethernet",
+                  "Wireless",
+                  "Manual"
+                ]
+              }
+            },
+            "protocol": {
+              "type": "string",
+              "description": "通信协议"
+            },
+            "dataStructure": {
+              "type": "string",
+              "description": "数据结构说明"
+            }
+          },
+          "required": ["formats"]
+        }
+      }
+    },
+    
+    "storageRequirement": {
+      "description": "存储条件要求",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "temperatureRange": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"},
+                "unit": {"type": "string", "default": "°C"}
+              }
+            },
+            "specialRequirements": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    
+    "maintenanceSchedule": {
+      "description": "维护保养计划",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "routineInterval": {
+              "type": "integer",
+              "description": "日常维护周期(天)"
+            },
+            "majorInterval": {
+              "type": "integer",
+              "description": "大修周期(天)"
+            },
+            "maintenanceItems": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "item": {"type": "string"},
+                  "frequency": {"type": "string"},
+                  "responsible": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "usageRestrictions": {
+      "description": "使用限制条件",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "requiresCertification": {
+              "type": "boolean",
+              "description": "是否需要操作资质"
+            },
+            "requiredSkills": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "所需技能清单"
+            },
+            "safetyRequirements": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "安全要求"
+            },
+            "maxUsagePerDay": {
+              "type": "integer",
+              "description": "每日最大使用次数"
+            }
+          }
+        }
+      }
+    },
+    
+    "documentReferences": {
+      "description": "相关文档引用",
+      "type": "object",
+      "properties": {
+        "type": {"const": "Property"},
+        "value": {
+          "type": "object",
+          "properties": {
+            "operatingManual": {
+              "type": "string",
+              "description": "操作手册链接"
+            },
+            "calibrationProcedure": {
+              "type": "string",
+              "description": "校准规程链接"
+            },
+            "msaGuideline": {
+              "type": "string",
+              "description": "MSA指导文件链接"
+            },
+            "sopCodes": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "关联SOP编码"
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "required": [
+    "qcToolCategory",
+    "measurementType",
+    "measurableModalities"
+  ],
+  
+  "dependencies": {
+    "calibrationRequirement": {
+      "properties": {
+        "calibrationStatus": {
+          "type": "object"
+        }
+      },
+      "required": ["calibrationStatus"]
+    }
+  }
+}

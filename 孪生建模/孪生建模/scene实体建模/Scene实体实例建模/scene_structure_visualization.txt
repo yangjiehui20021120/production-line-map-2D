@@ -1,0 +1,112 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    Scene实例层次结构可视化 - M670-SN001                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📦 Route Scene (1个)
+└─ urn:ngsi-ld:Scene:Route:M670-SN001:RT_M000004670327:20251028090000
+   │
+   ├─ 📋 Takt T01 (3个Process)
+   │  ├─ ⚙️  Process P0010
+   │  ├─ ⚙️  Process P0020
+   │  └─ ⚙️  Process P0030
+   │
+   ├─ 📋 Takt T02 (4个Process)
+   │  ├─ ⚙️  Process P0010
+   │  ├─ ⚙️  Process P0020
+   │  ├─ ⚙️  Process P0030
+   │  └─ ⚙️  Process P0040
+   │
+   ├─ 📋 Takt T03 (2个Process)
+   │  ├─ ⚙️  Process P0010
+   │  └─ ⚙️  Process P0020
+   │
+   ├─ 📋 Takt T04 (2个Process)
+   │  ├─ ⚙️  Process P0010
+   │  └─ ⚙️  Process P0020
+   │
+   ├─ 📋 Takt T05 (2个Process)
+   │  ├─ ⚙️  Process P0010
+   │  └─ ⚙️  Process P0020
+   │
+   ├─ 📋 Takt T06 (2个Process)
+   │  ├─ ⚙️  Process P0010
+   │  └─ ⚙️  Process P0020
+   │
+   ├─ 📋 Takt T07 (1个Process)
+   │  └─ ⚙️  Process P0010
+   │
+   ├─ 📋 Takt T08 (5个Process)
+   │  ├─ ⚙️  Process P0010
+   │  ├─ ⚙️  Process P0020
+   │  ├─ ⚙️  Process P0030
+   │  ├─ ⚙️  Process P0040
+   │  └─ ⚙️  Process P0050
+   │
+   ├─ 📋 Takt T09 (2个Process)
+   │  ├─ ⚙️  Process P0010
+   │  └─ ⚙️  Process P0020
+   │
+   ├─ 📋 Takt T10 (2个Process)
+   │  ├─ ⚙️  Process P0010
+   │  └─ ⚙️  Process P0020
+   │
+   └─ 📋 Takt T11 (2个Process)
+      ├─ ⚙️  Process P0010
+      └─ ⚙️  Process P0020
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                           Workpiece追溯链示例                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Takt T01工序链:
+  [原材料] 
+    ↓
+  ⚙️  P0010 → 🔧 Workpiece:M670-SN001-T01-P0010-Output
+    ↓
+  ⚙️  P0020 → 🔧 Workpiece:M670-SN001-T01-P0020-Output
+    ↓
+  ⚙️  P0030 → 🔧 Workpiece:M670-SN001-T01-P0030-Output (= Takt T01 Output)
+    ↓
+  [流向下一个Takt]
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              关键统计数据                                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+产品: M670-SN001 & M803-SN001 (各自独立)
+
+层级统计:
+  • Route级Scene:   1个
+  • Takt级Scene:   11个
+  • Process级Scene: 27个
+  ────────────────────
+  总计:           39个
+
+平均每个Takt包含: 2.45个Process
+最多Process的Takt: T08 (5个Process)
+最少Process的Takt: T07 (1个Process)
+
+时间跨度:
+  • Route级: 30天 (2,592,000秒)
+  • Takt级: 20小时平均 (72,000秒)
+  • Process级: 1小时平均 (3,600秒)
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                           Scene关系图例说明                                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+关系类型:
+  • partOf:           子Scene → 父Scene (向上关联)
+  • includesSubScenes: 父Scene → 子Scene列表 (向下关联)
+  • inputWorkpiece:   Process的输入在制品
+  • outputWorkpiece:  Process的输出在制品
+  • refMBOM:          Scene引用的MBOM工艺定义
+
+数据流:
+  原材料 → Process₁ → Workpiece₁ → Process₂ → Workpiece₂ → ... → 最终产品
+
+追溯能力:
+  ✓ 从产品可追溯到所有工序
+  ✓ 从工序可追溯到具体Workpiece状态
+  ✓ 从Workpiece可追溯到原材料批次
+  ✓ 从Scene可追溯到MBOM工艺定义

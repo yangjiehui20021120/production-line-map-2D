@@ -1,0 +1,214 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/orgunit-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:OrgUnit:CRRC-Tangshan",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "OrgUnit"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "name": {
+      "type": "Property",
+      "value": "唐山主机厂"
+    },
+    "orgUnitType": {
+      "type": "Property",
+      "value": "Factory"
+    },
+    "orgLevel": {
+      "type": "Property",
+      "value": 1
+    },
+    "orgStatus": {
+      "type": "Property",
+      "value": "Active"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/orgunit-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:OrgUnit:BodyWorkshop",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "OrgUnit"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "name": {
+      "type": "Property",
+      "value": "车体事业部"
+    },
+    "orgUnitType": {
+      "type": "Property",
+      "value": "Workshop"
+    },
+    "orgLevel": {
+      "type": "Property",
+      "value": 2
+    },
+    "orgStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "parentOrg": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:CRRC-Tangshan"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/orgunit-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:OrgUnit:SideWallLine",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "OrgUnit"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙产线"
+    },
+    "orgUnitType": {
+      "type": "Property",
+      "value": "ProductionLine"
+    },
+    "orgLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "orgStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "parentOrg": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:BodyWorkshop"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/orgunit-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:OrgUnit:SideWallLine-TeamA",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "OrgUnit"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙产线A班"
+    },
+    "orgUnitType": {
+      "type": "Property",
+      "value": "Team"
+    },
+    "orgLevel": {
+      "type": "Property",
+      "value": 4
+    },
+    "orgStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "parentOrg": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallLine"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/orgunit-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:OrgUnit:SideWallLine-TeamB",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "OrgUnit"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙产线B班"
+    },
+    "orgUnitType": {
+      "type": "Property",
+      "value": "Team"
+    },
+    "orgLevel": {
+      "type": "Property",
+      "value": 4
+    },
+    "orgStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "parentOrg": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallLine"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/orgunit-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:OrgUnit:SideWallLine-TeamC",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "OrgUnit"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙产线C班"
+    },
+    "orgUnitType": {
+      "type": "Property",
+      "value": "Team"
+    },
+    "orgLevel": {
+      "type": "Property",
+      "value": 4
+    },
+    "orgStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "parentOrg": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallLine"
+    }
+  }
+]

@@ -1,0 +1,479 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Material.schema.json",
+  "title": "TwinObject Material子类型特有字段规范",
+  "description": "原料/物料(Material)对象的扩展字段定义,版本:V1.0,基于TwinObject统一元模型核心规范",
+  
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Material"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "twinType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Transitional"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "materialSourceType": {
+          "description": "物料来源类型",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["External", "Internal"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "materialCategory": {
+          "description": "物料分类",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["RawMaterial", "Auxiliary", "PurchasedPart", "SemiFinished", "Consumable"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "materialGrade": {
+          "description": "物料等级/牌号",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "supplierInfo": {
+          "description": "供应商信息(外部采购)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "supplierId": {"type": "string"},
+                "supplierName": {"type": "string"},
+                "supplierCode": {"type": "string"},
+                "supplierContact": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "supplierBatch": {
+          "description": "供应商批次号",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "purchaseOrder": {
+          "description": "采购订单信息",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "poNumber": {"type": "string"},
+                "poDate": {"type": "string", "format": "date"},
+                "poLineItem": {"type": "string"},
+                "purchasePrice": {"type": "number"},
+                "currency": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "incomingInspection": {
+          "description": "来料检验记录",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "inspectionId": {"type": "string"},
+                "inspectionDate": {"type": "string", "format": "date-time"},
+                "inspectorId": {"type": "string"},
+                "inspectionResult": {
+                  "type": "string",
+                  "enum": ["Pass", "Fail", "ConditionalAccept", "Quarantine"]
+                },
+                "samplingPlan": {"type": "string"},
+                "sampledQuantity": {"type": "number"},
+                "defectCount": {"type": "integer"},
+                "defects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "defectCode": {"type": "string"},
+                      "defectDesc": {"type": "string"},
+                      "severity": {
+                        "type": "string",
+                        "enum": ["Critical", "Major", "Minor"]
+                      }
+                    }
+                  }
+                },
+                "remarks": {"type": "string"}
+              },
+              "required": ["inspectionId", "inspectionDate", "inspectionResult"]
+            }
+          }
+        },
+        
+        "qualityCertificate": {
+          "description": "质量证书/合格证",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "certificateId": {"type": "string"},
+                "certificateType": {
+                  "type": "string",
+                  "enum": ["MillCertificate", "QualityCertificate", "TestReport", "ComplianceCert"]
+                },
+                "issueDate": {"type": "string", "format": "date"},
+                "issuingAuthority": {"type": "string"},
+                "certificateUrl": {"type": "string"},
+                "testResults": {"type": "object"}
+              }
+            }
+          }
+        },
+        
+        "sourceWorkpiece": {
+          "description": "来源在制品(内部来源)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:Workpiece:.+$"
+            }
+          }
+        },
+        
+        "sourceProduct": {
+          "description": "来源成品(内部来源)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:Product:.+$"
+            }
+          }
+        },
+        
+        "sourceScene": {
+          "description": "创建来源场景(内部来源)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:Scene:.+$"
+            }
+          }
+        },
+        
+        "outputFromProcess": {
+          "description": "输出自哪个工序(内部来源)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "routeCode": {"type": "string"},
+                "taktSeq": {"type": "integer"},
+                "procCode": {"type": "string"},
+                "stepSeq": {"type": "integer"}
+              }
+            }
+          }
+        },
+        
+        "receivingDate": {
+          "description": "收货日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        
+        "stockLocation": {
+          "description": "库存位置",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "warehouseCode": {"type": "string"},
+                "areaCode": {"type": "string"},
+                "rackId": {"type": "string"},
+                "binLocation": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "stockQuantity": {
+          "description": "库存数量",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "number"}
+          }
+        },
+        
+        "stockUnit": {
+          "description": "计量单位",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["piece", "kg", "ton", "meter", "liter", "box", "roll", "sheet"]
+            }
+          }
+        },
+        
+        "minimumStock": {
+          "description": "最小库存(安全库存)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "number"}
+          }
+        },
+        
+        "maximumStock": {
+          "description": "最大库存",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "number"}
+          }
+        },
+        
+        "stockStatus": {
+          "description": "库存状态",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Available", "Reserved", "InTransit", "Quarantine", "Expired", "Depleted"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "expiryDate": {
+          "description": "有效期/过期日期",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        
+        "manufactureDate": {
+          "description": "生产日期(供应商)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        
+        "materialSpec": {
+          "description": "物料规格参数",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "dimensions": {
+                  "type": "object",
+                  "properties": {
+                    "length": {"type": "number"},
+                    "width": {"type": "number"},
+                    "thickness": {"type": "number"},
+                    "diameter": {"type": "number"},
+                    "unit": {"type": "string"}
+                  }
+                },
+                "weight": {"type": "number"},
+                "weight_unit": {"type": "string"},
+                "chemicalComposition": {"type": "object"},
+                "mechanicalProperties": {"type": "object"},
+                "tolerance": {"type": "string"},
+                "surfaceFinish": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "storageConditions": {
+          "description": "存储条件要求",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "temperatureMin": {"type": "number"},
+                "temperatureMax": {"type": "number"},
+                "humidityMin": {"type": "number"},
+                "humidityMax": {"type": "number"},
+                "specialRequirements": {"type": "string"},
+                "storageInstructions": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "hazardClass": {
+          "description": "危险品分类",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "isHazardous": {"type": "boolean"},
+                "unNumber": {"type": "string"},
+                "hazardClass": {"type": "string"},
+                "packingGroup": {"type": "string"},
+                "msdsUrl": {"type": "string"}
+              }
+            }
+          }
+        },
+        
+        "usageRecords": {
+          "description": "使用记录",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "usageId": {"type": "string"},
+                  "usageDate": {"type": "string", "format": "date-time"},
+                  "usageScene": {"type": "string"},
+                  "targetWorkpiece": {"type": "string"},
+                  "quantityUsed": {"type": "number"},
+                  "operatorId": {"type": "string"},
+                  "remarks": {"type": "string"}
+                },
+                "required": ["usageDate", "quantityUsed"]
+              }
+            }
+          }
+        },
+        
+        "disposalRecords": {
+          "description": "处置记录(报废/退货)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "disposalId": {"type": "string"},
+                  "disposalType": {
+                    "type": "string",
+                    "enum": ["Scrap", "Return", "Rework", "Donation"]
+                  },
+                  "disposalDate": {"type": "string", "format": "date-time"},
+                  "disposalReason": {"type": "string"},
+                  "quantityDisposed": {"type": "number"},
+                  "approvedBy": {"type": "string"},
+                  "remarks": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        
+        "traceabilityLinks": {
+          "description": "追溯链接",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "upstreamMaterials": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "downstreamWorkpieces": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "relatedProducts": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      },
+      
+      "required": [
+        "materialSourceType",
+        "materialCategory",
+        "stockStatus"
+      ]
+    }
+  ]
+}

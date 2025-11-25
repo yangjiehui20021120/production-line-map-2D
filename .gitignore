@@ -1,0 +1,18 @@
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Python / Backend
+backend/.venv/
+backend/__pycache__/
+backend/.pytest_cache/
+
+# Vite / Logs
+*.log
+pnpm-lock.yaml
+
+# Env files
+.env
+backend/.env
+

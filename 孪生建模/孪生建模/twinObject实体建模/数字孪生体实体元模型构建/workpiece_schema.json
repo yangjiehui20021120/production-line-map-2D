@@ -1,0 +1,421 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Workpiece.schema.json",
+  "title": "TwinObject Workpiece子类型特有字段规范",
+  "description": "在制品(Workpiece)对象的扩展字段定义,版本:V1.0,基于TwinObject统一元模型核心规范",
+  
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://example.com/schemas/TwinObject.CoreModel.schema.json"
+    },
+    {
+      "properties": {
+        "subType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Workpiece"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "twinType": {
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"const": "Transitional"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "finalProductId": {
+          "description": "最终产品编号(追溯锚点)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "predecessorWorkpiece": {
+          "description": "前驱在制品引用(追溯链)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:Workpiece:.+$"
+            }
+          }
+        },
+        
+        "successorWorkpiece": {
+          "description": "后继在制品引用(追溯链)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:Workpiece:.+$"
+            }
+          }
+        },
+        
+        "granularityLevel": {
+          "description": "管理颗粒度级别",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["Takt", "Process", "Step", "Custom"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "granularityContext": {
+          "description": "颗粒度上下文(精确定位)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "routeCode": {"type": "string"},
+                "taktSeq": {"type": "integer"},
+                "procCode": {"type": "string"},
+                "stepSeq": {"type": "integer"}
+              },
+              "required": ["routeCode"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "createdByScene": {
+          "description": "创建来源场景",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:Scene:.+$"
+            }
+          },
+          "required": ["type", "object"]
+        },
+        
+        "creationTimestamp": {
+          "description": "创建时间戳",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "completionRate": {
+          "description": "完成度百分比(0-100)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "processStatus": {
+          "description": "加工状态",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": ["NotStarted", "InProgress", "Completed", "OnHold", "Scrapped"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "currentRouteContext": {
+          "description": "当前工艺路线位置",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "routeCode": {"type": "string"},
+                "routeVersion": {"type": "string"},
+                "currentTaktSeq": {"type": "integer"},
+                "currentProcCode": {"type": "string"},
+                "currentStepSeq": {"type": "integer"}
+              }
+            }
+          }
+        },
+        
+        "routeProgress": {
+          "description": "路线进度统计",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "totalTakts": {"type": "integer"},
+                "completedTakts": {"type": "integer"},
+                "totalProcesses": {"type": "integer"},
+                "completedProcesses": {"type": "integer"},
+                "estimatedCompletionTime": {"type": "string", "format": "date-time"}
+              }
+            }
+          }
+        },
+        
+        "executedScenes": {
+          "description": "已执行场景列表",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sceneId": {"type": "string"},
+                  "sceneType": {"type": "string"},
+                  "startTime": {"type": "string", "format": "date-time"},
+                  "endTime": {"type": "string", "format": "date-time"},
+                  "stationCode": {"type": "string"},
+                  "operatorId": {"type": "string"}
+                },
+                "required": ["sceneId", "startTime"]
+              }
+            }
+          }
+        },
+        
+        "sceneResults": {
+          "description": "场景执行结果摘要",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sceneId": {"type": "string"},
+                  "result": {
+                    "type": "string",
+                    "enum": ["Pass", "Fail", "ConditionalPass"]
+                  },
+                  "cycleTime": {"type": "number"},
+                  "qualityMetrics": {"type": "object"}
+                },
+                "required": ["sceneId", "result"]
+              }
+            }
+          }
+        },
+        
+        "qualityCheckpoints": {
+          "description": "质量检查点记录",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "checkpointId": {"type": "string"},
+                  "checkpointType": {
+                    "type": "string",
+                    "enum": ["PreProcess", "InProcess", "PostProcess"]
+                  },
+                  "checkTime": {"type": "string", "format": "date-time"},
+                  "inspectorId": {"type": "string"},
+                  "result": {
+                    "type": "string",
+                    "enum": ["Pass", "Fail", "ConditionalPass"]
+                  },
+                  "measurements": {"type": "object"},
+                  "remarks": {"type": "string"}
+                },
+                "required": ["checkpointId", "checkTime", "result"]
+              }
+            }
+          }
+        },
+        
+        "currentDefects": {
+          "description": "当前缺陷列表",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "defectId": {"type": "string"},
+                  "defectCode": {"type": "string"},
+                  "defectDesc": {"type": "string"},
+                  "detectedAt": {"type": "string", "format": "date-time"},
+                  "detectionScene": {"type": "string"},
+                  "severity": {
+                    "type": "string",
+                    "enum": ["Critical", "Major", "Minor"]
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": ["Open", "Repairing", "Repaired", "Accepted"]
+                  },
+                  "repairRequired": {"type": "boolean"}
+                },
+                "required": ["defectCode", "detectedAt", "severity"]
+              }
+            }
+          }
+        },
+        
+        "onSiteRepairs": {
+          "description": "现场修复记录",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "repairId": {"type": "string"},
+                  "relatedDefectId": {"type": "string"},
+                  "repairTime": {"type": "string", "format": "date-time"},
+                  "repairMethod": {"type": "string"},
+                  "repairOperator": {"type": "string"},
+                  "repairDuration": {"type": "number"},
+                  "repairResult": {
+                    "type": "string",
+                    "enum": ["Success", "Failed", "Pending"]
+                  },
+                  "verifiedBy": {"type": "string"},
+                  "notes": {"type": "string"}
+                },
+                "required": ["repairId", "repairTime", "repairOperator"]
+              }
+            }
+          }
+        },
+        
+        "holdReasons": {
+          "description": "暂停原因记录",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "holdId": {"type": "string"},
+                  "holdReason": {"type": "string"},
+                  "holdTime": {"type": "string", "format": "date-time"},
+                  "releaseTime": {"type": "string", "format": "date-time"},
+                  "approvedBy": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        
+        "materialGenealogy": {
+          "description": "物料谱系(关键原料追溯)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "materialType": {"type": "string"},
+                  "materialId": {"type": "string"},
+                  "supplierBatch": {"type": "string"},
+                  "usageScene": {"type": "string"},
+                  "usageTimestamp": {"type": "string", "format": "date-time"},
+                  "quantity": {"type": "number"},
+                  "unit": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        
+        "cycleTimeActual": {
+          "description": "实际周期时间(分钟)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "number"}
+          }
+        },
+        
+        "cycleTimeStandard": {
+          "description": "标准周期时间(分钟)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "number"}
+          }
+        },
+        
+        "transitionEvents": {
+          "description": "状态转换事件",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "eventTime": {"type": "string", "format": "date-time"},
+                  "fromStatus": {"type": "string"},
+                  "toStatus": {"type": "string"},
+                  "triggeredBy": {"type": "string"},
+                  "reason": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      },
+      
+      "required": [
+        "finalProductId",
+        "granularityLevel",
+        "granularityContext",
+        "createdByScene",
+        "creationTimestamp",
+        "completionRate",
+        "processStatus",
+        "basedOnMBOM",
+        "mbomItemId"
+      ]
+    }
+  ]
+}

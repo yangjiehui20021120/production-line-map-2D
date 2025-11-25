@@ -1,0 +1,505 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/TwinObject.Station.schema.json",
+  "title": "Station和Position子类型扩展字段规范",
+  "description": "基于TwinObject核心模型,为Station(工位/缓存区)和Position(台位)定义特有字段扩展,版本:V1.0",
+  
+  "definitions": {
+    
+    "StationSpecificFields": {
+      "description": "Station(工位)和BufferZone(缓存区)的特有字段",
+      "type": "object",
+      "properties": {
+        
+        "isBuffer": {
+          "description": "是否为缓存区(必填)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "boolean"}
+          },
+          "required": ["type", "value"]
+        },
+        
+        "lineCode": {
+          "description": "所属产线编码",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {"type": "string"}
+          }
+        },
+        
+        "areaCode": {
+          "description": "所属区域编码",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "examples": ["焊接区", "装配区", "检验区"]
+            }
+          }
+        },
+        
+        "zoneId": {
+          "description": "所属分区ID",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "examples": ["ZONE-A", "ZONE-B"]
+            }
+          }
+        },
+        
+        "capacityWIP": {
+          "description": "在制品容量(特别是缓存区建议填写)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unitCode": {
+              "const": "pieces",
+              "description": "单位:件"
+            }
+          }
+        },
+        
+        "layoutArea": {
+          "description": "占地面积(平方米)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unitCode": {
+              "const": "m2"
+            }
+          }
+        },
+        
+        "hazardFlags": {
+          "description": "风险标记(安全相关)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "WELDING",
+                  "LIFTING",
+                  "HIGH_TEMP",
+                  "HIGH_VOLTAGE",
+                  "CONFINED_SPACE",
+                  "CHEMICAL",
+                  "RADIATION",
+                  "NOISE"
+                ]
+              }
+            }
+          }
+        },
+        
+        "allowedProcessTypes": {
+          "description": "允许执行的工序类型白名单",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["process", "handling", "inspection", "andon", "rework"]
+              }
+            }
+          }
+        },
+        
+        "maxConcurrentTasks": {
+          "description": "最大并发任务数(多台位时)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        
+        "aliasStationCodes": {
+          "description": "历史别名或旧编码(用于兼容)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "examples": [{"value": ["TS36120201", "老3号位"]}]
+        },
+        
+        "upstreamStations": {
+          "description": "上游工位关系(物流连接)",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "Relationship"},
+              "object": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:TwinObject:Station:.+$"
+              }
+            }
+          }
+        },
+        
+        "downstreamStations": {
+          "description": "下游工位关系(物流连接)",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "Relationship"},
+              "object": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:TwinObject:Station:.+$"
+              }
+            }
+          }
+        },
+        
+        "associatedBuffers": {
+          "description": "关联的缓存区(工位可引用其可用的缓存区)",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "Relationship"},
+              "object": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:TwinObject:(Station|BufferZone):.+$"
+              }
+            }
+          }
+        },
+        
+        "requiredEquipmentTypes": {
+          "description": "必需的设备类型(工位要求)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "examples": ["Robot", "Welder", "Crane", "Fixture"]
+              }
+            }
+          }
+        },
+        
+        "environmentalConditions": {
+          "description": "环境条件要求",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "temperature": {
+                  "type": "object",
+                  "properties": {
+                    "min": {"type": "number"},
+                    "max": {"type": "number"},
+                    "unit": {"const": "Celsius"}
+                  }
+                },
+                "humidity": {
+                  "type": "object",
+                  "properties": {
+                    "min": {"type": "number"},
+                    "max": {"type": "number"},
+                    "unit": {"const": "percent"}
+                  }
+                },
+                "cleanlinessLevel": {
+                  "type": "string",
+                  "enum": ["ISO5", "ISO6", "ISO7", "ISO8", "General"]
+                }
+              }
+            }
+          }
+        },
+        
+        "accessControl": {
+          "description": "门禁与权限要求",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "requiredQualifications": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "examples": [["焊工证", "高空作业证"]]
+                },
+                "restrictedAccess": {
+                  "type": "boolean",
+                  "description": "是否需要特殊授权进入"
+                },
+                "maxOccupancy": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "最大同时在场人数"
+                }
+              }
+            }
+          }
+        },
+        
+        "operatingSchedule": {
+          "description": "运营时间表",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "shifts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "shiftName": {"type": "string"},
+                      "startTime": {"type": "string", "format": "time"},
+                      "endTime": {"type": "string", "format": "time"}
+                    }
+                  }
+                },
+                "weekdaysOnly": {"type": "boolean"}
+              }
+            }
+          }
+        }
+      },
+      "required": ["isBuffer"]
+    },
+    
+    "PositionSpecificFields": {
+      "description": "Position(台位)的特有字段",
+      "type": "object",
+      "properties": {
+        
+        "parentStation": {
+          "description": "所属工位(必填Relationship)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Relationship"},
+            "object": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:(Station|BufferZone):.+$"
+            }
+          },
+          "required": ["type", "object"]
+        },
+        
+        "positionCode": {
+          "description": "台位编码(在同一Station内唯一)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "pattern": "^POS-[A-Z0-9]+$",
+              "examples": ["POS-A1", "POS-B2"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        
+        "relativeOffset": {
+          "description": "相对于父Station的坐标偏移",
+          "type": "object",
+          "properties": {
+            "type": {"const": "GeoProperty"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "type": {"const": "Point"},
+                "coordinates": {
+                  "type": "array",
+                  "description": "[offsetX, offsetY] 单位:米",
+                  "items": {"type": "number"},
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              }
+            }
+          }
+        },
+        
+        "capacityWIP": {
+          "description": "台位在制品容量",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unitCode": {"const": "pieces"}
+          }
+        },
+        
+        "dedicatedEquipment": {
+          "description": "专属设备引用(固定在该台位的设备)",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {"const": "Relationship"},
+              "object": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:TwinObject:.+$"
+              }
+            }
+          }
+        },
+        
+        "positionType": {
+          "description": "台位功能类型",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "string",
+              "enum": [
+                "MainWorkPosition",
+                "AuxiliaryPosition",
+                "InspectionPosition",
+                "LoadingPosition",
+                "UnloadingPosition",
+                "BufferPosition"
+              ]
+            }
+          }
+        },
+        
+        "orientationAngle": {
+          "description": "朝向角度(相对于Station坐标系,度)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            "unitCode": {"const": "degrees"}
+          }
+        },
+        
+        "workEnvelope": {
+          "description": "工作包络(作业空间尺寸)",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "object",
+              "properties": {
+                "length": {"type": "number", "description": "长度(mm)"},
+                "width": {"type": "number", "description": "宽度(mm)"},
+                "height": {"type": "number", "description": "高度(mm)"}
+              }
+            }
+          }
+        },
+        
+        "supportedFixtures": {
+          "description": "支持的夹具类型",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        },
+        
+        "hazardFlags": {
+          "description": "台位级别的风险标记",
+          "type": "object",
+          "properties": {
+            "type": {"const": "Property"},
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "WELDING",
+                  "LIFTING",
+                  "HIGH_TEMP",
+                  "HIGH_VOLTAGE",
+                  "CONFINED_SPACE",
+                  "PINCH_POINT",
+                  "ROTATING_MACHINERY"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": ["parentStation", "positionCode"]
+    }
+  },
+  
+  "oneOf": [
+    {
+      "description": "Station或BufferZone类型的TwinObject",
+      "allOf": [
+        {
+          "properties": {
+            "subType": {
+              "properties": {
+                "value": {
+                  "enum": ["Station", "BufferZone"]
+                }
+              }
+            }
+          }
+        },
+        {"$ref": "#/definitions/StationSpecificFields"}
+      ]
+    },
+    {
+      "description": "Position类型的TwinObject",
+      "allOf": [
+        {
+          "properties": {
+            "subType": {
+              "properties": {
+                "value": {
+                  "const": "Position"
+                }
+              }
+            }
+          }
+        },
+        {"$ref": "#/definitions/PositionSpecificFields"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M670-SN001",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙组成-M670-SN001"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004670327"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M670-SN001-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M670-SN002",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙组成-M670-SN002"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004670327"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M670-SN002-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M670-SN003",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙组成-M670-SN003"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004670327"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M670-SN003-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M670-SN004",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙组成-M670-SN004"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004670327"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M670-SN004-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M670-SN005",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙组成-M670-SN005"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004670327"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M670-SN005-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M803-SN001",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN001"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004803474"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M803-SN002",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN002"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004803474"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN002-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M803-SN003",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN003"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004803474"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN003-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M803-SN004",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN004"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004803474"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN004-T11-Output"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/twinobject-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Product:M803-SN005",
+    "type": "TwinObject",
+    "subType": {
+      "type": "Property",
+      "value": "Product"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Transitional"
+    },
+    "name": {
+      "type": "Property",
+      "value": "一位侧墙组成-M803-SN005"
+    },
+    "productType": {
+      "type": "Property",
+      "value": "Assembly"
+    },
+    "productModel": {
+      "type": "Property",
+      "value": "M000004803474"
+    },
+    "qualityStatus": {
+      "type": "Property",
+      "value": "Qualified"
+    },
+    "originatingWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN005-T11-Output"
+    }
+  }
+]

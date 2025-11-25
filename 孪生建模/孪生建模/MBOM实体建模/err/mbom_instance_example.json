@@ -1,0 +1,1158 @@
+{
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://example.com/contexts/mbom-context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:MBOM:M000004670327:V1.0",
+  "type": "MBOM",
+  
+  "mbomCode": "MBOM_M000004670327",
+  "mbomName": "M000004670327侧墙制造BOM",
+  "mbomVersion": "V1.0",
+  "productCode": "M000004670327",
+  "status": "active",
+  "effectiveFrom": "2025-01-01T00:00:00Z",
+  
+  "documents": {
+    "sopCodes": ["SOP_ZQ_SIDEWALL_001", "SOP_ZQ_WELDING_002"],
+    "drawingRefs": ["DWG_M000004670327_GA", "DWG_M000004670327_WELD"],
+    "inspectionStandards": ["GB/T 3323-2005", "ISO 5817:2014"],
+    "safetyInstructions": ["SAFETY_WELDING_2024", "SAFETY_LIFTING_2024"]
+  },
+  
+  "materials": {
+    "bomReference": "BOM_M000004670327_V1.0",
+    "materialList": [
+      {
+        "materialCode": "MAT_STEEL_TYPE_V",
+        "materialName": "侧墙型材V",
+        "specification": "Q235B 厚度5mm 长度2800mm",
+        "quantity": 1,
+        "unit": "PCS",
+        "supplierCode": "SUP_STEEL_001"
+      },
+      {
+        "materialCode": "MAT_STEEL_TYPE_IV",
+        "materialName": "侧墙型材IV",
+        "specification": "Q235B 厚度4mm 长度2600mm",
+        "quantity": 1,
+        "unit": "PCS",
+        "supplierCode": "SUP_STEEL_001"
+      },
+      {
+        "materialCode": "MAT_WELDING_WIRE_ER70S6",
+        "materialName": "焊丝ER70S-6",
+        "specification": "直径1.2mm",
+        "quantity": 2.5,
+        "unit": "KG",
+        "consumableType": "welding",
+        "supplierCode": "SUP_WELD_MATERIAL_002"
+      },
+      {
+        "materialCode": "MAT_SHIELDING_GAS_CO2",
+        "materialName": "保护气体CO2",
+        "specification": "纯度99.9%",
+        "quantity": 5,
+        "unit": "L",
+        "consumableType": "gas"
+      }
+    ]
+  },
+  
+  "resources": {
+    "requiredRoles": [
+      {
+        "roleCode": "ROLE_WELDER",
+        "roleName": "焊接工",
+        "minCount": 2,
+        "requiredSkills": ["Skill.Welder.L2", "Skill.MIG.Advanced"],
+        "certifications": ["CERT_WELDER_MIG_2024"]
+      },
+      {
+        "roleCode": "ROLE_CRANE_OPERATOR",
+        "roleName": "行车工",
+        "minCount": 1,
+        "requiredSkills": ["Skill.CraneOperator.L2"],
+        "certifications": ["CERT_CRANE_5T"]
+      },
+      {
+        "roleCode": "ROLE_QC_INSPECTOR",
+        "roleName": "质检员",
+        "minCount": 1,
+        "requiredSkills": ["Skill.QC.Welding", "Skill.NDT.Visual"],
+        "certifications": ["CERT_QC_LEVEL2"]
+      }
+    ],
+    
+    "requiredEquipment": [
+      {
+        "equipmentType": "AUTO_WELDER",
+        "requiredCapabilities": ["CAP.Weld.MIG", "CAP.Weld.TIG", "CAP.Program.Auto"],
+        "minCount": 2,
+        "preferredModels": ["KUKA_KR16_WELD", "ABB_IRB2600_WELD"]
+      },
+      {
+        "equipmentType": "CRANE",
+        "requiredCapabilities": ["CAP.Lift.5T", "CAP.Position.Precision"],
+        "minCount": 1
+      },
+      {
+        "equipmentType": "LASER_SCANNER",
+        "requiredCapabilities": ["CAP.Measure.3D", "CAP.Accuracy.0.1mm"],
+        "minCount": 1
+      }
+    ],
+    
+    "requiredTooling": [
+      {
+        "toolingCode": "FIXTURE_HJ_01",
+        "toolingName": "侧墙焊接夹具",
+        "toolingType": "fixture",
+        "quantity": 3
+      },
+      {
+        "toolingCode": "SLING_3T",
+        "toolingName": "3吨吊索",
+        "toolingType": "sling",
+        "quantity": 2
+      },
+      {
+        "toolingCode": "GAUGE_WELD_SEAM",
+        "toolingName": "焊缝检测规",
+        "toolingType": "gauge",
+        "quantity": 2
+      }
+    ],
+    
+    "requiredStations": [
+      {
+        "stationCode": "ST-HJ-01",
+        "stationName": "焊接工位1",
+        "capabilities": ["CAP.Weld.MIG", "CAP.Access.Overhead"],
+        "usedInProcesses": ["0010", "0020", "0030"]
+      },
+      {
+        "stationCode": "ST-TX-01",
+        "stationName": "调修工位1",
+        "capabilities": ["CAP.Measure.Laser", "CAP.Adjust.Manual"],
+        "usedInProcesses": ["0040"]
+      }
+    ]
+  },
+  
+  "route": {
+    "routeCode": "RT_M000004670327",
+    "routeName": "M000004670327侧墙工艺路线",
+    "routeVersion": "V1.0",
+    "lineCode": "TS361202",
+    "effectiveFrom": "2025-01-01T00:00:00Z",
+    "status": "active",
+    
+    "requiredMeasurements": [
+      {
+        "modalityCode": "TotalCycleTime",
+        "ruleId": "RULE_TOTAL_CT_LT_4620MIN",
+        "timing": "post",
+        "description": "整条路线总周期时间"
+      },
+      {
+        "modalityCode": "OverallYieldRate",
+        "ruleId": "RULE_YIELD_GT_95PCT",
+        "timing": "post",
+        "aggregator": "mean",
+        "description": "整体良品率"
+      }
+    ],
+    
+    "takts": [
+      {
+        "taktSeq": 1,
+        "taktCode": "D0000518642",
+        "taktName": "M000004670327侧墙组成节拍1",
+        "targetCT_min": 420,
+        "defaultTimeWindow": "perPiece",
+        
+        "requiredMeasurements": [
+          {
+            "modalityCode": "TaktCycleTime",
+            "ruleId": "RULE_TAKT_CT_400_440MIN",
+            "timing": "post",
+            "description": "节拍1实际周期时间"
+          },
+          {
+            "modalityCode": "TaktWIPCount",
+            "ruleId": "RULE_WIP_LT_3",
+            "timing": "in",
+            "capturedByResourceClass": "MES_SYSTEM",
+            "description": "节拍内在制品数量"
+          }
+        ],
+        
+        "processes": [
+          {
+            "procCode": "0010",
+            "procName": "清洗打磨侧墙型材",
+            "procSeqInTakt": 1,
+            "procKind": "process",
+            "allowedStationCodes": [],
+            "allowedBufferCodes": ["BF-02"],
+            "sopDocCode": "SOP_ZQ_CLEAN_001",
+            "version": "C",
+            
+            "consumedMaterials": [
+              {
+                "materialCode": "MAT_CLEAN_SOLVENT",
+                "quantity": 0.5,
+                "unit": "L"
+              }
+            ],
+            
+            "requiredResources": {
+              "roles": ["ROLE_OPERATOR"],
+              "equipment": [],
+              "tooling": ["TOOL_CLEAN_KIT", "TOOL_POLISHER"]
+            },
+            
+            "documents": {
+              "sopCode": "SOP_ZQ_CLEAN_001",
+              "workInstruction": "WI_CLEAN_SIDEWALL_2024"
+            },
+            
+            "requiredMeasurements": [
+              {
+                "modalityCode": "AmbientTemperature",
+                "ruleId": "RULE_TEMP_18_28C",
+                "timing": "in",
+                "capturedByResourceClass": "TEMP_SENSOR",
+                "description": "环境温度监控"
+              }
+            ],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepCode": "1010",
+                "stepName": "开工前准备",
+                "processKind": "process",
+                "stdTime_min": 20,
+                "stationCode": "BF",
+                "positionCode": null,
+                
+                "resourceClasses": ["OPERATOR"],
+                "roleCodes": ["ROLE_OPERATOR"],
+                "actsOnType": "Workpiece",
+                "actsOnHint": "侧墙型材V、IV",
+                "qgateIn": true,
+                "qgateOut": false,
+                
+                "materialChecks": [
+                  {
+                    "materialCode": "MAT_STEEL_TYPE_V",
+                    "checkType": "presence",
+                    "description": "确认型材V到位"
+                  },
+                  {
+                    "materialCode": "MAT_STEEL_TYPE_IV",
+                    "checkType": "presence",
+                    "description": "确认型材IV到位"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Manual.Prep", "CAP.Inspect.Visual"],
+                  "requiredSkills": ["Skill.Operator.L1"],
+                  "mustHaveTooling": ["TOOL_CLEAN_KIT"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_CLEAN_001_S1",
+                  "safetyNotes": "检查工具完好性,确认工作区域整洁"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "VisualInspectionResult",
+                    "ruleId": "RULE_VISUAL_OK",
+                    "timing": "post",
+                    "capturedByResourceClass": "OPERATOR",
+                    "description": "目视检查型材表面状态"
+                  }
+                ]
+              },
+              
+              {
+                "stepSeq": 2,
+                "stepCode": "1020",
+                "stepName": "清理型材",
+                "processKind": "process",
+                "stdTime_min": 60,
+                "stationCode": "BF",
+                
+                "resourceClasses": ["OPERATOR", "HANDTOOL"],
+                "roleCodes": ["ROLE_OPERATOR"],
+                "actsOnType": "Workpiece",
+                "qgateIn": false,
+                "qgateOut": true,
+                
+                "materialConsumption": [
+                  {
+                    "materialCode": "MAT_CLEAN_SOLVENT",
+                    "quantity": 0.5,
+                    "unit": "L"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Clean", "CAP.Manual.Polish"],
+                  "requiredSkills": ["Skill.Operator.L1"],
+                  "mustHaveTooling": ["TOOL_POLISHER"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_CLEAN_001_S2",
+                  "qualityStandard": "GB/T_XXX_表面清洁度要求",
+                  "safetyNotes": "使用清洗剂时保持通风"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "SurfaceRoughness",
+                    "ruleId": "RULE_ROUGHNESS_LT_50UM",
+                    "timing": "post",
+                    "aggregator": "mean",
+                    "sampleSize": 3,
+                    "capturedByResourceClass": "QC_TOOL",
+                    "description": "表面粗糙度测量"
+                  },
+                  {
+                    "modalityCode": "CleanlinessLevel",
+                    "ruleId": "RULE_CLEAN_LEVEL_A",
+                    "timing": "post",
+                    "capturedByResourceClass": "OPERATOR",
+                    "description": "清洁度等级评定"
+                  }
+                ]
+              }
+            ]
+          },
+          
+          {
+            "procCode": "0020",
+            "procName": "装配侧墙反装",
+            "procSeqInTakt": 2,
+            "procKind": "process",
+            "allowedStationCodes": ["ST-HJ-01", "ST-HJ-03", "ST-HJ-06"],
+            "allowedBufferCodes": [],
+            "sopDocCode": "SOP_ZQ_ASSEMBLY_001",
+            "version": "C",
+            
+            "consumedMaterials": [],
+            
+            "requiredResources": {
+              "roles": ["ROLE_CRANE_OPERATOR", "ROLE_HANDLER"],
+              "equipment": ["CRANE"],
+              "tooling": ["SLING_3T", "FIXTURE_HJ_01"]
+            },
+            
+            "documents": {
+              "sopCode": "SOP_ZQ_ASSEMBLY_001",
+              "workInstruction": "WI_ASSEMBLY_SIDEWALL_2024"
+            },
+            
+            "requiredMeasurements": [
+              {
+                "modalityCode": "ProcessDefectRate",
+                "ruleId": "RULE_DEFECT_RATE_LT_2PCT",
+                "timing": "post",
+                "description": "装配工序缺陷率"
+              }
+            ],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepName": "吊运侧墙型材V入工装",
+                "processKind": "handling",
+                "stdTime_min": 50,
+                "stationCode": "ST-HJ-01",
+                
+                "resourceClasses": ["CRANE", "OPERATOR"],
+                "roleCodes": ["ROLE_CRANE_OPERATOR", "ROLE_HANDLER"],
+                "actsOnType": "Workpiece",
+                "actsOnHint": "侧墙型材V",
+                "qgateIn": true,
+                "qgateOut": false,
+                
+                "materialsHandled": [
+                  {
+                    "materialCode": "MAT_STEEL_TYPE_V",
+                    "operation": "lift_and_place"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Lift.5T", "CAP.Manual.Guide"],
+                  "requiredSkills": ["Skill.CraneOperator.L2", "Skill.Handler.L1"],
+                  "mustHaveTooling": ["CRANE_5T", "SLING_3T"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_ASSEMBLY_001_S1",
+                  "safetyChecklist": "吊装作业安全检查表_2024",
+                  "safetyNotes": "确认吊索完好,禁止站立吊物下方"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "CraneLoadWeight",
+                    "ruleId": "RULE_LOAD_LT_5000KG",
+                    "timing": "in",
+                    "capturedByResourceClass": "CRANE",
+                    "description": "吊装载荷实时监控"
+                  },
+                  {
+                    "modalityCode": "PositionAccuracy",
+                    "ruleId": "RULE_POSITION_TOLERANCE_5MM",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "型材定位精度检测"
+                  },
+                  {
+                    "modalityCode": "OperatorConfirmation",
+                    "ruleId": "RULE_MANUAL_CONFIRM_REQUIRED",
+                    "timing": "post",
+                    "capturedByResourceClass": "OPERATOR",
+                    "description": "人工确认型材到位"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      
+      {
+        "taktSeq": 2,
+        "taktCode": "D0000518727",
+        "taktName": "M000004670327侧墙组成节拍2",
+        "targetCT_min": 420,
+        "defaultTimeWindow": "perPiece",
+        
+        "requiredMeasurements": [
+          {
+            "modalityCode": "TaktCycleTime",
+            "ruleId": "RULE_TAKT_CT_400_440MIN",
+            "timing": "post"
+          }
+        ],
+        
+        "processes": [
+          {
+            "procCode": "0010",
+            "procName": "焊接侧墙反面焊缝",
+            "procSeqInTakt": 1,
+            "procKind": "process",
+            "allowedStationCodes": ["ST-HJ-01", "ST-HJ-03", "ST-HJ-06"],
+            "sopDocCode": "SOP_ZQ_WELDING_001",
+            "version": "C",
+            
+            "consumedMaterials": [
+              {
+                "materialCode": "MAT_WELDING_WIRE_ER70S6",
+                "quantity": 1.2,
+                "unit": "KG"
+              },
+              {
+                "materialCode": "MAT_SHIELDING_GAS_CO2",
+                "quantity": 2.5,
+                "unit": "L"
+              }
+            ],
+            
+            "requiredResources": {
+              "roles": ["ROLE_WELDER"],
+              "equipment": ["AUTO_WELDER"],
+              "tooling": ["FIXTURE_HJ_01", "WELDER_MIG_300A"]
+            },
+            
+            "requiredMeasurements": [
+              {
+                "modalityCode": "WeldingAmbientHumidity",
+                "ruleId": "RULE_HUMIDITY_30_70PCT",
+                "timing": "in",
+                "capturedByResourceClass": "HUMIDITY_SENSOR"
+              }
+            ],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepName": "焊接反装焊缝",
+                "processKind": "process",
+                "stdTime_min": 210,
+                "stationCode": "ST-HJ-01",
+                
+                "resourceClasses": ["AUTO_WELDER", "ROBOT"],
+                "roleCodes": ["ROLE_WELDER"],
+                "actsOnType": "Workpiece",
+                "qgateIn": true,
+                "qgateOut": true,
+                
+                "materialConsumption": [
+                  {
+                    "materialCode": "MAT_WELDING_WIRE_ER70S6",
+                    "quantity": 1.2,
+                    "unit": "KG"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Weld.MIG", "CAP.Weld.Program"],
+                  "requiredSkills": ["Skill.Welder.L2"],
+                  "mustHaveTooling": ["WELDER_MIG_300A", "FIXTURE_HJ_01"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_WELD_001_S4",
+                  "qualityStandard": "ISO 5817:2014 焊缝质量B级",
+                  "safetyNotes": "佩戴焊接面罩和防护手套,确保通风"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "WeldingCurrent",
+                    "ruleId": "RULE_CURRENT_150_250A",
+                    "timing": "in",
+                    "aggregator": "mean",
+                    "capturedByResourceClass": "AUTO_WELDER",
+                    "description": "焊接电流实时监控"
+                  },
+                  {
+                    "modalityCode": "WeldingVoltage",
+                    "ruleId": "RULE_VOLTAGE_25_35V",
+                    "timing": "in",
+                    "aggregator": "mean",
+                    "capturedByResourceClass": "AUTO_WELDER",
+                    "description": "焊接电压实时监控"
+                  },
+                  {
+                    "modalityCode": "WeldSeamWidth",
+                    "ruleId": "RULE_SEAM_WIDTH_8_12MM",
+                    "timing": "post",
+                    "sampleSize": 5,
+                    "capturedByResourceClass": "QC_TOOL",
+                    "description": "焊缝宽度检测"
+                  },
+                  {
+                    "modalityCode": "WeldSeamImage",
+                    "ruleId": "RULE_VISUAL_INSPECTION",
+                    "timing": "post",
+                    "capturedByResourceClass": "CAMERA",
+                    "description": "焊缝外观图像检测"
+                  }
+                ]
+              },
+              
+              {
+                "stepSeq": 2,
+                "stepName": "翻转侧墙至正装",
+                "processKind": "handling",
+                "stdTime_min": 40,
+                "stationCode": "ST-HJ-01",
+                
+                "resourceClasses": ["CRANE", "OPERATOR"],
+                "roleCodes": ["ROLE_CRANE_OPERATOR", "ROLE_HANDLER"],
+                "actsOnType": "Workpiece",
+                "actsOnHint": "侧墙组件",
+                "qgateIn": false,
+                "qgateOut": true,
+                
+                "materialsHandled": [
+                  {
+                    "materialCode": "WORKPIECE_SIDEWALL_ASSY",
+                    "operation": "flip"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Lift.5T", "CAP.Manual.Guide"],
+                  "requiredSkills": ["Skill.CraneOperator.L2", "Skill.Handler.L1"],
+                  "mustHaveTooling": ["CRANE_5T", "SLING_3T"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_WELD_001_S5",
+                  "safetyChecklist": "吊装作业安全检查表_2024",
+                  "safetyNotes": "确保吊索完好,禁止站立吊物下方,翻转速度≤5°/秒"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "CraneLoadWeight",
+                    "ruleId": "RULE_LOAD_LT_5000KG",
+                    "timing": "in",
+                    "capturedByResourceClass": "CRANE",
+                    "description": "吊装载荷实时监控"
+                  },
+                  {
+                    "modalityCode": "FlipAngleAccuracy",
+                    "ruleId": "RULE_FLIP_ANGLE_TOLERANCE_1DEG",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "翻转角度精度检测"
+                  }
+                ]
+              }
+            ]
+          },
+          
+          {
+            "procCode": "0020",
+            "procName": "焊接侧墙正面焊缝",
+            "procSeqInTakt": 2,
+            "procKind": "process",
+            "allowedStationCodes": ["ST-HJ-01", "ST-HJ-03", "ST-HJ-06"],
+            "sopDocCode": "SOP_ZQ_WELDING_002",
+            "version": "C",
+            
+            "consumedMaterials": [
+              {
+                "materialCode": "MAT_WELDING_WIRE_ER70S6",
+                "quantity": 1.3,
+                "unit": "KG"
+              },
+              {
+                "materialCode": "MAT_SHIELDING_GAS_CO2",
+                "quantity": 2.5,
+                "unit": "L"
+              }
+            ],
+            
+            "requiredResources": {
+              "roles": ["ROLE_WELDER"],
+              "equipment": ["AUTO_WELDER"],
+              "tooling": ["FIXTURE_HJ_01", "WELDER_MIG_300A"]
+            },
+            
+            "requiredMeasurements": [
+              {
+                "modalityCode": "WeldingAmbientHumidity",
+                "ruleId": "RULE_HUMIDITY_30_70PCT",
+                "timing": "in",
+                "capturedByResourceClass": "HUMIDITY_SENSOR"
+              }
+            ],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepName": "焊接正装焊缝",
+                "processKind": "process",
+                "stdTime_min": 210,
+                "stationCode": "ST-HJ-01",
+                
+                "resourceClasses": ["AUTO_WELDER", "ROBOT"],
+                "roleCodes": ["ROLE_WELDER"],
+                "actsOnType": "Workpiece",
+                "qgateIn": true,
+                "qgateOut": true,
+                
+                "materialConsumption": [
+                  {
+                    "materialCode": "MAT_WELDING_WIRE_ER70S6",
+                    "quantity": 1.3,
+                    "unit": "KG"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Weld.MIG", "CAP.Weld.Program"],
+                  "requiredSkills": ["Skill.Welder.L2"],
+                  "mustHaveTooling": ["WELDER_MIG_300A", "FIXTURE_HJ_01"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_WELD_002_S1",
+                  "qualityStandard": "ISO 5817:2014 焊缝质量B级",
+                  "safetyNotes": "佩戴焊接面罩和防护手套,确保通风"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "WeldingCurrent",
+                    "ruleId": "RULE_CURRENT_150_250A",
+                    "timing": "in",
+                    "aggregator": "mean",
+                    "capturedByResourceClass": "AUTO_WELDER",
+                    "description": "焊接电流实时监控"
+                  },
+                  {
+                    "modalityCode": "WeldingVoltage",
+                    "ruleId": "RULE_VOLTAGE_25_35V",
+                    "timing": "in",
+                    "aggregator": "mean",
+                    "capturedByResourceClass": "AUTO_WELDER",
+                    "description": "焊接电压实时监控"
+                  },
+                  {
+                    "modalityCode": "WeldSeamWidth",
+                    "ruleId": "RULE_SEAM_WIDTH_8_12MM",
+                    "timing": "post",
+                    "sampleSize": 5,
+                    "capturedByResourceClass": "QC_TOOL",
+                    "description": "焊缝宽度检测"
+                  },
+                  {
+                    "modalityCode": "WeldSeamImage",
+                    "ruleId": "RULE_VISUAL_INSPECTION",
+                    "timing": "post",
+                    "capturedByResourceClass": "CAMERA",
+                    "description": "焊缝外观图像检测"
+                  }
+                ]
+              }
+            ]
+          },
+          
+          {
+            "procCode": "0030",
+            "procName": "检查焊缝质量",
+            "procSeqInTakt": 3,
+            "procKind": "inspection",
+            "allowedStationCodes": ["ST-HJ-01"],
+            "sopDocCode": "SOP_ZQ_QC_001",
+            "version": "C",
+            
+            "consumedMaterials": [],
+            
+            "requiredResources": {
+              "roles": ["ROLE_QC_INSPECTOR"],
+              "equipment": ["LASER_SCANNER"],
+              "tooling": ["GAUGE_WELD_SEAM", "NDT_ULTRASONIC"]
+            },
+            
+            "requiredMeasurements": [
+              {
+                "modalityCode": "InspectionPassRate",
+                "ruleId": "RULE_PASS_RATE_GT_95PCT",
+                "timing": "post",
+                "description": "检验合格率"
+              }
+            ],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepName": "目视检查焊缝外观",
+                "processKind": "inspection",
+                "stdTime_min": 30,
+                "stationCode": "ST-HJ-01",
+                
+                "resourceClasses": ["OPERATOR"],
+                "roleCodes": ["ROLE_QC_INSPECTOR"],
+                "actsOnType": "Workpiece",
+                "qgateIn": false,
+                "qgateOut": false,
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Inspect.Visual"],
+                  "requiredSkills": ["Skill.QC.Welding", "Skill.NDT.Visual"],
+                  "mustHaveTooling": ["GAUGE_WELD_SEAM"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_QC_001_S1",
+                  "qualityStandard": "GB/T 3323-2005 焊缝外观缺陷分级",
+                  "safetyNotes": "注意焊件温度,避免烫伤"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "VisualDefectCount",
+                    "ruleId": "RULE_DEFECT_COUNT_LT_3",
+                    "timing": "post",
+                    "capturedByResourceClass": "OPERATOR",
+                    "description": "目视缺陷计数"
+                  },
+                  {
+                    "modalityCode": "InspectionResult",
+                    "ruleId": "RULE_INSPECTION_PASS",
+                    "timing": "post",
+                    "capturedByResourceClass": "OPERATOR",
+                    "description": "检验结果判定"
+                  }
+                ]
+              },
+              
+              {
+                "stepSeq": 2,
+                "stepName": "超声波无损检测",
+                "processKind": "inspection",
+                "stdTime_min": 45,
+                "stationCode": "ST-HJ-01",
+                
+                "resourceClasses": ["NDT_ULTRASONIC", "OPERATOR"],
+                "roleCodes": ["ROLE_QC_INSPECTOR"],
+                "actsOnType": "Workpiece",
+                "qgateIn": false,
+                "qgateOut": true,
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.NDT.Ultrasonic"],
+                  "requiredSkills": ["Skill.NDT.UT.L2"],
+                  "mustHaveTooling": ["NDT_ULTRASONIC"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_QC_001_S2",
+                  "qualityStandard": "GB/T 11345-2013 焊缝超声检测",
+                  "safetyNotes": "使用耦合剂时注意防滑"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "UTDefectLevel",
+                    "ruleId": "RULE_UT_LEVEL_LT_2",
+                    "timing": "post",
+                    "capturedByResourceClass": "NDT_ULTRASONIC",
+                    "description": "超声缺陷等级"
+                  },
+                  {
+                    "modalityCode": "UTImage",
+                    "ruleId": "RULE_UT_IMAGE_VALID",
+                    "timing": "post",
+                    "capturedByResourceClass": "NDT_ULTRASONIC",
+                    "description": "超声图像存档"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      
+      {
+        "taktSeq": 3,
+        "taktCode": "D0000518728",
+        "taktName": "M000004670327侧墙组成节拍3",
+        "targetCT_min": 300,
+        "defaultTimeWindow": "perPiece",
+        
+        "requiredMeasurements": [
+          {
+            "modalityCode": "TaktCycleTime",
+            "ruleId": "RULE_TAKT_CT_280_320MIN",
+            "timing": "post"
+          }
+        ],
+        
+        "processes": [
+          {
+            "procCode": "0010",
+            "procName": "调修侧墙尺寸",
+            "procSeqInTakt": 1,
+            "procKind": "process",
+            "allowedStationCodes": ["ST-TX-01"],
+            "sopDocCode": "SOP_ZQ_ADJUST_001",
+            "version": "C",
+            
+            "consumedMaterials": [],
+            
+            "requiredResources": {
+              "roles": ["ROLE_ADJUSTER"],
+              "equipment": ["LASER_SCANNER", "HYDRAULIC_PRESS"],
+              "tooling": ["MEASURE_LASER_3D", "ADJUSTMENT_FIXTURE"]
+            },
+            
+            "requiredMeasurements": [
+              {
+                "modalityCode": "DimensionAccuracy",
+                "ruleId": "RULE_DIM_TOLERANCE_OVERALL",
+                "timing": "post",
+                "description": "整体尺寸精度"
+              }
+            ],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepName": "激光扫描测量尺寸",
+                "processKind": "process",
+                "stdTime_min": 60,
+                "stationCode": "ST-TX-01",
+                
+                "resourceClasses": ["LASER_SCANNER"],
+                "roleCodes": ["ROLE_ADJUSTER"],
+                "actsOnType": "Workpiece",
+                "qgateIn": true,
+                "qgateOut": false,
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Measure.3D", "CAP.Accuracy.0.1mm"],
+                  "requiredSkills": ["Skill.Measure.Laser"],
+                  "mustHaveTooling": ["MEASURE_LASER_3D"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_ADJUST_001_S1",
+                  "qualityStandard": "企标_侧墙尺寸公差±2mm",
+                  "safetyNotes": "激光扫描时佩戴防护眼镜"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "Length_X",
+                    "ruleId": "RULE_LENGTH_X_2800_TOLERANCE_2MM",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "长度X方向测量"
+                  },
+                  {
+                    "modalityCode": "Height_Z",
+                    "ruleId": "RULE_HEIGHT_Z_1800_TOLERANCE_2MM",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "高度Z方向测量"
+                  },
+                  {
+                    "modalityCode": "Flatness",
+                    "ruleId": "RULE_FLATNESS_LT_1MM",
+                    "timing": "post",
+                    "aggregator": "max",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "平面度测量"
+                  },
+                  {
+                    "modalityCode": "ScanPointCloud",
+                    "ruleId": "RULE_POINTCLOUD_VALID",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "点云数据存档"
+                  }
+                ]
+              },
+              
+              {
+                "stepSeq": 2,
+                "stepName": "液压校形调修",
+                "processKind": "process",
+                "stdTime_min": 120,
+                "stationCode": "ST-TX-01",
+                
+                "resourceClasses": ["HYDRAULIC_PRESS", "OPERATOR"],
+                "roleCodes": ["ROLE_ADJUSTER"],
+                "actsOnType": "Workpiece",
+                "qgateIn": false,
+                "qgateOut": false,
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Press.Hydraulic", "CAP.Force.500T"],
+                  "requiredSkills": ["Skill.Adjuster.L2"],
+                  "mustHaveTooling": ["HYDRAULIC_PRESS", "ADJUSTMENT_FIXTURE"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_ADJUST_001_S2",
+                  "safetyChecklist": "液压作业安全检查表_2024",
+                  "safetyNotes": "确认液压系统压力正常,操作时远离受力区域"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "HydraulicPressure",
+                    "ruleId": "RULE_PRESSURE_LT_450BAR",
+                    "timing": "in",
+                    "aggregator": "max",
+                    "capturedByResourceClass": "HYDRAULIC_PRESS",
+                    "description": "液压压力监控"
+                  },
+                  {
+                    "modalityCode": "DeformationAmount",
+                    "ruleId": "RULE_DEFORM_0_10MM",
+                    "timing": "in",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "变形量实时监测"
+                  }
+                ]
+              },
+              
+              {
+                "stepSeq": 3,
+                "stepName": "复测尺寸验证",
+                "processKind": "inspection",
+                "stdTime_min": 40,
+                "stationCode": "ST-TX-01",
+                
+                "resourceClasses": ["LASER_SCANNER"],
+                "roleCodes": ["ROLE_ADJUSTER", "ROLE_QC_INSPECTOR"],
+                "actsOnType": "Workpiece",
+                "qgateIn": false,
+                "qgateOut": true,
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Measure.3D", "CAP.Accuracy.0.1mm"],
+                  "requiredSkills": ["Skill.Measure.Laser"],
+                  "mustHaveTooling": ["MEASURE_LASER_3D"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_ADJUST_001_S3",
+                  "qualityStandard": "企标_侧墙尺寸公差±2mm",
+                  "safetyNotes": "激光扫描时佩戴防护眼镜"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "Length_X",
+                    "ruleId": "RULE_LENGTH_X_2800_TOLERANCE_2MM",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "长度X方向复测"
+                  },
+                  {
+                    "modalityCode": "Height_Z",
+                    "ruleId": "RULE_HEIGHT_Z_1800_TOLERANCE_2MM",
+                    "timing": "post",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "高度Z方向复测"
+                  },
+                  {
+                    "modalityCode": "Flatness",
+                    "ruleId": "RULE_FLATNESS_LT_1MM",
+                    "timing": "post",
+                    "aggregator": "max",
+                    "capturedByResourceClass": "LASER_SCANNER",
+                    "description": "平面度复测"
+                  },
+                  {
+                    "modalityCode": "AdjustmentResult",
+                    "ruleId": "RULE_ADJUSTMENT_PASS",
+                    "timing": "post",
+                    "capturedByResourceClass": "OPERATOR",
+                    "description": "调修结果判定"
+                  }
+                ]
+              }
+            ]
+          },
+          
+          {
+            "procCode": "0020",
+            "procName": "下件转运至成品库",
+            "procSeqInTakt": 2,
+            "procKind": "handling",
+            "allowedStationCodes": [],
+            "allowedBufferCodes": ["BF-OUT"],
+            "sopDocCode": "SOP_ZQ_TRANSFER_001",
+            "version": "C",
+            
+            "consumedMaterials": [],
+            
+            "requiredResources": {
+              "roles": ["ROLE_CRANE_OPERATOR", "ROLE_HANDLER"],
+              "equipment": ["CRANE"],
+              "tooling": ["SLING_3T"]
+            },
+            
+            "requiredMeasurements": [],
+            
+            "steps": [
+              {
+                "stepSeq": 1,
+                "stepName": "吊运侧墙至转运小车",
+                "processKind": "handling",
+                "stdTime_min": 30,
+                "stationCode": "ST-TX-01",
+                
+                "resourceClasses": ["CRANE", "OPERATOR"],
+                "roleCodes": ["ROLE_CRANE_OPERATOR", "ROLE_HANDLER"],
+                "actsOnType": "Workpiece",
+                "qgateIn": false,
+                "qgateOut": false,
+                
+                "materialsHandled": [
+                  {
+                    "materialCode": "WORKPIECE_SIDEWALL_FINISHED",
+                    "operation": "transfer"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Lift.5T", "CAP.Manual.Guide"],
+                  "requiredSkills": ["Skill.CraneOperator.L2", "Skill.Handler.L1"],
+                  "mustHaveTooling": ["CRANE_5T", "SLING_3T"]
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_TRANSFER_001_S1",
+                  "safetyChecklist": "吊装作业安全检查表_2024",
+                  "safetyNotes": "确认吊索完好,禁止站立吊物下方"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "CraneLoadWeight",
+                    "ruleId": "RULE_LOAD_LT_5000KG",
+                    "timing": "in",
+                    "capturedByResourceClass": "CRANE",
+                    "description": "吊装载荷监控"
+                  }
+                ]
+              },
+              
+              {
+                "stepSeq": 2,
+                "stepName": "转运至成品库暂存",
+                "processKind": "handling",
+                "stdTime_min": 50,
+                "stationCode": "BF-OUT",
+                
+                "resourceClasses": ["CART", "OPERATOR"],
+                "roleCodes": ["ROLE_HANDLER"],
+                "actsOnType": "Buffer",
+                "actsOnHint": "成品暂存区",
+                "qgateIn": false,
+                "qgateOut": true,
+                
+                "materialsHandled": [
+                  {
+                    "materialCode": "WORKPIECE_SIDEWALL_FINISHED",
+                    "operation": "store"
+                  }
+                ],
+                
+                "resourceRequirements": {
+                  "requiredCapabilities": ["CAP.Transport.Cart"],
+                  "requiredSkills": ["Skill.Handler.L1"],
+                  "mustHaveTooling": []
+                },
+                
+                "stepDocuments": {
+                  "workInstructionSection": "WI_TRANSFER_001_S2",
+                  "safetyNotes": "转运路径畅通,速度≤3km/h"
+                },
+                
+                "requiredMeasurements": [
+                  {
+                    "modalityCode": "StorageLocationCode",
+                    "ruleId": "RULE_LOCATION_VALID",
+                    "timing": "post",
+                    "capturedByResourceClass": "MES_SYSTEM",
+                    "description": "库位编码记录"
+                  },
+                  {
+                    "modalityCode": "TransferCompleteTime",
+                    "ruleId": "RULE_TIME_VALID",
+                    "timing": "post",
+                    "capturedByResourceClass": "MES_SYSTEM",
+                    "description": "转运完成时间戳"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

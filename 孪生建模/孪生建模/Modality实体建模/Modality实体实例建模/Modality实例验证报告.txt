@@ -1,0 +1,122 @@
+================================================================================
+Modality 实体实例验证报告
+================================================================================
+
+文件: Modality_Instances_Complete.json
+版本: 1.0.0
+日期: 2025-10-27
+总实例数: 40
+
+按Source分类:
+  Sensor         : 29 ( 72.5%)
+  Calculated     : 10 ( 25.0%)
+  Manual         :  1 (  2.5%)
+
+按Category分类:
+  ProcessParameter         : 11 ( 27.5%)
+  Geometry                 : 11 ( 27.5%)
+  QualityCharacteristic    :  8 ( 20.0%)
+  Energy                   :  6 ( 15.0%)
+  Environment              :  4 ( 10.0%)
+
+按ValueFormat分类:
+  scalar         : 24 ( 60.0%)
+  timeseries     : 15 ( 37.5%)
+  profile        :  1 (  2.5%)
+
+必填字段完整性检查:
+  ✅ id             : 40/40
+  ✅ type           : 40/40
+  ✅ name           : 40/40
+  ✅ category       : 40/40
+  ✅ valueType      : 40/40
+  ✅ source         : 40/40
+
+推荐字段填写率:
+  详细描述        : 40/40 (100.0%)
+  计量单位        : 40/40 (100.0%)
+  值域范围        : 36/40 ( 90.0%)
+  测量精度        : 29/40 ( 72.5%)
+  采样模式        : 40/40 (100.0%)
+  数据格式        : 40/40 (100.0%)
+  应用领域        : 40/40 (100.0%)
+  业务说明        : 29/40 ( 72.5%)
+  版本号         : 40/40 (100.0%)
+
+衍生数据实例: 5
+  • 焊接电流(统计值)
+    ← WeldingCurrent_Auto
+    规则: min/max over scene duration
+  • 焊接电压(统计值)
+    ← WeldingVoltage_Auto
+    规则: min/max over scene duration
+  • 环境温度(统计值)
+    ← AmbientTemp_Auto
+    规则: min/max over scene duration
+  • 环境湿度(统计值)
+    ← AmbientHumidity_Auto
+    规则: min/max over scene duration
+  • 尺寸偏差
+    ← DimensionMeasurement_Auto
+    规则: deviation = measured - target
+
+关联关系实例: 3
+  • 送丝速度(自动采集)
+    → WeldingCurrent_Auto, WeldingVoltage_Auto
+  • 焊接电流(自动采集)
+    → WireFeedSpeed_Auto, WeldingVoltage_Auto
+  • 焊接电压(自动采集)
+    → WeldingCurrent_Auto, WireFeedSpeed_Auto
+
+ID格式验证:
+  ✅ 所有ID符合URN格式规范
+  ✅ 所有实例type='Modality'
+  ✅ 所有实例包含@context
+
+完整Modality清单 (ID列表):
+   1. RobotLinearSpeed                    | 机器人线速度                    | Sensor
+   2. MotorRotationSpeed                  | 电机转速                      | Sensor
+   3. WireFeedSpeed_Auto                  | 送丝速度(自动采集)                | Sensor
+   4. WeldingSpeed                        | 焊接速度                      | Sensor
+   5. ToolLinearSpeed                     | 刀具线速度                     | Sensor
+   6. FeedRate                            | 进给速度                      | Sensor
+   7. RobotTCPPose                        | 机器人TCP位姿                  | Sensor
+   8. RobotBaseX                          | 机器人X轴姿态                   | Sensor
+   9. RobotBaseY                          | 机器人Y轴姿态                   | Sensor
+  10. RobotBaseZ                          | 机器人Z轴姿态                   | Sensor
+  11. RobotToolEX                         | 工具坐标系X姿态                  | Sensor
+  12. RobotToolEY                         | 工具坐标系Y姿态                  | Sensor
+  13. RobotToolEZ                         | 工具坐标系Z姿态                  | Sensor
+  14. RobotRailPosition                   | 机器人导轨位置                   | Sensor
+  15. AxisAngle                           | 轴旋转角度                     | Sensor
+  16. WeldingCurrent_Auto                 | 焊接电流(自动采集)                | Sensor
+  17. WeldingCurrent_Stat                 | 焊接电流(统计值)                 | Calculated
+  18. WeldingVoltage_Auto                 | 焊接电压(自动采集)                | Sensor
+  19. WeldingVoltage_Stat                 | 焊接电压(统计值)                 | Calculated
+  20. SendWireCurrent                     | 送丝电流                      | Sensor
+  21. DriveTemp                           | 驱动器温度                     | Sensor
+  22. AmbientTemp_Auto                    | 环境温度(自动采集)                | Sensor
+  23. AmbientTemp_Stat                    | 环境温度(统计值)                 | Calculated
+  24. AmbientHumidity_Auto                | 环境湿度(自动采集)                | Sensor
+  25. AmbientHumidity_Stat                | 环境湿度(统计值)                 | Calculated
+  26. DriveForce                          | 驱动力                       | Sensor
+  27. WorkpieceDeflection                 | 工件挠度                      | Sensor
+  28. CoolingWaterFlow                    | 冷却水流量                     | Sensor
+  29. ShieldingGasFlow                    | 保护气流量                     | Sensor
+  30. ToolCompensation                    | 刀具补偿值                     | Sensor
+  31. DimensionMeasurement_Auto           | 尺寸测量(自动)                  | Sensor
+  32. DimensionMeasurement_Manual         | 尺寸测量(人工确认)                | Manual
+  33. DimensionDeviation                  | 尺寸偏差                      | Calculated
+  34. ProfileScan                         | 轮廓扫描                      | Sensor
+  35. TotalEnergyConsumption              | 总能耗                       | Calculated
+  36. PowerOnDuration                     | 上电时长                      | Calculated
+  37. OperationDuration                   | 开动时长                      | Calculated
+  38. ActualProcessingTime                | 实际加工时长                    | Calculated
+  39. CumulativeRuntime                   | 累计运行时长                    | Calculated
+  40. SpindlePower                        | 主轴功率                      | Sensor
+
+================================================================================
+验证完成 ✅
+所有必填字段完整率: 100%
+推荐字段平均填写率: 94.4%
+================================================================================

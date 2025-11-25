@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - NGSI_LD_ENDPOINT=${NGSI_LD_ENDPOINT:-http://mockserver:9090/ngsi-ld/v1}
+      - USE_MOCK_DATA=${USE_MOCK_DATA:-true}
+

@@ -1,0 +1,510 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://digitaltwins.rail.com/schemas/ModalData.schema.json",
+  "title": "ModalData",
+  "description": "模态数据实体 - 代表一条具体的数据记录或测量值，承载数字孪生系统的运行时数据",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "refTwin",
+    "refScene",
+    "refModality",
+    "value",
+    "observedAt",
+    "qualityTag",
+    "provenance"
+  ],
+  
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:ModalData:[A-Za-z0-9_.:+-]+$",
+      "description": "ModalData实体的全局唯一标识符，建议格式：urn:ngsi-ld:ModalData:{ModalityName}.{SceneName}.{Sequence}",
+      "examples": [
+        "urn:ngsi-ld:ModalData:WeldingCurrent.FrontWelding_20250808.0001",
+        "urn:ngsi-ld:ModalData:DriveTemp.Milling_20250808_001.X_Main.0123",
+        "urn:ngsi-ld:ModalData:ProfileOffset.QualityCheck_20250808.0001"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "ModalData",
+      "description": "实体类型标识，固定为ModalData"
+    },
+    
+    "@context": {
+      "description": "NGSI-LD上下文链接",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1
+        }
+      ],
+      "default": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]
+    },
+    
+    "refTwin": {
+      "type": "object",
+      "description": "引用孪生体（NGSI-LD Relationship，必填） - 三锚点之一",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:TwinObject:[A-Za-z0-9_-]+$",
+          "description": "该数据由哪个TwinObject产生或关于哪个对象。例如焊接电流数据指向焊机，质量检测数据指向被测工件"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "refScene": {
+      "type": "object",
+      "description": "引用场景（NGSI-LD Relationship，必填） - 三锚点之二",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Scene:[A-Za-z0-9_.:+-]+$",
+          "description": "该数据所属的Scene（场景/工序实例）的URN。提供业务上下文，表示数据在哪个业务过程中产生"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "refModality": {
+      "type": "object",
+      "description": "引用模态（NGSI-LD Relationship，必填） - 三锚点之三",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Modality:[A-Za-z0-9_-]+$",
+          "description": "该数据的类型（Modality）的URN。定义数据的语义和规范"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "value": {
+      "type": "object",
+      "description": "数据值（NGSI-LD Property，必填）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "description": "实际的测量值或观测值。类型根据Modality.valueType决定",
+          "oneOf": [
+            {"type": "number"},
+            {"type": "integer"},
+            {"type": "boolean"},
+            {"type": "string"},
+            {"type": "object"},
+            {"type": "array"}
+          ],
+          "examples": [
+            185.3,
+            true,
+            "OK",
+            {"X": 1234.56, "Y": 789.01, "Z": 234.56},
+            [100.1, 100.2, 100.3, 100.4]
+          ]
+        },
+        "unitCode": {
+          "type": "string",
+          "description": "值的单位（可选，通常继承自Modality或ModalityBinding）",
+          "examples": ["A", "V", "°C", "mm", "rpm"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "observedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "观测时间戳（NGSI-LD标准属性，必填）- 数据采集的实际时间，ISO 8601格式"
+    },
+    
+    "qualityTag": {
+      "type": "object",
+      "description": "质量标签（NGSI-LD Property，强烈推荐）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["OK", "Warn", "Error", "Outlier", "Interpolated", "CalFail", "ClockUnsynced", "Missing"],
+          "description": "数据质量判定标签。OK-正常，Warn-警告，Error-错误，Outlier-异常值，Interpolated-插值，CalFail-计算失败，ClockUnsynced-时钟未同步，Missing-缺失"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "provenance": {
+      "type": "object",
+      "description": "数据溯源信息（NGSI-LD Property，强烈推荐）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "description": "数据来源和处理血缘信息",
+          "properties": {
+            "sourceTwinId": {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:TwinObject:[A-Za-z0-9_-]+$",
+              "description": "数据源设备URN（通常与refTwin相同，但对于衍生数据可能不同）"
+            },
+            "method": {
+              "type": "string",
+              "description": "数据采集或生成方法",
+              "examples": ["OPC-UA", "Modbus", "MQTT", "HTTP-API", "Manual", "Calculated"]
+            },
+            "swVersion": {
+              "type": "string",
+              "description": "采集软件或设备固件版本",
+              "examples": ["1.4.0", "v2.3.1"]
+            },
+            "pipelineStage": {
+              "type": "string",
+              "enum": ["ingest", "processed", "validated", "aggregated"],
+              "description": "数据处理流水线阶段。ingest-初始采集，processed-已处理，validated-已验证，aggregated-已聚合"
+            }
+          },
+          "required": ["method", "pipelineStage"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "qualityScore": {
+      "type": "object",
+      "description": "质量评分（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "数据质量的数值评分，0-1之间。1表示完美质量，0表示完全不可用"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "isDerived": {
+      "type": "object",
+      "description": "是否为衍生数据（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "boolean",
+          "description": "标识该数据是否由其他ModalData计算得出。true表示衍生数据，需配合derivedFrom使用",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "derivedFrom": {
+      "type": "array",
+      "description": "衍生来源（NGSI-LD Relationship，可选），当isDerived=true时，指向一个或多个源数据的ModalData",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Relationship"
+          },
+          "object": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:ModalData:[A-Za-z0-9_.:+-]+$"
+          }
+        },
+        "required": ["type", "object"]
+      },
+      "uniqueItems": true
+    },
+    
+    "sequenceNumber": {
+      "type": "object",
+      "description": "序列号（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "在同一Scene内的数据序列号，用于时序数据排序"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "metadata": {
+      "type": "object",
+      "description": "扩展元数据（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "description": "其他元数据信息的键值对集合",
+          "additionalProperties": true,
+          "examples": [
+            {"operator": "张三", "shift": "早班"},
+            {"temperature": 25.5, "humidity": 60}
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "实体创建时间（NGSI-LD标准属性）- 数据进入系统的时间"
+    },
+    
+    "modifiedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "实体最后修改时间（NGSI-LD标准属性）"
+    }
+  },
+  
+  "additionalProperties": false,
+  
+  "examples": [
+    {
+      "id": "urn:ngsi-ld:ModalData:WeldingCurrent.FrontWelding_20250808.0001",
+      "type": "ModalData",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "refTwin": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:WeldingRobot01"
+      },
+      "refScene": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:SideWall.FrontWelding.2025-08-08:001"
+      },
+      "refModality": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+      },
+      "value": {
+        "type": "Property",
+        "value": 185.3,
+        "unitCode": "A"
+      },
+      "observedAt": "2025-08-08T20:05:09.123Z",
+      "qualityTag": {
+        "type": "Property",
+        "value": "OK"
+      },
+      "provenance": {
+        "type": "Property",
+        "value": {
+          "sourceTwinId": "urn:ngsi-ld:TwinObject:WeldingRobot01",
+          "method": "OPC-UA",
+          "swVersion": "1.4.0",
+          "pipelineStage": "ingest"
+        }
+      },
+      "qualityScore": {
+        "type": "Property",
+        "value": 0.98
+      },
+      "sequenceNumber": {
+        "type": "Property",
+        "value": 1
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:ModalData:ProfileOffset.QualityCheck_20250808.0001",
+      "type": "ModalData",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "refTwin": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:SideWallPanel007"
+      },
+      "refScene": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:SideWall.QualityCheck.2025-08-08:001"
+      },
+      "refModality": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:ProfileOffset"
+      },
+      "value": {
+        "type": "Property",
+        "value": 0.62,
+        "unitCode": "mm"
+      },
+      "observedAt": "2025-08-08T20:15:30.456Z",
+      "qualityTag": {
+        "type": "Property",
+        "value": "OK"
+      },
+      "provenance": {
+        "type": "Property",
+        "value": {
+          "sourceTwinId": "urn:ngsi-ld:TwinObject:LaserScanner01",
+          "method": "OPC-UA",
+          "swVersion": "2.1.0",
+          "pipelineStage": "validated"
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:ModalData:WeldingCurrent_Stat.FrontWelding_20250808.Max",
+      "type": "ModalData",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "refTwin": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:WeldingRobot01"
+      },
+      "refScene": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:SideWall.FrontWelding.2025-08-08:001"
+      },
+      "refModality": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:WeldingCurrent_Stat"
+      },
+      "value": {
+        "type": "Property",
+        "value": 198.5,
+        "unitCode": "A"
+      },
+      "observedAt": "2025-08-08T20:10:00.000Z",
+      "qualityTag": {
+        "type": "Property",
+        "value": "OK"
+      },
+      "provenance": {
+        "type": "Property",
+        "value": {
+          "sourceTwinId": "urn:ngsi-ld:TwinObject:WeldingRobot01",
+          "method": "Calculated",
+          "pipelineStage": "aggregated"
+        }
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:ModalData:WeldingCurrent.FrontWelding_20250808.0001"
+        },
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:ModalData:WeldingCurrent.FrontWelding_20250808.0002"
+        }
+      ]
+    },
+    {
+      "id": "urn:ngsi-ld:ModalData:DriveTemp.Milling_20250808.X_Main.0123",
+      "type": "ModalData",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "refTwin": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:TwinObject:CNCMachine01"
+      },
+      "refScene": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:SideWall.Milling.2025-08-08:001"
+      },
+      "refModality": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:DriveTemp"
+      },
+      "value": {
+        "type": "Property",
+        "value": 45.2,
+        "unitCode": "°C"
+      },
+      "observedAt": "2025-08-08T15:23:45.789Z",
+      "qualityTag": {
+        "type": "Property",
+        "value": "OK"
+      },
+      "provenance": {
+        "type": "Property",
+        "value": {
+          "sourceTwinId": "urn:ngsi-ld:TwinObject:CNCMachine01",
+          "method": "OPC-UA",
+          "swVersion": "3.2.1",
+          "pipelineStage": "ingest"
+        }
+      },
+      "sequenceNumber": {
+        "type": "Property",
+        "value": 123
+      },
+      "metadata": {
+        "type": "Property",
+        "value": {
+          "axis": "X",
+          "location": "Main",
+          "ambientTemp": 22.5
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://digitaltwins.rail.com/schemas/Modality.schema.json",
+  "title": "Modality",
+  "description": "数字孪生模态数据字典定义 - 描述一种可观测数据的业务类型及其采集规范（基于物理量+采集方式双维度）",
+  "type": "object",
+  "required": ["id", "type", "name", "category", "valueType", "source"],
+  
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:Modality:[A-Za-z0-9_-]+$",
+      "description": "Modality实体的全局唯一标识符",
+      "examples": [
+        "urn:ngsi-ld:Modality:WeldingCurrent_Auto",
+        "urn:ngsi-ld:Modality:DriveTemp",
+        "urn:ngsi-ld:Modality:RobotLinearSpeed"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "Modality",
+      "description": "实体类型标识，固定为Modality"
+    },
+    
+    "@context": {
+      "description": "NGSI-LD上下文链接",
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1
+        }
+      ],
+      "default": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]
+    },
+    
+    "name": {
+      "type": "object",
+      "description": "模态名称（NGSI-LD Property，必填）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "简短名称或代号，建议格式：{物理量}_{采集方式}",
+          "examples": ["焊接电流(自动采集)", "驱动器温度", "机器人线速度"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "description": {
+      "type": "object",
+      "description": "模态描述（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "详细说明该模态代表的数据内容、用途、业务背景等"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "category": {
+      "type": "object",
+      "description": "数据类别（NGSI-LD Property，必填）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "ProcessParameter",
+            "QualityCharacteristic",
+            "Geometry",
+            "Environment",
+            "Energy",
+            "State",
+            "Event",
+            "Other"
+          ],
+          "description": "数据的业务分类：ProcessParameter-工艺参数, QualityCharacteristic-质量特性, Geometry-几何参数, Environment-环境参数, Energy-能源相关, State-状态, Event-事件, Other-其他"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "valueType": {
+      "type": "object",
+      "description": "数据值类型（NGSI-LD Property，必填）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "Number",
+            "Integer",
+            "Boolean",
+            "Text",
+            "Object",
+            "Array",
+            "Timestamp"
+          ],
+          "description": "数据取值的基本类型"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "unit": {
+      "type": "object",
+      "description": "计量单位（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "数据的物理单位，如 A, V, mm, °C, rpm 等。ModalityBinding可根据需要覆盖",
+          "examples": ["A", "V", "mm", "°C", "rpm", "mm/s", "L/min", "%RH", "kWh", "deg"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "source": {
+      "type": "object",
+      "description": "数据来源方式（NGSI-LD Property，必填） - Modality定义的第二维度",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "Sensor",
+            "Manual",
+            "Calculated",
+            "Simulated",
+            "Inferred",
+            "Other"
+          ],
+          "description": "枚举描述数据从何而来，这是Modality定义的核心维度之一。Sensor-自动传感采集, Manual-人工录入, Calculated-计算得出, Simulated-仿真生成, Inferred-推断得出, Other-其他"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "allowedRange": {
+      "type": "object",
+      "description": "值域规范（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "正常情况下数据应处于的范围 [min, max]，由业务或质量要求给出",
+          "examples": [[0, 500], [-180, 180], [15, 20]]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "accuracy": {
+      "type": "object",
+      "description": "测量精度（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "该模态数据采集的精度或分辨率要求，如传感器误差上限",
+          "examples": ["±0.5%", "±1A", "±0.1mm", "±1°C"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "sampleModel": {
+      "type": "object",
+      "description": "采样模式（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "continuous",
+            "perStep",
+            "perPiece",
+            "onEvent",
+            "byStep",
+            "other"
+          ],
+          "description": "数据的采样触发模式。continuous-连续采样, perStep-每工步采样, perPiece-每工件采样, onEvent-事件触发, byStep-按步骤采样, other-其他"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "valueFormat": {
+      "type": "object",
+      "description": "数据格式（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "scalar",
+            "timeseries",
+            "profile",
+            "image",
+            "pointcloud",
+            "matrix",
+            "other"
+          ],
+          "description": "数据的结构化格式。scalar-标量, timeseries-时间序列, profile-轮廓曲线, image-图像, pointcloud-点云, matrix-矩阵, other-其他"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "domain": {
+      "type": "object",
+      "description": "应用领域（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": [
+            "process",
+            "quality",
+            "geometry",
+            "environment",
+            "energy",
+            "safety",
+            "other"
+          ],
+          "description": "数据所属的业务领域分类"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "isDerived": {
+      "type": "object",
+      "description": "是否为衍生数据（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "boolean",
+          "description": "标识该模态数据是否由其他模态计算得出。true表示是衍生数据，需配合derivedFrom和derivationRule使用",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "derivedFrom": {
+      "type": "object",
+      "description": "衍生来源（NGSI-LD Relationship，可选）",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^urn:ngsi-ld:Modality:[A-Za-z0-9_-]+$",
+              "description": "单个源Modality的URN"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^urn:ngsi-ld:Modality:[A-Za-z0-9_-]+$"
+              },
+              "minItems": 1,
+              "description": "多个源Modality的URN数组"
+            }
+          ],
+          "description": "当isDerived=true时，指向源数据的Modality"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "derivationRule": {
+      "type": "object",
+      "description": "衍生规则（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "当isDerived=true时，描述计算规则或公式",
+          "examples": [
+            "min over scene duration",
+            "max over scene duration",
+            "avg over scene duration",
+            "I = P / (U * cosφ)",
+            "deviation = measured - target"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "relatedModalities": {
+      "type": "object",
+      "description": "相关模态（NGSI-LD Relationship，可选）",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Modality:[A-Za-z0-9_-]+$"
+          },
+          "description": "与该模态相关联或需要协同监控的其他模态列表，例如焊接电流需要与送丝速度、焊接电压协同监控"
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "businessNote": {
+      "type": "object",
+      "description": "业务说明（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "description": "业务背景、工艺要求、使用场景等补充说明",
+          "maxLength": 1000
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "version": {
+      "type": "object",
+      "description": "模态定义版本（NGSI-LD Property，可选）",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "语义化版本号，遵循SemVer规范",
+          "examples": ["1.0.0", "1.2.3", "2.0.0"]
+        }
+      },
+      "additionalProperties": false
+    },
+    
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "实体创建时间（NGSI-LD标准属性）"
+    },
+    
+    "modifiedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "实体最后修改时间（NGSI-LD标准属性）"
+    }
+  },
+  
+  "additionalProperties": false,
+  
+  "examples": [
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingCurrent_Auto",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://digitaltwins.rail.com/contexts/twin-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接电流(自动采集)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程电流，从焊机控制系统自动采集的实时曲线"
+      },
+      "category": {
+        "type": "Property",
+        "value": "ProcessParameter"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Sensor"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 500]
+      },
+      "accuracy": {
+        "type": "Property",
+        "value": "±1%"
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "continuous"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "timeseries"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "process"
+      },
+      "relatedModalities": {
+        "type": "Relationship",
+        "object": [
+          "urn:ngsi-ld:Modality:WireFeedSpeed_Auto",
+          "urn:ngsi-ld:Modality:WeldingVoltage_Auto"
+        ]
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Modality:WeldingCurrent_Stat",
+      "type": "Modality",
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+      ],
+      "name": {
+        "type": "Property",
+        "value": "焊接电流(统计值)"
+      },
+      "description": {
+        "type": "Property",
+        "value": "焊接过程电流的统计值(Min/Max)，从实时电流计算得出"
+      },
+      "category": {
+        "type": "Property",
+        "value": "QualityCharacteristic"
+      },
+      "valueType": {
+        "type": "Property",
+        "value": "Number"
+      },
+      "unit": {
+        "type": "Property",
+        "value": "A"
+      },
+      "source": {
+        "type": "Property",
+        "value": "Calculated"
+      },
+      "allowedRange": {
+        "type": "Property",
+        "value": [0, 500]
+      },
+      "sampleModel": {
+        "type": "Property",
+        "value": "perPiece"
+      },
+      "valueFormat": {
+        "type": "Property",
+        "value": "scalar"
+      },
+      "domain": {
+        "type": "Property",
+        "value": "quality"
+      },
+      "isDerived": {
+        "type": "Property",
+        "value": true
+      },
+      "derivedFrom": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Modality:WeldingCurrent_Auto"
+      },
+      "derivationRule": {
+        "type": "Property",
+        "value": "min/max over scene duration"
+      },
+      "version": {
+        "type": "Property",
+        "value": "1.0.0"
+      }
+    }
+  ]
+}

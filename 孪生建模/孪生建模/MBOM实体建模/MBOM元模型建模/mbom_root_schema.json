@@ -1,0 +1,517 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/MBOM.Root.schema.json",
+  "title": "MBOM Root Entity Schema",
+  "description": "MBOM顶层实体元模型 - 制造物料清单的根节点定义 (mbomType=MBOMRoot)",
+  "type": "object",
+  
+  "required": [
+    "id",
+    "type",
+    "mbomType",
+    "mbomCode",
+    "mbomName",
+    "mbomVersion",
+    "productCode",
+    "status"
+  ],
+  
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "NGSI-LD上下文定义,必须包含NGSI-LD核心上下文和MBOM域上下文",
+      "examples": [
+        [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://example.com/contexts/mbom-context.jsonld"
+        ]
+      ]
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$",
+      "description": "MBOM实体唯一标识符,遵循URN命名规范: urn:ngsi-ld:MBOM:{productCode}:{version}",
+      "examples": [
+        "urn:ngsi-ld:MBOM:M000004670327:V1.0",
+        "urn:ngsi-ld:MBOM:M000004803474:V2.1"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "MBOM",
+      "description": "实体类型固定为MBOM,所有MBOM体系实体共享此类型"
+    },
+    
+    "mbomType": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property",
+          "description": "NGSI-LD属性类型"
+        },
+        "value": {
+          "type": "string",
+          "const": "MBOMRoot",
+          "description": "子类型固定为MBOMRoot,标识这是MBOM的顶层根实体"
+        }
+      },
+      "description": "MBOM子类型标识,用于区分MBOM体系中的不同层级实体"
+    },
+    
+    "mbomCode": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "pattern": "^[A-Z0-9_-]+$",
+          "description": "MBOM业务编码,通常格式为 MBOM_{productCode}"
+        }
+      },
+      "description": "MBOM业务编码,用于业务系统内部标识",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "MBOM_M000004670327"
+        }
+      ]
+    },
+    
+    "mbomName": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "description": "MBOM名称,业务友好的描述性名称",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "M000004670327侧墙制造BOM"
+        }
+      ]
+    },
+    
+    "mbomVersion": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[Vv][0-9]+(\\.[0-9]+)*$",
+          "description": "版本号格式: V{major}.{minor}.{patch}, 如V1.0, V2.1.3"
+        }
+      },
+      "description": "MBOM版本号,支持语义化版本管理",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "V1.0"
+        }
+      ]
+    },
+    
+    "productCode": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      },
+      "description": "关联的产品代码,对应PLM系统中的产品标识",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "M000004670327"
+        }
+      ]
+    },
+    
+    "status": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["draft", "active", "retired", "deprecated"],
+          "description": "draft=草稿; active=激活生产中; retired=已退役; deprecated=已弃用待替换"
+        }
+      },
+      "description": "MBOM生命周期状态",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "active"
+        }
+      ]
+    },
+    
+    "effectiveFrom": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "required": ["@type", "@value"],
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "DateTime"
+            },
+            "@value": {
+              "type": "string",
+              "format": "date-time",
+              "description": "ISO 8601格式的日期时间,如2025-01-01T00:00:00Z"
+            }
+          }
+        }
+      },
+      "description": "MBOM生效起始时间",
+      "examples": [
+        {
+          "type": "Property",
+          "value": {
+            "@type": "DateTime",
+            "@value": "2025-01-01T00:00:00Z"
+          }
+        }
+      ]
+    },
+    
+    "effectiveTo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "required": ["@type", "@value"],
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "DateTime"
+            },
+            "@value": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "description": "MBOM生效结束时间,可选字段"
+    },
+    
+    "hasRoute": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship",
+          "description": "NGSI-LD关系类型"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:RT_[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$",
+          "description": "关联的Route实体ID"
+        }
+      },
+      "description": "指向工艺路线的关系 (1:1),每个MBOM有且仅有一条工艺路线。双向关系:Route.partOfMBOM指回此实体",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+        }
+      ]
+    },
+    
+    "requiresMaterials": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Material:[A-Za-z0-9_-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "description": "所需物料清单 (1:N),引用Material实体列表",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:Material:MAT_STEEL_M670327_A",
+            "urn:ngsi-ld:Material:MAT_WELDING_WIRE_ER70S6"
+          ]
+        }
+      ]
+    },
+    
+    "requiresRoles": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Role:ROLE_[A-Z_]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "description": "所需人员角色清单 (1:N),引用Role实体列表",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:Role:ROLE_WELDER",
+            "urn:ngsi-ld:Role:ROLE_QC_INSPECTOR"
+          ]
+        }
+      ]
+    },
+    
+    "requiresEquipmentTypes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:EquipmentType:[A-Z_]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "description": "所需设备类型清单 (1:N),引用EquipmentType实体列表"
+    },
+    
+    "documents": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "sopCodes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "作业指导书编码列表"
+            },
+            "drawingRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "工程图纸引用列表"
+            },
+            "inspectionStandards": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "检验标准列表,如GB/T标准、ISO标准等"
+            },
+            "safetyInstructions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "安全规程列表"
+            }
+          }
+        }
+      },
+      "description": "关联文档集合,所有文档采用编码引用方式,不嵌入文档内容",
+      "examples": [
+        {
+          "type": "Property",
+          "value": {
+            "sopCodes": ["SOP_M000004670327_001"],
+            "drawingRefs": ["DWG_M000004670327_GA"],
+            "inspectionStandards": ["GB/T 3323-2005", "ISO 5817:2014"],
+            "safetyInstructions": ["SAFETY_WELDING_2024"]
+          }
+        }
+      ]
+    },
+    
+    "createdBy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:(Person|System):[A-Za-z0-9_-]+$"
+        }
+      },
+      "description": "MBOM创建者,引用Person或System实体"
+    },
+    
+    "approvedBy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:Person:[A-Za-z0-9_-]+$"
+        }
+      },
+      "description": "MBOM审批者,引用Person实体"
+    },
+    
+    "supersededBy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$"
+        }
+      },
+      "description": "被哪个新版本MBOM替代,用于版本追溯"
+    },
+    
+    "supersedes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$"
+        }
+      },
+      "description": "替代哪个旧版本MBOM,用于版本追溯"
+    },
+    
+    "changeHistory": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:ChangeMgt:[A-Za-z0-9_-]+$"
+          }
+        }
+      },
+      "description": "变更历史记录,引用ChangeMgt实体列表"
+    },
+    
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "description": "元数据信息,包括创建时间、修改时间、标签、备注等"
+    }
+  },
+  
+  "additionalProperties": false
+}

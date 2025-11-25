@@ -1,0 +1,513 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/MBOM.Takt.schema.json",
+  "title": "MBOM Takt Entity Schema",
+  "description": "节拍实体元模型 - 工艺路线的时间分段单元 (mbomType=Takt)",
+  "type": "object",
+  
+  "required": [
+    "id",
+    "type",
+    "mbomType",
+    "taktSeq",
+    "taktName",
+    "partOfRoute",
+    "includesProcesses"
+  ],
+  
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "NGSI-LD上下文定义",
+      "examples": [
+        [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://example.com/contexts/mbom-context.jsonld"
+        ]
+      ]
+    },
+    
+    "id": {
+      "type": "string",
+      "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]{2,3}$",
+      "description": "Takt实体唯一标识符,格式: urn:ngsi-ld:MBOM:{productCode}:T{seq}",
+      "examples": [
+        "urn:ngsi-ld:MBOM:M000004670327:T01",
+        "urn:ngsi-ld:MBOM:M000004670327:T11"
+      ]
+    },
+    
+    "type": {
+      "type": "string",
+      "const": "MBOM",
+      "description": "实体类型固定为MBOM"
+    },
+    
+    "mbomType": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "const": "Takt",
+          "description": "子类型固定为Takt,标识这是节拍实体"
+        }
+      },
+      "description": "MBOM子类型标识"
+    },
+    
+    "taktSeq": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 999,
+          "description": "节拍序号,在Route中的顺序位置,从1开始"
+        }
+      },
+      "description": "节拍序号,定义节拍在工艺路线中的执行顺序",
+      "examples": [
+        {
+          "type": "Property",
+          "value": 1
+        }
+      ]
+    },
+    
+    "taktCode": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
+          "description": "节拍业务编码,可选字段"
+        }
+      },
+      "description": "节拍业务编码,用于业务系统标识",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "D0000518642"
+        }
+      ]
+    },
+    
+    "taktName": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "description": "节拍名称,业务友好的描述性名称",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "M000004670327侧墙组成节拍1"
+        }
+      ]
+    },
+    
+    "targetCT": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "目标节拍时间数值"
+        },
+        "unitCode": {
+          "type": "string",
+          "enum": ["MIN", "SEC", "HOUR"],
+          "default": "MIN",
+          "description": "时间单位: MIN=分钟, SEC=秒, HOUR=小时"
+        }
+      },
+      "description": "目标节拍时间(Cycle Time),定义该节拍的标准完成时间",
+      "examples": [
+        {
+          "type": "Property",
+          "value": 420,
+          "unitCode": "MIN"
+        }
+      ]
+    },
+    
+    "defaultTimeWindow": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "string",
+          "enum": ["perPiece", "perBatch", "perShift", "perDay"],
+          "description": "perPiece=每件; perBatch=每批; perShift=每班; perDay=每天"
+        }
+      },
+      "description": "默认时间窗口,定义该节拍的时间统计粒度",
+      "examples": [
+        {
+          "type": "Property",
+          "value": "perPiece"
+        }
+      ]
+    },
+    
+    "partOfRoute": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:RT_[A-Za-z0-9_-]+:[Vv][0-9]+(\\.[0-9]+)*$",
+          "description": "所属Route实体ID"
+        }
+      },
+      "description": "反向关系:指向所属的Route实体 (N:1)。双向关系:Route.consistsOfTakts指向此实体",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:MBOM:RT_M000004670327:V1.0"
+        }
+      ]
+    },
+    
+    "includesProcesses": {
+      "type": "object",
+      "required": ["type", "object"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+:P[0-9]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "包含的Process实体ID列表,按procSeqInTakt顺序排列"
+        }
+      },
+      "description": "正向关系:指向包含的所有Process实体 (1:N)。双向关系:Process.partOfTakt指回此实体",
+      "examples": [
+        {
+          "type": "Relationship",
+          "object": [
+            "urn:ngsi-ld:MBOM:M000004670327:T01:P0010",
+            "urn:ngsi-ld:MBOM:M000004670327:T01:P0020"
+          ]
+        }
+      ]
+    },
+    
+    "processCount": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "节拍包含的工序总数"
+        }
+      },
+      "description": "工序总数,用于快速统计"
+    },
+    
+    "estimatedDuration": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "估算总时长,所有工序标准工时之和"
+        },
+        "unitCode": {
+          "type": "string",
+          "enum": ["MIN", "SEC", "HOUR"],
+          "default": "MIN"
+        }
+      },
+      "description": "节拍估算总时长,用于产能计算"
+    },
+    
+    "requiredMeasurements": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["modalityCode", "ruleId", "timing"],
+            "properties": {
+              "modalityCode": {
+                "type": "string",
+                "description": "测量模态代码,引用Modality Catalog"
+              },
+              "ruleId": {
+                "type": "string",
+                "description": "质量规则ID,引用Rule Catalog"
+              },
+              "timing": {
+                "type": "string",
+                "enum": ["pre", "in", "post"],
+                "description": "测量时机: pre=节拍开始前, in=节拍执行中, post=节拍完成后"
+              },
+              "aggregator": {
+                "type": "string",
+                "enum": ["mean", "max", "min", "sum", "p95", "count"],
+                "description": "聚合方式"
+              },
+              "sampleSize": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "采样数量"
+              },
+              "capturedByResourceClass": {
+                "type": "string",
+                "description": "采集资源类别,如MES_SYSTEM, SENSOR等"
+              },
+              "description": {
+                "type": "string",
+                "description": "测量描述"
+              }
+            }
+          }
+        }
+      },
+      "description": "Takt级测量要求,定义节拍级KPI如节拍实际CT、WIP数量等",
+      "examples": [
+        {
+          "type": "Property",
+          "value": [
+            {
+              "modalityCode": "TaktCycleTime",
+              "ruleId": "RULE_TAKT_CT_400_440MIN",
+              "timing": "post",
+              "description": "节拍实际周期时间"
+            },
+            {
+              "modalityCode": "TaktWIPCount",
+              "ruleId": "RULE_WIP_LT_3",
+              "timing": "in",
+              "capturedByResourceClass": "MES_SYSTEM",
+              "description": "节拍内在制品数量"
+            }
+          ]
+        }
+      ]
+    },
+    
+    "allowedStations": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Station:ST-[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "节拍允许使用的工位列表,引用Station实体"
+    },
+    
+    "allowedBuffers": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^urn:ngsi-ld:Buffer:BF-[A-Z0-9_-]+$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "description": "节拍允许使用的缓冲区列表,引用Buffer实体"
+    },
+    
+    "taktConstraints": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "maxWIP": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "最大在制品数量,控制节拍内WIP上限"
+            },
+            "minOperatorCount": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "最小操作人员数量"
+            },
+            "requiresQualityGate": {
+              "type": "boolean",
+              "description": "是否需要质量门检查"
+            },
+            "parallelExecutionAllowed": {
+              "type": "boolean",
+              "description": "是否允许并行执行多个工件"
+            }
+          }
+        }
+      },
+      "description": "节拍级约束条件"
+    },
+    
+    "predecessorTakt": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+$",
+          "description": "前序节拍实体ID"
+        }
+      },
+      "description": "前序节拍,指向taktSeq-1的Takt实体,用于建立节拍间依赖关系"
+    },
+    
+    "successorTakt": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
+        },
+        "object": {
+          "type": "string",
+          "pattern": "^urn:ngsi-ld:MBOM:[A-Za-z0-9_-]+:T[0-9]+$",
+          "description": "后续节拍实体ID"
+        }
+      },
+      "description": "后续节拍,指向taktSeq+1的Takt实体,用于建立节拍间依赖关系"
+    },
+    
+    "transferPoint": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "isTransferPoint": {
+              "type": "boolean",
+              "description": "是否是转运点,节拍边界通常是物流转运点"
+            },
+            "transferMethod": {
+              "type": "string",
+              "enum": ["crane", "agv", "conveyor", "manual"],
+              "description": "转运方式: crane=行车, agv=AGV, conveyor=输送带, manual=人工"
+            },
+            "bufferLocation": {
+              "type": "string",
+              "description": "缓冲区位置标识"
+            }
+          }
+        }
+      },
+      "description": "转运点信息,节拍边界的物流管理"
+    },
+    
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "notes": {
+              "type": "string",
+              "description": "备注信息"
+            }
+          }
+        }
+      },
+      "description": "元数据信息"
+    }
+  },
+  
+  "additionalProperties": false
+}
