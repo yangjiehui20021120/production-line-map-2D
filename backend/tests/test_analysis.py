@@ -123,3 +123,4 @@ def test_get_spaghetti_paths_statistics():
     assert stats["totalPaths"] >= 0
 
 
+
