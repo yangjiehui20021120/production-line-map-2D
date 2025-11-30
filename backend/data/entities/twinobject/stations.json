@@ -1,0 +1,558 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-HJ",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-HJ"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙组焊工位"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 5
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "Lifting"
+      ]
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120201"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-BH",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-BH"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙补焊工位"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 2
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "Lifting"
+      ]
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120201"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-TX",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-TX"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙调修工位"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 3
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "Lifting"
+      ]
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120202"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-DX",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-DX"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙大线打磨工位"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 2
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "Lifting"
+      ]
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120204"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-JG-A",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-JG-A"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙加工工位A"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 2
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120203"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-JG-B",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-JG-B"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙加工工位B"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 2
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120203"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-JX",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-JX"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙精细打磨工位"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "Lifting"
+      ]
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120204"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:ST-FJ",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "ST-FJ"
+    },
+    "name": {
+      "type": "Property",
+      "value": "侧墙附件工位"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.1"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "ProductionStation"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 6
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "Lifting"
+      ]
+    },
+    "aliasCode": {
+      "type": "Property",
+      "value": [
+        "TS36120204"
+      ]
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": true,
+        "trackQuality": true
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:TwinObject:Station:BF",
+    "type": "TwinObject",
+    "code": {
+      "type": "Property",
+      "value": "BF"
+    },
+    "name": {
+      "type": "Property",
+      "value": "定置区"
+    },
+    "twinType": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Station"
+    },
+    "functionCategory": {
+      "type": "Property",
+      "value": "F1.4.4"
+    },
+    "twinLevel": {
+      "type": "Property",
+      "value": 3
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+    },
+    "stationCategory": {
+      "type": "Property",
+      "value": "BufferZone"
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 24
+    },
+    "statusTracking": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "trackThroughput": true,
+        "trackCycleTime": false,
+        "trackQuality": false
+      }
+    },
+    "description": {
+      "type": "Property",
+      "value": "缓冲区域有平放区、悬挂区及堆叠区"
+    }
+  }
+]

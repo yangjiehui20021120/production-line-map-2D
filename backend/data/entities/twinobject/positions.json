@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "AQFX-0035物理打击",
+        "AQFX-0032起重伤害",
+        "AQFX-0019机械伤害",
+        "AQFX-0031起重伤害",
+        "AQFX-0037物体打击",
+        "AQFX-0025其他伤害"
+      ]
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-03",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-03"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位03"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P3"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-04",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-04"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位04"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P4"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-05",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-05"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位05"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P5"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-06",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-06"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位06"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P6"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-07",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-07"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位07"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P7"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-HJ-08",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-HJ-08"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙组焊工位台位08"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-HJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P8"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding",
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-BH-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-BH-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙补焊工位台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-BH"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "AQFX-0035物理打击",
+        "AQFX-0032起重伤害",
+        "AQFX-0031起重伤害",
+        "AQFX-0037物体打击",
+        "AQFX-0025其他伤害"
+      ]
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-BH-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-BH-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙补焊工位台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-BH"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Welding"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-TX-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-TX-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙调修工位台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-TX"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "AQFX-0035物理打击",
+        "AQFX-0032起重伤害",
+        "AQFX-0019机械伤害",
+        "AQFX-0031起重伤害",
+        "AQFX-0037物体打击",
+        "AQFX-0025其他伤害"
+      ]
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-TX-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-TX-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙调修工位台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-TX"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-TX-03",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-TX-03"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙调修工位台位03"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-TX"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P3"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-DX-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-DX-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙大线打磨工位台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-DX"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "AQFX-0035物理打击",
+        "AQFX-0032起重伤害",
+        "AQFX-0031起重伤害",
+        "AQFX-0037物体打击",
+        "AQFX-0025其他伤害"
+      ]
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-DX-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-DX-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙大线打磨工位台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-DX"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-JG-A-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-JG-A-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙加工工位A台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-JG-A"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "AQFX-0035物理打击",
+        "AQFX-0032起重伤害",
+        "AQFX-0017机械伤害",
+        "AQFX-0031起重伤害",
+        "AQFX-0037物体打击",
+        "AQFX-0025其他伤害",
+        "AQFX-0018机械伤害",
+        "AQFX-0021机械伤害"
+      ]
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-JG-A-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-JG-A-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙加工工位A台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-JG-A"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-JG-B-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-JG-B-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙加工工位B台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-JG-B"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-JG-B-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-JG-B-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙加工工位B台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-JG-B"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-JX-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-JX-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙精细打磨工位台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-JX"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-FJ-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-FJ-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙附件工位台位01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-FJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "hazardFlags": {
+      "type": "Property",
+      "value": [
+        "AQFX-0035物理打击",
+        "AQFX-0032起重伤害",
+        "AQFX-0031起重伤害",
+        "AQFX-0037物体打击",
+        "AQFX-0025其他伤害",
+        "AQFX-0023机械伤害",
+        "AQFX-0039灼烫",
+        "AQFX-0040灼烫"
+      ]
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-FJ-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-FJ-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙附件工位台位02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-FJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-FJ-03",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-FJ-03"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙附件工位台位03"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-FJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P3"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-FJ-04",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-FJ-04"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙附件工位台位04"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-FJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P4"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-FJ-05",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-FJ-05"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙附件工位台位05"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-FJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P5"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:ST-FJ-06",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "ST-FJ-06"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "侧墙附件工位台位06"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:ST-FJ"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P6"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "WorkTable"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Assembly"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-01",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-01"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区01"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P1"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 6
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": true,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-02",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-02"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区02"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P2"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-03",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-03"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区03"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P3"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 6
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": true,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-04",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-04"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区04"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P4"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 6
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": true,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-05",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-05"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区05"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P5"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-06",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-06"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区06"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P6"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-07",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-07"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区07"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P7"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 4
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": true,
+        "defaultStatus": "Empty"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:TwinObject:Position:BF-08",
+    "type": "TwinObject",
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "category": {
+      "type": "Property",
+      "value": "Constituent"
+    },
+    "subType": {
+      "type": "Property",
+      "value": "Position"
+    },
+    "objectCode": {
+      "type": "Property",
+      "value": "BF-08"
+    },
+    "objectName": {
+      "type": "Property",
+      "value": "定置区08"
+    },
+    "belongsToStation": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Station:BF"
+    },
+    "positionIndex": {
+      "type": "Property",
+      "value": "P8"
+    },
+    "positionType": {
+      "type": "Property",
+      "value": "BufferPoint"
+    },
+    "relativeOffset": {
+      "type": "Property",
+      "value": {
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "unit": "mm"
+      }
+    },
+    "capacityWip": {
+      "type": "Property",
+      "value": 1
+    },
+    "supportedOperations": {
+      "type": "Property",
+      "value": [
+        "Waiting",
+        "Loading",
+        "Unloading"
+      ]
+    },
+    "occupancyStatus": {
+      "type": "Property",
+      "value": {
+        "trackOccupancy": true,
+        "allowMultipleWip": false,
+        "defaultStatus": "Empty"
+      }
+    }
+  }
+]

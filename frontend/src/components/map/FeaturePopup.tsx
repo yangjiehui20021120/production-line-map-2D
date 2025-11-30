@@ -4,16 +4,66 @@ export function FeaturePopup() {
   const { selected, equipment, workpieces, personnel, selectEntity } = useRealtimeStore()
 
   if (!selected) return null
+
+  const close = () => selectEntity(null)
+
+  if (selected.type === 'basemap') {
+    return (
+      <div className="feature-popup">
+        <div className="feature-popup__header">
+          <strong>{selected.name ?? selected.id}</strong>
+          <button type="button" onClick={close}>
+            ×
+          </button>
+        </div>
+        <div className="feature-popup__body">
+          {selected.featureType && (
+            <p>
+              <span>类型:</span>
+              <span>{selected.featureType}</span>
+            </p>
+          )}
+          {selected.layer && (
+            <p>
+              <span>图层:</span>
+              <span>{selected.layer}</span>
+            </p>
+          )}
+          {selected.processGroup && (
+            <p>
+              <span>工序区:</span>
+              <span>{selected.processGroup}</span>
+            </p>
+          )}
+          {selected.status && (
+            <p>
+              <span>状态:</span>
+              <span>{selected.status}</span>
+            </p>
+          )}
+          {typeof selected.ct !== 'undefined' && (
+            <p>
+              <span>CT:</span>
+              <span>{selected.ct} min</span>
+            </p>
+          )}
+          <p>
+            <span>ID:</span>
+            <span>{selected.id}</span>
+          </p>
+        </div>
+      </div>
+    )
+  }
+
   const dataset =
-    selected.kind === 'equipment'
+    selected.entityKind === 'equipment'
       ? equipment
-      : selected.kind === 'workpiece'
+      : selected.entityKind === 'workpiece'
         ? workpieces
         : personnel
   const entity = dataset.find((item) => item.id === selected.id)
   if (!entity) return null
-
-  const close = () => selectEntity(null)
 
   return (
     <div className="feature-popup">

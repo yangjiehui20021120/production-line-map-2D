@@ -1,8 +1,21 @@
-import { moduleLinks, specializedViews, layerDefinitions } from '../config/viewConfigs'
+import { moduleLinks, specializedViews } from '../config/viewConfigs'
+import { layerDefinitions, alwaysOnLayerIds } from '../config/mapLayers'
 import { useLayerStore } from '../stores/layerStore'
+import { useAppStore } from '../stores/appStore'
+
+const MODULE_MODE_MAP = {
+  实况监控: 'live',
+  路线仿真: 'simulation',
+  历史回放: 'history',
+} as const
 
 export function Sidebar() {
   const { viewMode, switchView, activeLayers, toggleLayer } = useLayerStore()
+  const mode = useAppStore((state) => state.mode)
+  const setMode = useAppStore((state) => state.setMode)
+  const showDeveloping = (name: string) => {
+    window.alert(`${name} 功能开发中，敬请期待！`)
+  }
 
   return (
     <aside className="sidebar">
@@ -14,12 +27,30 @@ export function Sidebar() {
       <nav className="sidebar-section">
         <p className="sidebar-section-title">模块</p>
         <ul>
-          {moduleLinks.map((item) => (
-            <li key={item.label} className={item.active ? 'active' : ''}>
-              <span>{item.icon}</span>
-              <span>{item.label}</span>
-            </li>
-          ))}
+          {moduleLinks.map((item) => {
+            const targetMode = MODULE_MODE_MAP[item.label as keyof typeof MODULE_MODE_MAP] ?? 'live'
+            const isActive = mode === targetMode
+            return (
+              <li
+                key={item.label}
+                className={isActive ? 'active' : ''}
+                onClick={() => {
+                  if (targetMode === 'history') {
+                    setMode('history')
+                    return
+                  }
+                  if (targetMode === 'live') {
+                    setMode('live')
+                    return
+                  }
+                  showDeveloping(item.label)
+                }}
+              >
+                <span>{item.icon}</span>
+                <span>{item.label}</span>
+              </li>
+            )
+          })}
         </ul>
       </nav>
 
@@ -47,17 +78,22 @@ export function Sidebar() {
         <ul className="layer-list">
           {layerDefinitions.map((layer) => {
             const checked = activeLayers.includes(layer.id)
-            const classNames = [
-              checked ? 'active' : '',
-              !layer.enabled ? 'disabled' : '',
-            ]
+            const locked = alwaysOnLayerIds.includes(layer.id)
+            const classNames = [checked ? 'active' : '', !layer.enabled ? 'disabled' : '', locked ? 'locked' : '']
               .filter(Boolean)
               .join(' ')
             return (
               <li
                 key={layer.id}
                 className={classNames}
-                onClick={() => layer.enabled && toggleLayer(layer.id)}
+                onClick={() => {
+                  if (locked) return
+                  if (!layer.enabled) {
+                    showDeveloping(layer.label)
+                  } else {
+                    toggleLayer(layer.id)
+                  }
+                }}
               >
                 <span>{layer.icon}</span>
                 <span>{layer.label}</span>

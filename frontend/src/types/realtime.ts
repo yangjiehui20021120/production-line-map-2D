@@ -1,3 +1,5 @@
+import type { PointGeometry } from '@shared/types'
+
 export type EquipmentStatus = 'Running' | 'Idle' | 'Fault' | 'Maintenance'
 export type WorkpieceStatus = 'InProcess' | 'Delayed' | 'Completed'
 export type PersonnelStatus = 'Working' | 'Break' | 'Idle'
@@ -5,10 +7,7 @@ export type PersonnelStatus = 'Working' | 'Break' | 'Idle'
 export interface BaseRealtimeEntity {
   id: string
   name: string
-  location: {
-    type: 'Point'
-    coordinates: [number, number]
-  }
+  location: PointGeometry
   status: string
 }
 
@@ -19,6 +18,7 @@ export interface EquipmentEntity extends BaseRealtimeEntity {
     type: string
     oee: number
     temperature: number
+    assignedStation?: string
   }
 }
 
@@ -28,6 +28,7 @@ export interface WorkpieceEntity extends BaseRealtimeEntity {
   attributes: {
     progress: number
     queueTime: number
+    currentStation?: string
   }
 }
 
@@ -56,4 +57,3 @@ export interface RealtimeUpdateMessage {
   timestamp: string
   entities: RealtimeEntity[]
 }
-

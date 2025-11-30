@@ -14,12 +14,25 @@ interface FilterState {
 
 export type RealtimeFilters = FilterState
 
+export type SelectedFeature =
+  | { type: 'realtime'; entityKind: EntityKind; id: string }
+  | {
+      type: 'basemap'
+      id: string
+      name?: string
+      featureType?: string
+      status?: string
+      processGroup?: string
+      ct?: number
+      layer?: string
+    }
+
 interface RealtimeState {
   equipment: EquipmentEntity[]
   workpieces: WorkpieceEntity[]
   personnel: PersonnelEntity[]
   filters: FilterState
-  selected: { id: string; kind: EntityKind } | null
+  selected: SelectedFeature | null
   setInitialData: (payload: {
     equipment: EquipmentEntity[]
     workpieces: WorkpieceEntity[]
@@ -27,7 +40,7 @@ interface RealtimeState {
   }) => void
   applyUpdate: (entities: RealtimeEntity[]) => void
   updateFilter: (kind: EntityKind, statuses: string[]) => void
-  selectEntity: (entity: { id: string; kind: EntityKind } | null) => void
+  selectEntity: (entity: SelectedFeature | null) => void
 }
 
 const DEFAULT_FILTERS: FilterState = {

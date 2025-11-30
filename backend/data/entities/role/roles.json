@@ -1,0 +1,736 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:ToolSpecialist",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "工具专员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "工具专员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "管理和维护生产工具",
+        "负责工具的发放和回收",
+        "确保工具完好可用"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:TrainingSpecialist",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "培训专员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "培训专员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "组织和实施员工技能培训",
+        "评估培训效果",
+        "维护培训记录"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:TimekeepingSpecialist",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "计工事务专员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "计工事务专员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责生产工时的统计和核算",
+        "处理工时相关事务",
+        "提供工时数据支持"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:QuotaEngineer",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "定额计工工程师"
+    },
+    "description": {
+      "type": "Property",
+      "value": "定额计工工程师岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "制定和优化工时定额标准",
+        "分析生产效率",
+        "提供改进建议"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:EquipmentSpecialist",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "设备专员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "设备专员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责生产设备的日常管理",
+        "协调设备维护保养",
+        "监控设备运行状态"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:SchedulingSupervisor",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "调度主管"
+    },
+    "description": {
+      "type": "Property",
+      "value": "调度主管岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责生产调度和资源协调",
+        "优化生产计划安排",
+        "处理生产异常"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:MaterialSpecialist",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "材料专员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "材料专员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责生产物料的管理",
+        "协调物料供应",
+        "监控库存水平"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:SafetySpecialist",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "安全专员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "安全专员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责现场安全管理",
+        "开展安全检查和培训",
+        "处理安全事故"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:AluminumWelder",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "铝电焊工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "铝电焊工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "执行铝合金电焊作业",
+        "确保焊接质量",
+        "遵守安全操作规程"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:RoboticWeldingOperator",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "焊接机械手操作工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "焊接机械手操作工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "操作自动焊接机械手",
+        "监控焊接过程",
+        "处理设备异常"
+      ]
+    },
+    "qualificationReq": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Qualification:AutomaticWeldingCert"
+      }
+    ],
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:BodyAssembler",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "车体装配工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "车体装配工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "执行车体装配作业",
+        "确保装配质量",
+        "配合质量检验"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:MachiningCenterOperator",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "加工中心操作工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "加工中心操作工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "操作数控加工中心",
+        "执行加工程序",
+        "进行首件检验"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:OverheadCraneOperator",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "天车司机"
+    },
+    "description": {
+      "type": "Property",
+      "value": "天车司机岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "操作天车进行物料搬运",
+        "确保吊装安全",
+        "维护设备日常保养"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:ForkliftOperator",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "叉车司机"
+    },
+    "description": {
+      "type": "Property",
+      "value": "叉车司机岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "操作叉车进行物料运输",
+        "遵守厂区交通规则",
+        "确保运输安全"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:TractorOperator",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "牵引车司机"
+    },
+    "description": {
+      "type": "Property",
+      "value": "牵引车司机岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "操作牵引车进行厂内运输",
+        "负责货物装卸协调",
+        "保证运输效率"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:Fitter",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "机械钳工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "机械钳工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "执行机械装配和维修",
+        "使用工具进行精密加工",
+        "保证装配质量"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:MaintenanceElectrician",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "维修电工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "维修电工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责电气设备维修",
+        "排查电气故障",
+        "执行预防性维护"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:ProductionReporter",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "报工员"
+    },
+    "description": {
+      "type": "Property",
+      "value": "报工员岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "收集和录入生产数据",
+        "编制生产报表",
+        "保证数据准确性"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:NDTInspector",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "探伤工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "探伤工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "执行无损检测作业",
+        "判定检测结果",
+        "出具检测报告"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:PatrolWorker",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "巡守工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "巡守工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责厂区安全巡查",
+        "监控设施设备状态",
+        "及时报告异常情况"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:ManagementWorker",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "管理工"
+    },
+    "description": {
+      "type": "Property",
+      "value": "管理工岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "协助班组管理工作",
+        "执行现场管理任务",
+        "配合生产协调"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:Director",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "主任"
+    },
+    "description": {
+      "type": "Property",
+      "value": "主任岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责部门日常管理",
+        "组织生产活动",
+        "协调资源配置"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:DeputyPlantManager",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "副厂长"
+    },
+    "description": {
+      "type": "Property",
+      "value": "副厂长岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "协助厂长管理工厂",
+        "分管特定业务领域",
+        "推动持续改进"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:PlantManager",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "厂长"
+    },
+    "description": {
+      "type": "Property",
+      "value": "厂长岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "全面负责工厂运营",
+        "制定战略规划",
+        "确保生产经营目标达成"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:ProcessTechnician",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "工艺技术"
+    },
+    "description": {
+      "type": "Property",
+      "value": "工艺技术岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "负责工艺技术管理",
+        "优化生产工艺",
+        "解决技术问题"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/role-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Role:MiddleManagementAssistant",
+    "type": "Role",
+    "name": {
+      "type": "Property",
+      "value": "中层助理"
+    },
+    "description": {
+      "type": "Property",
+      "value": "中层助理岗位职责定义"
+    },
+    "responsibilities": {
+      "type": "Property",
+      "value": [
+        "协助中层管理工作",
+        "执行管理任务",
+        "协调部门沟通"
+      ]
+    },
+    "effectiveFrom": {
+      "type": "Property",
+      "value": "2025-01-01T00:00:00Z"
+    }
+  }
+]

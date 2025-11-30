@@ -1,5 +1,3 @@
-import { appConfig } from '../config/appConfig'
-import { mockEquipment, mockPersonnel, mockWorkpieces } from '../mocks/realtimeMock'
 import type {
   EquipmentEntity,
   PersonnelEntity,
@@ -15,18 +13,21 @@ export interface RealtimeEntitiesPayload {
 }
 
 export async function fetchRealtimeEntities(): Promise<RealtimeEntitiesPayload> {
-  if (appConfig.useMock || !appConfig.apiBaseUrl) {
+  try {
+    const { data } = await apiClient.get<RealtimeResponse>('/api/v1/realtime/entities')
     return {
-      equipment: mockEquipment,
-      workpieces: mockWorkpieces,
-      personnel: mockPersonnel,
+      equipment: data.data.equipment ?? [],
+      workpieces: data.data.workpieces ?? [],
+      personnel: data.data.personnel ?? [],
     }
-  }
-  const { data } = await apiClient.get<RealtimeResponse>('/api/v1/realtime/entities')
-  return {
-    equipment: data.data.equipment ?? [],
-    workpieces: data.data.workpieces ?? [],
-    personnel: data.data.personnel ?? [],
+  } catch (error) {
+    console.error('[RealtimeService] Failed to fetch realtime entities:', error)
+    // 返回空数组，避免UI崩溃
+    return {
+      equipment: [],
+      workpieces: [],
+      personnel: [],
+    }
   }
 }
 

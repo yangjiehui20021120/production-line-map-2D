@@ -1,0 +1,3844 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T01:P0010:20251028090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T01:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "æ¸…æ´—æ‰“ç£¨ä¾§å¢™åž‹æ-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-28T09:00:00Z",
+        "end": "2025-10-28T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T01"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T01:20251028090000"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T01:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-28T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T01:P0020:20251028110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T01:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "è£…é…ä¾§å¢™åè£…-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-28T11:00:00Z",
+        "end": "2025-10-28T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T01"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T01:20251028090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T01:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-28T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T01:P0030:20251028130000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T01:P0030"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ç„ŠæŽ¥ä¾§å¢™åé¢ç„Šç¼-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01:P0030"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-28T13:00:00Z",
+        "end": "2025-10-28T14:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T01"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T01:20251028090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-P0020-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-P0030-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T01:P0030:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-28T13:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T01:20251028090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T01"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹1-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T01"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-28T09:00:00Z",
+        "end": "2025-10-29T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T01"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T01:P0010:20251028090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T01:P0020:20251028110000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T01:P0030:20251028130000"
+      }
+    ],
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-P0030-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0010:20251029090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T02:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ç„ŠæŽ¥ä¾§å¢™åé¢ç„Šç¼-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-29T09:00:00Z",
+        "end": "2025-10-29T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T02"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T02:20251029090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T02:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-29T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0020:20251029110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T02:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "è¿”ä¿®ä¾§å¢™åé¢ç„Šç¼ç¼ºé™·-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-29T11:00:00Z",
+        "end": "2025-10-29T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T02"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T02:20251029090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T02:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-29T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0030:20251029130000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T02:P0030"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ç‚¹å›ºä¾§å¢™æ­£è£…-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02:P0030"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-29T13:00:00Z",
+        "end": "2025-10-29T14:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T02"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T02:20251029090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0020-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0030-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T02:P0030:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-29T13:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0040:20251029150000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T02:P0040"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "åŠè¿ä¾§å¢™å…¥èƒŽ-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02:P0040"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-29T15:00:00Z",
+        "end": "2025-10-29T16:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T02"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T02:20251029090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0030-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0040-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T02:P0040:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-29T15:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T02:20251029090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T02"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹2-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T02"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-29T09:00:00Z",
+        "end": "2025-10-30T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T02"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0010:20251029090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0020:20251029110000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0030:20251029130000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T02:P0040:20251029150000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T01-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-P0040-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T03:P0010:20251030090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T03:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ç„ŠæŽ¥ä¾§å¢™æ­£é¢ç„Šç¼-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T03:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-30T09:00:00Z",
+        "end": "2025-10-30T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T03"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T03:20251030090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T03-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T03:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-30T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T03:P0020:20251030110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T03:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "è¿”ä¿®ä¾§å¢™æ­£é¢ç„Šç¼ç¼ºé™·-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T03:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-30T11:00:00Z",
+        "end": "2025-10-30T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T03"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T03:20251030090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T03-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T03-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T03:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-30T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T03:20251030090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T03"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹3-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T03"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-30T09:00:00Z",
+        "end": "2025-10-31T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T03"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T03:P0010:20251030090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T03:P0020:20251030110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T02-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T03-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T04:P0010:20251031090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T04:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "è°ƒä¿®ä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T04:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-31T09:00:00Z",
+        "end": "2025-10-31T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T04"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T04:20251031090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T03-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T04-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T04:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-31T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T04:P0020:20251031110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T04:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "äº¤éªŒä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T04:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-31T11:00:00Z",
+        "end": "2025-10-31T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T04"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T04:20251031090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T04-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T04-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T04:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-10-31T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T04:20251031090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T04"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹4-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T04"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-31T09:00:00Z",
+        "end": "2025-11-01T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T04"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T04:P0010:20251031090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T04:P0020:20251031110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T03-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T04-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T05:P0010:20251101090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T05:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ä¾§å¢™å…¥èƒŽ-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T05:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-01T09:00:00Z",
+        "end": "2025-11-01T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T05"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T05:20251101090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T04-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T05-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T05:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-01T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T05:P0020:20251101110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T05:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ä¾§å¢™å¤§çº¿è‡ªåŠ¨æ‰“ç£¨-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T05:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-01T11:00:00Z",
+        "end": "2025-11-01T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T05"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T05:20251101090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T05-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T05-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T05:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-01T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T05:20251101090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T05"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹5-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T05"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-01T09:00:00Z",
+        "end": "2025-11-02T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T05"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T05:P0010:20251101090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T05:P0020:20251101110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T04-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T05-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T06:P0010:20251102090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T06:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "åŠè¿ä¾§å¢™å…¥èƒŽ-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T06:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-02T09:00:00Z",
+        "end": "2025-11-02T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T06"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T06:20251102090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T05-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T06-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T06:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-02T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T06:P0020:20251102110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T06:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "åŠ å·¥ä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T06:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-02T11:00:00Z",
+        "end": "2025-11-02T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T06"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T06:20251102090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T06-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T06-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T06:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-02T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T06:20251102090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T06"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹6-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T06"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-02T09:00:00Z",
+        "end": "2025-11-03T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T06"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T06:P0010:20251102090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T06:P0020:20251102110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T05-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T06-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T07:P0010:20251103090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T07:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "æ¸…ç†ã€äº¤éªŒã€å‡ºèƒŽä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T07:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-03T09:00:00Z",
+        "end": "2025-11-03T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T07"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T07:20251103090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T06-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T07-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T07:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-03T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T07:20251103090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T07"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹7-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T07"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-03T09:00:00Z",
+        "end": "2025-11-04T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T07"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T07:P0010:20251103090000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T06-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T07-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0010:20251104090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T08:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "æ‰“ç£¨ä¾§å¢™åŠ å·¥ä½™é‡-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-04T09:00:00Z",
+        "end": "2025-11-04T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T08"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T07-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T08:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-04T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0020:20251104110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T08:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "å€’é’ä¾§å¢™é”è¾¹-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-04T11:00:00Z",
+        "end": "2025-11-04T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T08"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T08:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-04T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0030:20251104130000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T08:P0030"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "å®‰è£…èšæ°¨é…¯å‘æ³¡å’Œé“†èžºæ¯-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08:P0030"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-04T13:00:00Z",
+        "end": "2025-11-04T14:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T08"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0020-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0030-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T08:P0030:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-04T13:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0040:20251104150000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T08:P0040"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "åŽ»åž«æ¿PT-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08:P0040"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-04T15:00:00Z",
+        "end": "2025-11-04T16:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T08"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0030-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0040-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T08:P0040:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-04T15:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0050:20251104170000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T08:P0050"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "è£…é…ä¾§å¢™é™„ä»¶-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08:P0050"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-04T17:00:00Z",
+        "end": "2025-11-04T18:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T08"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0040-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0050-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T08:P0050:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-04T17:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T08"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹8-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T08"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-04T09:00:00Z",
+        "end": "2025-11-05T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T08"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0010:20251104090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0020:20251104110000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0030:20251104130000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0040:20251104150000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T08:P0050:20251104170000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T07-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-P0050-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T09:P0010:20251105090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T09:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ç¿»è½¬ä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T09:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-05T09:00:00Z",
+        "end": "2025-11-05T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T09"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T09:20251105090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T09-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T09:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-05T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T09:P0020:20251105110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T09:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "ç„ŠæŽ¥æ­£è£…é™„ä»¶-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T09:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-05T11:00:00Z",
+        "end": "2025-11-05T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T09"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T09:20251105090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T09-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T09-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T09:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-05T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T09:20251105090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T09"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹9-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T09"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-05T09:00:00Z",
+        "end": "2025-11-06T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T09"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T09:P0010:20251105090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T09:P0020:20251105110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T08-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T09-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T10:P0010:20251106090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T10:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "è°ƒä¿®ä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T10:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-06T09:00:00Z",
+        "end": "2025-11-06T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T10"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T10:20251106090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T09-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T10-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T10:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-06T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T10:P0020:20251106110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T10:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "æ‰“ç£¨ä¾§å¢™é™„ä»¶-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T10:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-06T11:00:00Z",
+        "end": "2025-11-06T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T10"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T10:20251106090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T10-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T10-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T10:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-06T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T10:20251106090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T10"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹10-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T10"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-06T09:00:00Z",
+        "end": "2025-11-07T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T10"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T10:P0010:20251106090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T10:P0020:20251106110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T09-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T10-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T11:P0010:20251107090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T11:P0010"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "é˜²æŠ¤ä¾§å¢™-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T11:P0010"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-07T09:00:00Z",
+        "end": "2025-11-07T10:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T11"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T11:20251107090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T10-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T11-P0010-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T11:P0010:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-07T09:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Process:M803-SN001:T11:P0020:20251107110000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Process"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T11:P0020"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "äº¤éªŒ-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T11:P0020"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-07T11:00:00Z",
+        "end": "2025-11-07T12:00:00Z",
+        "actualDuration": 3600
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T11"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T11:20251107090000"
+    },
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T11-P0010-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T11-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    },
+    "stepLog": {
+      "type": "Property",
+      "value": [
+        {
+          "stepId": "urn:ngsi-ld:MBOM:M000004803474:T11:P0020:S01",
+          "performedBy": {
+            "personId": "urn:ngsi-ld:TwinObject:Person:Worker-01",
+            "roleId": "urn:ngsi-ld:Role:Operator"
+          },
+          "observedAt": "2025-11-07T11:00:00Z",
+          "duration": 3600,
+          "resultData": {
+            "status": "Pass",
+            "qualityScore": 95
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Takt:M803-SN001:T11:20251107090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Takt"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-T11"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¸€ä½ä¾§å¢™ç»„æˆèŠ‚æ‹11-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:M000004803474:T11"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-11-07T09:00:00Z",
+        "end": "2025-11-08T05:00:00Z",
+        "actualDuration": 72000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202",
+        "zoneId": "ZONE-T11"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "partOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T11:P0010:20251107090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Process:M803-SN001:T11:P0020:20251107110000"
+      }
+    ],
+    "inputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T10-Output"
+    },
+    "outputWorkpiece": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Workpiece:M803-SN001-T11-P0020-Output"
+    },
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板",
+          "quantity": 1,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:Robot:ROBOT-01",
+        "urn:ngsi-ld:TwinObject:Person:Worker-01"
+      ]
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://example.com/contexts/scene-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Scene:Route:M803-SN001:RT_M000004803474:20251028090000",
+    "type": "Scene",
+    "sceneLevel": {
+      "type": "Property",
+      "value": "Route"
+    },
+    "sceneCode": {
+      "type": "Property",
+      "value": "SC-M803-SN001-RT_M000004803474"
+    },
+    "sceneName": {
+      "type": "Property",
+      "value": "M000004803474ä¾§å¢™å·¥è‰ºè·¯çº¿-M803-SN001"
+    },
+    "refMBOM": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:MBOM:RT_M000004803474:V1.0"
+    },
+    "refMBOMVersion": {
+      "type": "Property",
+      "value": "V1.0"
+    },
+    "timeFrame": {
+      "type": "Property",
+      "value": {
+        "start": "2025-10-28T09:00:00Z",
+        "end": "2025-11-27T09:00:00Z",
+        "actualDuration": 2592000
+      }
+    },
+    "location": {
+      "type": "Property",
+      "value": {
+        "lineCode": "TS361202"
+      }
+    },
+    "status": {
+      "type": "Property",
+      "value": "Completed"
+    },
+    "includesSubScenes": [
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T01:20251028090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T02:20251029090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T03:20251030090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T04:20251031090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T05:20251101090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T06:20251102090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T07:20251103090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T08:20251104090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T09:20251105090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T10:20251106090000"
+      },
+      {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Scene:Takt:M803-SN001:T11:20251107090000"
+      }
+    ],
+    "inputMaterials": {
+      "type": "Property",
+      "value": [
+        {
+          "materialId": "urn:ngsi-ld:TwinObject:Material:SteelPlate-Q235B",
+          "materialName": "Q235B钢板原材料",
+          "quantity": 10,
+          "unit": "piece",
+          "batchNo": "BATCH-20251028-001"
+        }
+      ]
+    },
+    "outputProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "refFinalProduct": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Product:M803-SN001"
+    },
+    "involvesAsset": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:TwinObject:ProductionLine:TS361202"
+      ]
+    }
+  }
+]

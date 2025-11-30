@@ -7,7 +7,6 @@ class ResizeObserverMock implements ResizeObserver {
 }
 
 if (!window.ResizeObserver) {
-  // @ts-expect-error - assign mock
-  window.ResizeObserver = ResizeObserverMock
+  window.ResizeObserver = ResizeObserverMock as unknown as typeof ResizeObserver
 }
 

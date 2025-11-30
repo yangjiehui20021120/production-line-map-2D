@@ -13,6 +13,14 @@ class Settings(BaseSettings):
     API_V1_PREFIX: str = "/api/v1"
     NGSI_LD_ENDPOINT: str = "http://localhost:9090/ngsi-ld/v1"
     USE_MOCK_DATA: bool = True
+    TRAJECTORY_SAMPLE_FILE: str = "test-data/trajectory_7days_sample.json"
+    
+    # Redis配置
+    REDIS_HOST: str = "localhost"
+    REDIS_PORT: int = 6379
+    REDIS_DB: int = 0
+    REDIS_URL: str = "redis://localhost:6379/0"  # 如果设置了REDIS_URL，会覆盖HOST/PORT/DB
+    USE_REDIS_CACHE: bool = True  # 是否启用Redis缓存
 
 
 settings = Settings()

@@ -2,12 +2,12 @@ import type { LayerId } from '../stores/layerStore'
 import { useLayerStore } from '../stores/layerStore'
 
 const LAYERS: { id: LayerId; name: string; description: string }[] = [
-  { id: 'basemap', name: '底图', description: 'Zone + Station 布局' },
+  { id: 'stations', name: '工位状态层', description: 'Zone + Station 底图' },
   { id: 'equipment', name: '设备层', description: '机器人/设备状态' },
-  { id: 'workpiece', name: '在制品层', description: 'WIP 位置' },
+  { id: 'wip', name: '在制品层', description: 'WIP 位置' },
   { id: 'personnel', name: '人员层', description: '人员定位' },
-  { id: 'paths', name: '路径层', description: '主物流/Spaghetti' },
-  { id: 'annotations', name: '标注层', description: '用户标注' },
+  { id: 'mainFlow', name: '路径层', description: '主物流/Spaghetti' },
+  { id: 'spaghetti', name: '意面图层', description: '路径分析' },
 ]
 
 export function LayerSwitcher() {

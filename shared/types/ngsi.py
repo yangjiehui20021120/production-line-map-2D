@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
-from typing import Literal, Union, List, Optional, TypedDict
+from typing import Literal, Union, List, Optional
+from typing_extensions import TypedDict
 
 
 class GeoPoint(TypedDict):

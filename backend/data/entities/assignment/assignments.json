@@ -1,0 +1,3682 @@
+[
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00005979:MachiningCenterOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00005979"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-19T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-19T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00005979 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00005979:BodyAssembler:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00005979"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:BodyAssembler"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-27T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-27T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00005979 as BodyAssembler"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00005979:DeputyPlantManager:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00005979"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:DeputyPlantManager"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-20T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-20T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00005979 as DeputyPlantManager"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00006152:QuotaEngineer:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00006152"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:QuotaEngineer"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-01T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-01T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00006152 as QuotaEngineer"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00001578:AluminumWelder:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00001578"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:AluminumWelder"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-25T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-25T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00001578 as AluminumWelder"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00001578:EquipmentSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00001578"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:EquipmentSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-25T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-25T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00001578 as EquipmentSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00001578:PatrolWorker:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00001578"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:PatrolWorker"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-23T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-23T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00001578 as PatrolWorker"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00010936:ForkliftOperator:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00010936"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-17T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-17T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00010936 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00010936:SchedulingSupervisor:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00010936"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:SchedulingSupervisor"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00010936 as SchedulingSupervisor"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00010936:MachiningCenterOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00010936"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00010936 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00001411:TractorOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00001411"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TractorOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-10T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-10T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00001411 as TractorOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00004315:RoboticWeldingOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00004315"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:RoboticWeldingOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-07T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-07T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00004315 as RoboticWeldingOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00004315:PatrolWorker:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00004315"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:PatrolWorker"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-25T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-25T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00004315 as PatrolWorker"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00067804:SafetySpecialist:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00067804"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:SafetySpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-17T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-17T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00067804 as SafetySpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00083304:BodyAssembler:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00083304"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:BodyAssembler"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00083304 as BodyAssembler"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00083371:TimekeepingSpecialist:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00083371"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TimekeepingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-06T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-06T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00083371 as TimekeepingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00083371:OverheadCraneOperator:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00083371"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:OverheadCraneOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-03T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-03T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00083371 as OverheadCraneOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00083371:TrainingSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00083371"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TrainingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-23T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-23T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00083371 as TrainingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00083510:RoboticWeldingOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00083510"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:RoboticWeldingOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00083510 as RoboticWeldingOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00083510:ForkliftOperator:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00083510"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-01T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-01T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00083510 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00061294:BodyAssembler:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00061294"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:BodyAssembler"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-03T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-03T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00061294 as BodyAssembler"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062605:SafetySpecialist:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062605"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:SafetySpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-20T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-20T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062605 as SafetySpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062605:QuotaEngineer:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062605"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:QuotaEngineer"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-30T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-30T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062605 as QuotaEngineer"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062605:TimekeepingSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062605"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TimekeepingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-10T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-10T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062605 as TimekeepingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00065419:MiddleManagementAssistant:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00065419"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MiddleManagementAssistant"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-09T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-09T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00065419 as MiddleManagementAssistant"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060328:TrainingSpecialist:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060328"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TrainingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-24T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-24T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060328 as TrainingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060328:ForkliftOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060328"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-09T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-09T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060328 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060328:Fitter:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060328"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Fitter"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-10-31T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-10-31T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060328 as Fitter"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00012178:BodyAssembler:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00012178"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:BodyAssembler"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00012178 as BodyAssembler"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00012178:QuotaEngineer:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00012178"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:QuotaEngineer"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-18T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-18T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00012178 as QuotaEngineer"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060387:ToolSpecialist:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060387"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ToolSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-19T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-19T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060387 as ToolSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060387:DeputyPlantManager:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060387"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:DeputyPlantManager"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-02T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-02T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060387 as DeputyPlantManager"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060382:ManagementWorker:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060382"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ManagementWorker"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-16T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-16T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060382 as ManagementWorker"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064129:Director:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064129"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Director"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-11T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-11T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064129 as Director"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066351:MiddleManagementAssistant:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066351"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MiddleManagementAssistant"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-24T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-24T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066351 as MiddleManagementAssistant"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066351:ToolSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066351"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ToolSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-10-31T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-10-31T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066351 as ToolSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066365:ForkliftOperator:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066365"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066365 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066365:TimekeepingSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066365"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TimekeepingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-05T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-05T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066365 as TimekeepingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066365:EquipmentSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066365"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:EquipmentSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-11T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-11T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066365 as EquipmentSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066360:SchedulingSupervisor:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066360"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:SchedulingSupervisor"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-11T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-11T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066360 as SchedulingSupervisor"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00066360:ProcessTechnician:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00066360"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ProcessTechnician"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-23T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-23T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00066360 as ProcessTechnician"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00081766:MiddleManagementAssistant:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00081766"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MiddleManagementAssistant"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-14T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-14T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00081766 as MiddleManagementAssistant"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00082390:ManagementWorker:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00082390"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ManagementWorker"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00082390 as ManagementWorker"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00082390:BodyAssembler:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00082390"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:BodyAssembler"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00082390 as BodyAssembler"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062568:RoboticWeldingOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062568"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:RoboticWeldingOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-18T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-18T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062568 as RoboticWeldingOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062568:Director:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062568"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Director"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-06T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-06T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062568 as Director"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00065972:MachiningCenterOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00065972"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-13T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-13T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00065972 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00065972:TrainingSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00065972"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TrainingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-22T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-22T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00065972 as TrainingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00065972:AluminumWelder:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00065972"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:AluminumWelder"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-10T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-10T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00065972 as AluminumWelder"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00011448:MiddleManagementAssistant:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00011448"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MiddleManagementAssistant"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-23T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-23T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00011448 as MiddleManagementAssistant"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00011448:MaterialSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00011448"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MaterialSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-11T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-11T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00011448 as MaterialSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00011140:MachiningCenterOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00011140"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-06T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-06T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00011140 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00011131:MachiningCenterOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00011131"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-01T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-01T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00011131 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060298:ManagementWorker:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060298"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ManagementWorker"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-12T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-12T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060298 as ManagementWorker"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00011134:QuotaEngineer:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00011134"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:QuotaEngineer"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-25T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-25T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00011134 as QuotaEngineer"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00011134:NDTInspector:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00011134"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:NDTInspector"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-09T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-09T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00011134 as NDTInspector"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00010329:ProductionReporter:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00010329"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ProductionReporter"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-29T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-29T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00010329 as ProductionReporter"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063585:Director:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063585"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Director"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-22T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-22T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063585 as Director"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063585:ForkliftOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063585"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-29T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-29T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063585 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063585:MaintenanceElectrician:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063585"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MaintenanceElectrician"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-05T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-05T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063585 as MaintenanceElectrician"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063586:OverheadCraneOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063586"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:OverheadCraneOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-25T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-25T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063586 as OverheadCraneOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063586:TrainingSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063586"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TrainingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-14T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-14T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063586 as TrainingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064832:Fitter:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064832"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Fitter"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-28T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-28T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064832 as Fitter"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064832:TimekeepingSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064832"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TimekeepingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-05T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-05T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064832 as TimekeepingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064812:ForkliftOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064812"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-24T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-24T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064812 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064812:MachiningCenterOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064812"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-24T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-24T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064812 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064840:TrainingSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064840"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TrainingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-11T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-11T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064840 as TrainingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064864:OverheadCraneOperator:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064864"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:OverheadCraneOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-02T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-02T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064864 as OverheadCraneOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064876:TrainingSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064876"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TrainingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-10T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-10T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064876 as TrainingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064876:MaterialSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064876"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MaterialSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-29T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-29T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064876 as MaterialSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060330:ForkliftOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060330"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-19T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-19T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060330 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060330:DeputyPlantManager:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060330"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:DeputyPlantManager"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-26T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-26T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060330 as DeputyPlantManager"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00061286:NDTInspector:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00061286"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:NDTInspector"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-19T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-19T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00061286 as NDTInspector"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00061286:SafetySpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00061286"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:SafetySpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-07T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-07T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00061286 as SafetySpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00061293:ManagementWorker:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00061293"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ManagementWorker"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-30T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-30T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00061293 as ManagementWorker"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00061290:TimekeepingSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00061290"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TimekeepingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-19T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-19T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00061290 as TimekeepingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00061290:ForkliftOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00061290"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:ForkliftOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-29T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-29T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00061290 as ForkliftOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062571:DeputyPlantManager:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062571"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:DeputyPlantManager"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-23T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-23T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062571 as DeputyPlantManager"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062571:Fitter:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062571"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Fitter"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-29T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-29T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062571 as Fitter"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060351:MaintenanceElectrician:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060351"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MaintenanceElectrician"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-01T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-01T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060351 as MaintenanceElectrician"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00060351:BodyAssembler:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00060351"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:BodyAssembler"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-05T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-05T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00060351 as BodyAssembler"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062543:RoboticWeldingOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062543"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:RoboticWeldingOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-05T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-05T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062543 as RoboticWeldingOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062543:MachiningCenterOperator:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062543"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MachiningCenterOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-23T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-23T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062543 as MachiningCenterOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064852:Fitter:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064852"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Fitter"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-30T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-30T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Active"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064852 as Fitter"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064852:RoboticWeldingOperator:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064852"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:RoboticWeldingOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-21T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-21T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064852 as RoboticWeldingOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063570:RoboticWeldingOperator:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063570"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:RoboticWeldingOperator"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-13T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-13T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063570 as RoboticWeldingOperator"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063570:MaterialSpecialist:SideWallShop:LateShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063570"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:MaterialSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-04T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-04T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "LateShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063570 as MaterialSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00063570:Fitter:SideWallShop:EarlyShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00063570"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:Fitter"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-24T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-24T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "EarlyShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00063570 as Fitter"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00062561:AluminumWelder:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00062561"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:AluminumWelder"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-01T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-01T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00062561 as AluminumWelder"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064130:DeputyPlantManager:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064130"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:DeputyPlantManager"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-17T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-17T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064130 as DeputyPlantManager"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00064130:TimekeepingSpecialist:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00064130"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:TimekeepingSpecialist"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-27T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-27T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Suspended"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00064130 as TimekeepingSpecialist"
+    }
+  },
+  {
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://factory.example.com/context/assignment-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Assignment:EMP-00065408:QuotaEngineer:SideWallShop:NightShift",
+    "type": "Assignment",
+    "assigneeId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:TwinObject:Person:EMP-00065408"
+    },
+    "roleId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Role:QuotaEngineer"
+    },
+    "orgId": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:OrgUnit:SideWallShop"
+    },
+    "validFrom": {
+      "type": "Property",
+      "value": "2025-11-15T08:00:00Z"
+    },
+    "validTo": {
+      "type": "Property",
+      "value": "2025-11-15T16:00:00Z"
+    },
+    "shiftId": {
+      "type": "Property",
+      "value": "NightShift"
+    },
+    "assignmentStatus": {
+      "type": "Property",
+      "value": "Expired"
+    },
+    "notes": {
+      "type": "Property",
+      "value": "Generated assignment for EMP-00065408 as QuotaEngineer"
+    }
+  }
+]

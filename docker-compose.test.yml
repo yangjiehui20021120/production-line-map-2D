@@ -1,0 +1,20 @@
+version: "3.9"
+
+# 测试用的docker-compose配置
+# 使用方式: docker-compose -f docker-compose.yml -f docker-compose.test.yml up
+
+services:
+  frontend:
+    environment:
+      - VITE_USE_MOCK=false
+      - VITE_API_BASE_URL=http://localhost:8000
+      - VITE_WS_URL=ws://localhost:8000/api/v1/realtime/ws
+
+  backend:
+    environment:
+      - USE_MOCK_DATA=true
+      - USE_REDIS_CACHE=true
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - LOG_LEVEL=INFO
+

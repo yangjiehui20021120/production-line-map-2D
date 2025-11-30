@@ -5,18 +5,62 @@ services:
     build:
       context: .
       dockerfile: docker/frontend.Dockerfile
+      target: dev
+    working_dir: /workspace
+    volumes:
+      - ./frontend:/workspace
+      - frontend_node_modules:/workspace/node_modules
+    environment:
+      # 这些变量会被注入到前端 bundle，中断点都在宿主机浏览器上访问，
+      # 因此默认值必须使用 localhost，而不是容器内部的服务名。
+      - VITE_API_BASE_URL=${VITE_API_BASE_URL:-http://localhost:8000}
+      - VITE_WS_URL=${VITE_WS_URL:-ws://localhost:8000/api/v1/realtime/ws}
+      - VITE_NGSI_ENDPOINT=${VITE_NGSI_ENDPOINT:-http://localhost:9090/ngsi-ld/v1}
     ports:
-      - "5173:80"
+      - "5173:5173"
     depends_on:
-      - backend
+      backend:
+        condition: service_started
 
   backend:
     build:
       context: .
       dockerfile: docker/backend.Dockerfile
+      target: dev
+    volumes:
+      - ./backend:/app
+      - ./shared:/shared
+      - ./test-data:/app/test-data
+    environment:
+      - USE_MOCK_DATA=${USE_MOCK_DATA:-true}
+      - USE_REDIS_CACHE=${USE_REDIS_CACHE:-true}
+      - NGSI_LD_ENDPOINT=${NGSI_LD_ENDPOINT:-http://mock-ngsi:9090/ngsi-ld/v1}
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - REDIS_DB=${REDIS_DB:-0}
     ports:
       - "8000:8000"
-    environment:
-      - NGSI_LD_ENDPOINT=${NGSI_LD_ENDPOINT:-http://mockserver:9090/ngsi-ld/v1}
-      - USE_MOCK_DATA=${USE_MOCK_DATA:-true}
+    depends_on:
+      redis:
+        condition: service_started
+      mock-ngsi:
+        condition: service_started
 
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  mock-ngsi:
+    build:
+      context: .
+      dockerfile: docker/mock-ngsi.Dockerfile
+    environment:
+      - MOCK_TRAJECTORY_FILE=/data/trajectory_7days_sample.json
+    volumes:
+      - ./test-data:/data:ro
+    ports:
+      - "9090:9090"
+
+volumes:
+  frontend_node_modules:

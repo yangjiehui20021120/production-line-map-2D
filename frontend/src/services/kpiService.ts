@@ -1,21 +1,19 @@
 import { useQuery } from '@tanstack/react-query'
 import type { KPIItem, KPIResponse } from '../types/kpi'
 import { apiClient } from './apiClient'
-import { appConfig, KPI_REFRESH_INTERVAL } from '../config/appConfig'
-import { mockKpiResponse } from '../mocks/kpiMock'
+import { KPI_REFRESH_INTERVAL } from '../config/appConfig'
 
 const KPI_QUERY_KEY = ['kpi-summary']
 
-async function fetchKPIFromApi(): Promise<KPIItem[]> {
-  const { data } = await apiClient.get<KPIResponse>('/api/map/kpi')
-  return data.data
-}
-
 async function fetchKPI(): Promise<KPIItem[]> {
-  if (appConfig.useMock || !appConfig.apiBaseUrl) {
-    return mockKpiResponse.data
+  try {
+    const { data } = await apiClient.get<KPIResponse>('/api/v1/map/kpi')
+    return data.data
+  } catch (error) {
+    console.error('[KPIService] Failed to fetch KPI data:', error)
+    // 返回空数组，避免UI崩溃
+    return []
   }
-  return fetchKPIFromApi()
 }
 
 export function useKPIQuery() {
@@ -23,6 +21,8 @@ export function useKPIQuery() {
     queryKey: KPI_QUERY_KEY,
     queryFn: fetchKPI,
     refetchInterval: KPI_REFRESH_INTERVAL,
+    retry: 3,
+    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
   })
 }
 
