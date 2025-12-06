@@ -6,7 +6,11 @@ frontend/dist/
 # Python / Backend
 backend/.venv/
 backend/__pycache__/
+backend/**/__pycache__/
 backend/.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
 
 # Vite / Logs
 *.log
@@ -15,4 +19,9 @@ pnpm-lock.yaml
 # Env files
 .env
 backend/.env
+
+# IDE / Editor
+.cursor/
+.vscode/
+.idea/
 

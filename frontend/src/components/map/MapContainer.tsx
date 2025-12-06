@@ -738,13 +738,6 @@ function createBaseStyle(
   })
 }
 
-const statusColorMap: Record<string, string> = {
-  Running: 'var(--accent-green)',
-  Idle: '#a0aec0',
-  Maintenance: 'var(--accent-yellow)',
-  Fault: '#ea5455',
-}
-
 const equipmentStatusColor: Record<string, string> = {
   Running: 'var(--accent-green)',
   Idle: '#a0aec0',
@@ -764,6 +757,18 @@ const personnelStatusColor: Record<string, string> = {
   Idle: '#a0aec0',
 }
 
+const STATUS_CANONICAL: Record<EntityKind, string[]> = {
+  equipment: ['Running', 'Idle', 'Fault', 'Maintenance'],
+  workpiece: ['InProcess', 'Delayed', 'Completed'],
+  personnel: ['Working', 'Break', 'Idle'],
+}
+
+function normalizeStatus(kind: EntityKind, status: string): string | null {
+  const allowed = STATUS_CANONICAL[kind]
+  const hit = allowed.find((item) => item.toLowerCase() === status.toLowerCase())
+  return hit ?? null
+}
+
 function updateEntitySource(
   source: VectorSource | undefined,
   entities: RealtimeEntity[],
@@ -772,23 +777,26 @@ function updateEntitySource(
 ) {
   if (!source) return
   source.clear()
-  const allowed = filters.statuses[kind]
-  entities
-    .filter((entity) => allowed.includes(entity.status))
-    .forEach((entity) => {
-      const geometry = new Point(transformWorkshopToMap(entity.location.coordinates as [number, number]))
-      const feature = new Feature({ geometry })
-      feature.set('entityKind', kind)
-      feature.set('entityId', entity.id)
-      const label =
-        kind === 'equipment'
-          ? `${entity.name}\nOEE:${(entity as EquipmentEntity).attributes.oee * 100}%`
-          : kind === 'workpiece'
-            ? `${entity.name}\n进度:${Math.round((entity as WorkpieceEntity).attributes.progress * 100)}%`
-            : `${entity.name}\n${(entity as PersonnelEntity).attributes.role}`
-      feature.setStyle(getEntityStyle(kind, entity.status, label))
-      source.addFeature(feature)
-    })
+  const allowed = filters.statuses[kind].length
+    ? filters.statuses[kind].map((s) => normalizeStatus(kind, s)).filter(Boolean) as string[]
+    : STATUS_CANONICAL[kind]
+
+  entities.forEach((entity) => {
+    const status = normalizeStatus(kind, entity.status)
+    if (!status || !allowed.includes(status)) return
+    const geometry = new Point(transformWorkshopToMap(entity.location.coordinates as [number, number]))
+    const feature = new Feature({ geometry })
+    feature.set('entityKind', kind)
+    feature.set('entityId', entity.id)
+    const label =
+      kind === 'equipment'
+        ? `${entity.name}\nOEE:${Math.round((entity as EquipmentEntity).attributes.oee * 100)}%`
+        : kind === 'workpiece'
+          ? `${entity.name}\n进度:${Math.round((entity as WorkpieceEntity).attributes.progress * 100)}%`
+          : `${entity.name}\n${(entity as PersonnelEntity).attributes.role}`
+    feature.setStyle(getEntityStyle(kind, status, label))
+    source.addFeature(feature)
+  })
 }
 
 function getEntityStyle(kind: EntityKind, status: string, label: string) {

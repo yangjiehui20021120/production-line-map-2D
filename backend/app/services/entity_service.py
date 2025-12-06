@@ -18,6 +18,13 @@ if settings.USE_MOCK_DATA:
 else:
     from app.core.ngsi_client import get_ngsi_client
 
+# 缓存服务（可选）
+try:
+    from app.core.cache_service import get_cache_service
+    CACHE_AVAILABLE = settings.USE_REDIS_CACHE
+except Exception:
+    CACHE_AVAILABLE = False
+
 
 class EntityService:
     """实体查询服务类。"""
@@ -29,6 +36,8 @@ class EntityService:
             self._mock_service = get_mock_ngsi_service()
         else:
             self._mock_service = None
+        self.cache_prefix = "entities"
+        self.cache_ttl = getattr(settings, "ENTITY_CACHE_TTL", 300)
 
     async def get_entity(self, entity_id: str, options: Optional[str] = None) -> Optional[Dict[str, Any]]:
         """获取单个实体（别名方法，兼容旧接口）。"""
@@ -50,19 +59,35 @@ class EntityService:
         if not validate_urn(entity_id):
             raise ValueError(f"Invalid URN format: {entity_id}")
 
+        cache_key = self._build_cache_key("detail", entity_id, options=options)
+        if CACHE_AVAILABLE:
+            try:
+                cache = await get_cache_service()
+                cached = await cache.get(cache_key, prefix=self.cache_prefix)
+                if cached is not None:
+                    return cached
+            except Exception:
+                pass
+
         if self.use_mock and self._mock_service:
             # 使用Mock服务
             entity_data = await self._mock_service.get_entity(entity_id)
             # 应用options（简化处理）
             if options == "keyValues" and entity_data:
                 entity_data = self._mock_service._to_key_values(entity_data)
-            return entity_data
         else:
             # 使用真实NGSI-LD客户端
             ngsi_client = get_ngsi_client()
             params = {"options": options} if options else None
             entity_data = await ngsi_client.get_entity(entity_id, attrs=params.get("attrs") if params else None)
-            return entity_data
+        
+        if CACHE_AVAILABLE and entity_data is not None:
+            try:
+                cache = await get_cache_service()
+                await cache.set(cache_key, entity_data, prefix=self.cache_prefix, expire=self.cache_ttl)
+            except Exception:
+                pass
+        return entity_data
 
     async def query_entities(self, request: EntityQueryRequest) -> List[Dict[str, Any]]:
         """查询实体列表。
@@ -84,6 +109,23 @@ class EntityService:
         if not validate_entity_type(entity_type):
             raise ValueError(f"Invalid entity type: {entity_type}")
 
+        cache_key = self._build_cache_key(
+            "list",
+            entity_type,
+            q=getattr(request, "q", None),
+            limit=request.limit,
+            offset=request.offset,
+            options=getattr(request, "options", None),
+        )
+        if CACHE_AVAILABLE:
+            try:
+                cache = await get_cache_service()
+                cached = await cache.get(cache_key, prefix=self.cache_prefix)
+                if cached is not None:
+                    return cached
+            except Exception:
+                pass
+
         if self.use_mock and self._mock_service:
             # 使用Mock服务
             # 构建查询字符串（如果有sub_type等过滤条件）
@@ -98,7 +140,6 @@ class EntityService:
                 offset=request.offset,
                 options=getattr(request, 'options', None),
             )
-            return entities_data
         else:
             # 使用真实NGSI-LD客户端
             ngsi_client = get_ngsi_client()
@@ -109,7 +150,14 @@ class EntityService:
                 offset=request.offset,
                 options=request.options,
             )
-            return entities_data
+        
+        if CACHE_AVAILABLE and entities_data is not None:
+            try:
+                cache = await get_cache_service()
+                await cache.set(cache_key, entities_data, prefix=self.cache_prefix, expire=self.cache_ttl)
+            except Exception:
+                pass
+        return entities_data
 
     async def get_entity_relationships(self, entity_id: str) -> Dict[str, List[str]]:
         """获取实体关系。
@@ -133,6 +181,30 @@ class EntityService:
             # 使用真实NGSI-LD客户端（待实现）
             # return await ngsi_client.get_entity_relationships(entity_id)
             raise NotImplementedError("NGSI-LD client relationship query not implemented yet")
+
+    def _build_cache_key(
+        self,
+        scope: str,
+        entity_type_or_id: str,
+        q: Optional[str] = None,
+        limit: Optional[int] = None,
+        offset: Optional[int] = None,
+        options: Optional[str] = None,
+        attrs: Optional[List[str]] = None,
+    ) -> str:
+        """构建缓存键，兼容列表和详情查询。"""
+        parts = [scope, entity_type_or_id]
+        if q:
+            parts.append(f"q={q}")
+        if limit is not None:
+            parts.append(f"l={limit}")
+        if offset is not None:
+            parts.append(f"o={offset}")
+        if options:
+            parts.append(f"opt={options}")
+        if attrs:
+            parts.append(f"attrs={','.join(sorted(attrs))}")
+        return "|".join(parts)
 
 
 # 全局实体服务实例

@@ -8,6 +8,23 @@ import type {
 
 export type EntityKind = 'equipment' | 'workpiece' | 'personnel'
 
+const STATUS_CANONICAL: Record<EntityKind, string[]> = {
+  equipment: ['Running', 'Idle', 'Fault', 'Maintenance'],
+  workpiece: ['InProcess', 'Delayed', 'Completed'],
+  personnel: ['Working', 'Break', 'Idle'],
+}
+
+function normalizeStatuses(kind: EntityKind, statuses: string[]): string[] {
+  const allowed = STATUS_CANONICAL[kind]
+  const set = new Set<string>()
+  statuses.forEach((s) => {
+    const hit = allowed.find((item) => item.toLowerCase() === s.toLowerCase())
+    if (hit) set.add(hit)
+  })
+  // 保持原始顺序，过滤掉无效值
+  return allowed.filter((item) => set.has(item))
+}
+
 interface FilterState {
   statuses: Record<EntityKind, string[]>
 }
@@ -45,9 +62,9 @@ interface RealtimeState {
 
 const DEFAULT_FILTERS: FilterState = {
   statuses: {
-    equipment: ['Running', 'Idle', 'Fault', 'Maintenance'],
-    workpiece: ['InProcess', 'Delayed', 'Completed'],
-    personnel: ['Working', 'Break', 'Idle'],
+    equipment: STATUS_CANONICAL.equipment,
+    workpiece: STATUS_CANONICAL.workpiece,
+    personnel: STATUS_CANONICAL.personnel,
   },
 }
 
@@ -86,7 +103,7 @@ export const useRealtimeStore = create<RealtimeState>((set) => ({
   updateFilter: (kind, statuses) =>
     set((state) => ({
       filters: {
-        statuses: { ...state.filters.statuses, [kind]: statuses },
+        statuses: { ...state.filters.statuses, [kind]: normalizeStatuses(kind, statuses) },
       },
     })),
   selectEntity: (entity) => set({ selected: entity }),

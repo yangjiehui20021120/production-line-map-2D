@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     REDIS_DB: int = 0
     REDIS_URL: str = "redis://localhost:6379/0"  # 如果设置了REDIS_URL，会覆盖HOST/PORT/DB
     USE_REDIS_CACHE: bool = True  # 是否启用Redis缓存
+    ENTITY_CACHE_TTL: int = 300  # 实体查询缓存TTL（秒）
 
 
 settings = Settings()
